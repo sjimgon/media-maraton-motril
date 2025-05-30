@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+#information about the directory
+src/pages/info.md
+src/layouts/info.md
+src/components/info.md
+src/assets/info.md
