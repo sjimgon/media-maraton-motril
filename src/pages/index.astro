@@ -1,11 +1,32 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/IndexLy.astro';
+import "../styles/global.css";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Inicio | Media Maratón Ciudad de Motril">
+  <header>
+    <h1>Media Maratón Ciudad de Motril</h1>
+    <nav>
+      <ul>
+        <li><a href="#inscripciones">INSCRIPCIONES</a></li>
+        <li><a href="#prueba">PRUEBA</a></li>
+        <li><a href="#multimedia">MULTIMEDIA</a></li>
+        <li><a href="#contacto">CONTACTO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Bienvenido</h2>
+      <p>La Media Maratón más emblemática de la Costa Tropical te espera.</p>
+    </section>
+    <section class="bg-blue-600 text-white text-center p-4 rounded-lg shadow-lg ">
+          Tailwind funciona correctamente 🚀
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Media Maratón Ciudad de Motril</p>
+  </footer>
+</BaseLayout>
