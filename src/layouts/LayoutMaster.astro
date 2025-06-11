@@ -1,0 +1,34 @@
+---
+const { title = "41 Media Maratón Ciudad de Motril" } = Astro.props;
+---
+
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<title>{title}</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="description" content="Competición deportiva celebrada en la ciudad de Motril con dos pruebas principales, 10 kilómetros y 21 kilómetros" />
+		<meta name="keywords" content="Maratón, Motril, Media Maratón, 10K, 21K, Carrera, Deporte" />
+		<meta name="author" content="41 Media Maratón Ciudad de Motril" />
+		
+		<!-- Carta de presentación para redes sociales -->
+		<meta property="og:url" content="https://mediamaraton.motril.es/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content="Competición deportiva celebrada en la ciudad de Motril con dos pruebas principales, 10 kilómetros y 21 kilómetros" />
+		<meta property="og:image" content="" /> <!-- Hay que definirla -->
+		<meta property="og:locale" content="es_ES" />
+
+		
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+
+</style>

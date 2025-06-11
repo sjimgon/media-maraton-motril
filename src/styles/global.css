@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'DMSans-Variable';
+  src: url('./fonts/DMSans - Variable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DMSans Italic-Variable';
+  src: url('./fonts/DMSans Italic - Variable.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Variable';
+  src: url('/fonts/ClashDisplay-Variable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@theme {
+  /* Colores */
+  --color-primarioMMM: #0077bd;
+
+  /* Fuentes personalizadas */
+  --font-sans: 'DMSans-Variable', system-ui, sans-serif;
+  --font-display: 'DMSans Italic-Variable', system-ui, sans-serif;
+  --font-heading: 'ClashDisplay-Variable', system-ui, sans-serif;
+}
