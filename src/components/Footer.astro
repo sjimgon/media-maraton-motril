@@ -1,0 +1,61 @@
+---
+import logo from '../assets/MMM - White.svg';
+---
+
+<footer class="bg-cover bg-[url('/images/Footer.webp')] w-screen">
+    <div class="footer-content text-white flex flex-row justify-between p-5 items-center">
+        
+        <img src={logo.src} alt="Logo Media Maratón Ciudad de Motril" class="h-[80px]">
+
+        <section class="link-section flex flex-row m-5 gap-x-5">
+            <div class="link-section-1 flex flex-col [&>a]:inline [&>a]:hover:opacity-80 [&>a]:cursor-pointer">
+                <a href="/">Inicio</a>
+                <a href="/inscripciones">Incripciones</a>
+                <a href="/recorrido">Recorrido</a>
+                <a href="/servicios">Servicios al corredor</a>
+            </div>
+    
+            <div class="link-section-2 flex flex-col [&>a]:inline [&>a]:hover:opacity-80 [&>a]:cursor-pointer">
+                <a href="/normativa">Normativa</a>
+
+                <a href="/campeones">Ruta de los campeones</a>
+                <a href="/multimedia">Multimedia</a>
+                <a href="/contacto">Contacto</a>
+            </div>
+        </section>
+
+        <section class="faq flex flex-col items-center gap-y-2">
+            <p class="text-xl font-black">¿Dudas?</p>
+            <button class="bg-white text-primarioMMM px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+            <a href="/contacto" class="text-primarioMMM font-bold">Pregúntanos</a>
+            </button>
+        </section>
+        
+        
+    </div>
+
+    <hr class="w-3xl border-t border-white/60 mx-auto">
+
+
+    <section class="footer-sub flex justify-center mt-2 gap-x-4">
+        
+        <div class="text-white text-xs mt-4">
+            <p>Área de Deportes, Ayuntemiento de Motril</p>
+            <p>© <span id="year"></span> Todos los derechos reservados</p>
+        </div>
+
+        <script is:inline>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        
+        <div class="social-links flex flex-row justify-end items-center gap-x-4">
+            <a href="https://www.facebook.com/MediaMaratonMotril" target="_blank" >
+                <img src="/src/assets/fb-round.svg" alt="Facebook" class="h-7 hover:scale-125 transition-transform">
+            </a>
+            <a href="https://www.instagram.com/motrilmedia/" target="_blank">
+                <img src="/src/assets/ig-round.svg" alt="Instagram" class="h-7 hover:scale-125 transition-transform">
+            </a>
+        </div>
+    </section>
+</footer>

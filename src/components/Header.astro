@@ -2,15 +2,83 @@
 import logo from '../assets/MMM - Blue.svg';
 ---
 
-<header class="flex justify-center ">
-  <nav class="flex items-center w-full p-5">
-    <ul class="w-full flex items-center justify-evenly ">
-        <li class=""><a href="/prueba" class="font-black text-primarioMMM hover:text-gray-400">PRUEBA</a></li>
-        <li class=""><a href="/inscripciones" class="font-black text-primarioMMM hover:text-gray-400">INSCRIPCIONES</a></li>
-        <li class=""><a href= index.astro class="font-black text-primarioMMM hover:text-gray-400"><img src={logo.src} alt="Media Maratón Ciudad de Motril" class="h-14 w-min-16px"></a></li>
-        <li class=""><a href="/multimedia" class="font-black text-primarioMMM hover:text-gray-400">MULTIMEDIA</a></li>
-        <li class=""><a href="/contacto" class="font-black text-primarioMMM hover:text-gray-400">CONTACTO</a></li>
-    </ul>
-</nav>
+<header class="flex justify-center">
+  <nav class="flex items-center w-full p-5 relative">
 
+    <!-- Botón hamburguesa solo móvil -->
+    <button
+      id="menu-toggle"
+      class="md:hidden absolute left-4 top-6 z-20"
+      aria-label="Abrir menú"
+      type="button"
+    >
+      <span class="block w-8 h-1 bg-primarioMMM mb-1 rounded"></span>
+      <span class="block w-8 h-1 bg-primarioMMM mb-1 rounded"></span>
+      <span class="block w-8 h-1 bg-primarioMMM rounded"></span>
+    </button>
+
+    <!-- Menú móvil -->
+    <ul
+      id="main-menu-mobile"
+      class="w-screen flex flex-col items-center justify-evenly bg-white fixed top-0 left-0 h-screen transition-transform duration-300 -translate-x-full z-10 md:hidden"
+    >
+      <li>
+        <details>
+          <summary class="font-black text-primarioMMM hover:text-gray-400 m-5 cursor-pointer">PRUEBA</summary>
+          <ul class="bg-white rounded shadow-lg z-10">
+            <li><a href="/recorrido" class="block px-4 py-2 font-black text-primarioMMM hover:text-gray-400 hover:bg-gray-100">Recorrido</a></li>
+            <li><a href="/servicios" class="block px-4 py-2 font-black text-primarioMMM hover:text-gray-400 hover:bg-gray-100">Servicios al corredor</a></li>
+            <li><a href="/normativa" class="block px-4 py-2 font-black text-primarioMMM hover:text-gray-400 hover:bg-gray-100">Normativa</a></li>
+            <li><a href="/campeones" class="block px-4 py-2 font-black text-primarioMMM hover:text-gray-400 hover:bg-gray-100">Ruta de los campeones</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="/inscripciones" class="font-black text-primarioMMM hover:text-gray-400 m-5">INSCRIPCIONES</a></li>
+      <li>
+        <a href="/" class="font-black text-primarioMMM hover:text-gray-400 m-5">
+          <img src={logo.src} alt="Media Maratón Ciudad de Motril" class="h-14 w-min-16px">
+        </a>
+      </li>
+      <li><a href="/multimedia" class="font-black text-primarioMMM hover:text-gray-400 m-5">MULTIMEDIA</a></li>
+      <li><a href="/contacto" class="font-black text-primarioMMM hover:text-gray-400 m-5">CONTACTO</a></li>
+    </ul>
+
+    <!-- Menú escritorio -->
+    <ul class="w-screen flex flex-row items-center justify-evenly md:flex md:static md:h-auto md:bg-transparent hidden md:flex">
+      <li class="relative group">
+        <p class="font-black text-primarioMMM hover:text-gray-400 m-5 cursor-pointer">PRUEBA</p>
+        <ul class="absolute left-0 min-w-max bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-opacity z-10">
+          <li><a href="/recorrido" class="block px-4 py-2 font-black text-primarioMMM hover:text-gray-400 hover:bg-gray-100">Recorrido</a></li>
+          <li><a href="/servicios" class="block px-4 py-2 font-black text-primarioMMM hover:text-gray-400 hover:bg-gray-100">Servicios al corredor</a></li>
+          <li><a href="/normativa" class="block px-4 py-2 font-black text-primarioMMM hover:text-gray-400 hover:bg-gray-100">Normativa</a></li>
+          <li><a href="/campeones" class="block px-4 py-2 font-black text-primarioMMM hover:text-gray-400 hover:bg-gray-100">Ruta de los campeones</a></li>
+        </ul>
+      </li>
+      <li><a href="/inscripciones" class="font-black text-primarioMMM hover:text-gray-400 m-5">INSCRIPCIONES</a></li>
+      <li>
+        <a href="/" class="font-black text-primarioMMM hover:text-gray-400 m-5">
+          <img src={logo.src} alt="Media Maratón Ciudad de Motril" class="h-14 w-min-16px">
+        </a>
+      </li>
+      <li><a href="/multimedia" class="font-black text-primarioMMM hover:text-gray-400 m-5">MULTIMEDIA</a></li>
+      <li><a href="/contacto" class="font-black text-primarioMMM hover:text-gray-400 m-5">CONTACTO</a></li>
+    </ul>
+  </nav>
 </header>
+
+<script>
+  // Menú hamburguesa para móvil
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('main-menu-mobile');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      if (menu.classList.contains('-translate-x-full')) {
+        menu.classList.remove('-translate-x-full');
+        menu.classList.add('translate-x-0');
+      } else {
+        menu.classList.add('-translate-x-full');
+        menu.classList.remove('translate-x-0');
+      }
+    });
+  }
+</script>
