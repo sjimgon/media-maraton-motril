@@ -1,13 +1,14 @@
 ---
-import logo from '../assets/MMM - White.svg';
+import logo from '../assets/marca/MMM - White.svg';
+import ButtonSecondary from './ButtonSecondary.astro';
 ---
 
 <footer class="bg-cover bg-[url('/images/Footer.webp')] w-screen">
-    <div class="footer-content text-white flex flex-row justify-between p-5 items-center">
+    <div class="footer-content text-white flex flex-row justify-evenly p-5 items-center">
         
         <img src={logo.src} alt="Logo Media Maratón Ciudad de Motril" class="h-[80px]">
 
-        <section class="link-section flex flex-row m-5 gap-x-5">
+        <section class="link-section flex flex-row m-5 gap-x-15">
             <div class="link-section-1 flex flex-col [&>a]:inline [&>a]:hover:opacity-80 [&>a]:cursor-pointer">
                 <a href="/">Inicio</a>
                 <a href="/inscripciones">Incripciones</a>
@@ -25,10 +26,10 @@ import logo from '../assets/MMM - White.svg';
         </section>
 
         <section class="faq flex flex-col items-center gap-y-2">
-            <p class="text-xl font-black">¿Dudas?</p>
-            <button class="bg-white text-primarioMMM px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-            <a href="/contacto" class="text-primarioMMM font-bold">Pregúntanos</a>
-            </button>
+            <p class="text-xl font-black">¿Tienes dudas?</p>
+            <ButtonSecondary href="/contacto" class="mt-2">
+                Pregúntanos
+            </ButtonSecondary>
         </section>
         
         
@@ -37,9 +38,9 @@ import logo from '../assets/MMM - White.svg';
     <hr class="w-3xl border-t border-white/60 mx-auto">
 
 
-    <section class="footer-sub flex justify-center mt-2 gap-x-4">
+    <section class="footer-sub flex flex-row justify-center items-center mt-5 gap-x-4">
         
-        <div class="text-white text-xs mt-4">
+        <div class="text-white text-xs text-right">
             <p>Área de Deportes, Ayuntemiento de Motril</p>
             <p>© <span id="year"></span> Todos los derechos reservados</p>
         </div>
@@ -51,10 +52,10 @@ import logo from '../assets/MMM - White.svg';
         
         <div class="social-links flex flex-row justify-end items-center gap-x-4">
             <a href="https://www.facebook.com/MediaMaratonMotril" target="_blank" >
-                <img src="/src/assets/fb-round.svg" alt="Facebook" class="h-7 hover:scale-125 transition-transform">
+                <img src="/src/assets/rrss/fb-round.svg" alt="Facebook" class="h-7 hover:scale-125 transition-transform">
             </a>
             <a href="https://www.instagram.com/motrilmedia/" target="_blank">
-                <img src="/src/assets/ig-round.svg" alt="Instagram" class="h-7 hover:scale-125 transition-transform">
+                <img src="/src/assets/rrss/ig-round.svg" alt="Instagram" class="h-7 hover:scale-125 transition-transform">
             </a>
         </div>
     </section>

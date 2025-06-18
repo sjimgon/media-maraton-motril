@@ -1,0 +1,27 @@
+---
+// src/components/ButtonPrimary.astro
+const { 
+  href = undefined, 
+  type = "button", 
+  class: additionalClass = '' 
+} = Astro.props;
+
+const baseClass = "bg-primarioMMM text-white px-4 py-2 rounded-lg hover:bg-white hover:text-primarioMMM ring-3 transition-colors";
+
+---
+
+{href ? (
+  <a 
+    href={href} 
+    class={`${baseClass} ${additionalClass}`}
+  >
+    <slot />
+  </a>
+) : (
+  <button 
+    type={type} 
+    class={`${baseClass} ${additionalClass}`}
+  >
+    <slot />
+  </button>
+)}

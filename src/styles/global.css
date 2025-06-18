@@ -27,6 +27,7 @@
 @theme {
   /* Colores */
   --color-primarioMMM: #0077bd;
+  --color-secundarioMMM: #33b4ff;
 
   /* Fuentes personalizadas */
   --font-sans: 'DMSans-Variable', system-ui, sans-serif;

@@ -2,6 +2,8 @@
 import Layout from '../layouts/LayoutMaster.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ButtonPrimary from '../components/ButtonPrimary.astro';
+import Conteo from '../components/CuentaRegresiva.astro';
 ---
 
 <Layout title="Inicio | Media Maratón Ciudad de Motril">
@@ -9,8 +11,15 @@ import Footer from '../components/Footer.astro';
   <main>
     <Header />
     <!-- Hero de entrada -->
-    <section class="bg-hero-bg bg-cover bg-center h-screen flex items-center justify-center text-primarioMMM">
-      <h1 class="flex justify-center font-black font-heading text-8xl text-center">41 MEDIA MARATÓN CIUDAD DE MOTRIL</h1>
+    <section class="bg-hero-bg bg-cover bg-center h-screen flex flex-col items-center justify-center text-primarioMMM">
+      <h1 class="flex justify-center font-black font-heading text-8xl text-center">41º MEDIA MARATÓN CIUDAD DE MOTRIL</h1>
+      <h2 class="mt-5 text-4xl font-medium text-black ">19 DE OCTUBRE DE 2025</h2>
+
+      <ButtonPrimary href="/inscripciones" class = "my-4 text-2xl font-bold">INSCRÍBETE</ButtonPrimary>
+
+      <Conteo fecha="2025-10-19T10:30:00" />
+
+
     </section>
     <section class="bg-blue-600 text-white text-center p-4 rounded-lg shadow-lg ">
           Tailwind funciona correctamente 🚀
