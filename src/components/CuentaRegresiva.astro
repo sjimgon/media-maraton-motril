@@ -4,13 +4,25 @@ const { fecha } = Astro.props;
 
 <div
   id="cuenta-regresiva"
-  class="flex gap-2 font-bold text-2xl"
+  class="flex gap-4 font-semibold text-4xl m-3"
   data-fecha={fecha}
 >
-  <span id="dias">00</span> DÍAS
-  <span id="horas">00</span> H
-  <span id="minutos">00</span> M
-  <span id="segundos">00</span> S
+  <div class="flex flex-col items-center text-black">
+    <span id="dias">00</span>
+    <span class="text-xl ">DÍAS</span>
+  </div>
+  <div class="flex flex-col items-center text-black">
+    <span id="horas">00</span>
+    <span class="text-xl ">H</span>
+  </div>
+  <div class="flex flex-col items-center text-black">
+    <span id="minutos">00</span>
+    <span class="text-xl ">M</span>
+  </div>
+  <div class="flex flex-col items-center text-black">
+    <span id="segundos">00</span>
+    <span class="text-xl ">S</span>
+  </div>
 </div>
 
 <script>
@@ -20,7 +32,7 @@ const { fecha } = Astro.props;
     const ahora = new Date();
     const diferencia = fechaObjetivo - ahora;
     if (diferencia <= 0) {
-      el.innerHTML = 'LA ESPERA HA FINALIZADO ¡HA LLEGADO EL MOMENTO!';
+      el.innerHTML = '¡HA LLEGADO EL MOMENTO!';
       clearInterval(intervalo);
       return;
     }

@@ -8,25 +8,18 @@ import Conteo from '../components/CuentaRegresiva.astro';
 
 <Layout title="Inicio | Media Maratón Ciudad de Motril">
 
-  <main>
+  <main >
     <Header />
     <!-- Hero de entrada -->
-    <section class="bg-hero-bg bg-cover bg-center h-screen flex flex-col items-center justify-center text-primarioMMM">
-      <h1 class="flex justify-center font-black font-heading text-8xl text-center">41º MEDIA MARATÓN CIUDAD DE MOTRIL</h1>
-      <h2 class="mt-5 text-4xl font-medium text-black ">19 DE OCTUBRE DE 2025</h2>
+    <section class="flex flex-col items-center justify-center text-primarioMMM w-full p-12 md:p-10">
+      <h1 class="flex justify-center font-black font-heading text-center text-6xl md:text-9xl ">41º MEDIA MARATÓN CIUDAD DE MOTRIL</h1>
+      <h2 class="m-4 text-2xl md:text-4xl text-center font-black text-black ">19 DE OCTUBRE DE 2025</h2>
 
-      <ButtonPrimary href="/inscripciones" class = "my-4 text-2xl font-bold">INSCRÍBETE</ButtonPrimary>
+      <ButtonPrimary href="/inscripciones" class = " text-2xl font-bold">INSCRÍBETE</ButtonPrimary>
 
       <Conteo fecha="2025-10-19T10:30:00" />
 
-
     </section>
-    <section class="bg-blue-600 text-white text-center p-4 rounded-lg shadow-lg ">
-          Tailwind funciona correctamente 🚀
-    </section>
-    <section class="bg-primarioMMM text-white p-4 text-center">
-  <h2 class="text-2xl font-bold">¡Funciona primarioMMM!</h2>
-</section>
   </main>
 
   <Footer />
