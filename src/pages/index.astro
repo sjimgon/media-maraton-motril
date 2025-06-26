@@ -3,6 +3,7 @@ import Layout from '../layouts/LayoutMaster.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ButtonPrimary from '../components/ButtonPrimary.astro';
+import ButtonSecondary from '../components/ButtonSecondary.astro';
 import Conteo from '../components/CuentaRegresiva.astro';
 ---
 
@@ -10,14 +11,215 @@ import Conteo from '../components/CuentaRegresiva.astro';
 
   <main >
     <Header />
-    <!-- Hero de entrada -->
-    <section class="flex flex-col items-center justify-center text-primarioMMM w-full p-12 md:p-10">
-      <h1 class="flex justify-center font-black font-heading text-center text-6xl md:text-9xl ">41º MEDIA MARATÓN CIUDAD DE MOTRIL</h1>
-      <h2 class="m-4 text-2xl md:text-4xl text-center font-black text-black ">19 DE OCTUBRE DE 2025</h2>
+    <section 
+      class="
+        text-primarioMMM 
+        w-full 
+        p-12 md:p-10 mt-15 md:mt-40
+        flex flex-col
+        items-center justify-center 
+      "
+    >
+      <h1 
+        class=" 
+        font-heading text-center
+        text-6xl md:text-9xl
+        font-black
+        flex 
+        justify-center 
+        "
+      >
+        41º MEDIA MARATÓN CIUDAD DE MOTRIL
+      </h1>
+      <h2
+        class="
+        text-center
+        text-2xl md:text-4xl 
+        font-black text-black
+        m-4 
+        "
+      >
+        19 DE OCTUBRE DE 2025
+      </h2>
 
-      <ButtonPrimary href="/inscripciones" class = " text-2xl font-bold">INSCRÍBETE</ButtonPrimary>
+      <ButtonPrimary
+        href="/inscripciones"
+        class = "text-2xl font-bold"
+      >
+        INSCRÍBETE
+      </ButtonPrimary>
 
       <Conteo fecha="2025-10-19T10:30:00" />
+    </section>
+
+    <section
+      id="recorrido"
+      class="
+        bg-primarioMMM
+        text-white
+        p-8 md:p-16 mt-8
+        flex flex-col md:flex-row
+        justify-center items-center
+      "
+    >
+      <div
+        id="info-recorrido"
+        class="
+        gap-y-5 md:w-1/3
+        md:mb-10
+        flex flex-col items-center md:items-start
+        "
+      >
+        <h2
+          class="
+            text-5xl font-black
+            text-center md:text-left
+          "
+        >
+          RECORRIDO
+        </h2>
+
+        <p
+          class="
+            text-lg
+            text-center md:text-left
+          "
+        >
+          El recorrido de la Media Maratón Ciudad de Motril es un circuito que combina tramos por el centro urbano y zonas costeras, ofreciendo una experiencia única a los corredores.
+        </p>
+
+        <ButtonSecondary
+          href="/recorrido"
+          class="text-center md:text-left text-lg font-bold mt-4 w-1/2"
+        >
+          Conocer más
+        </ButtonSecondary>
+      </div>
+
+      <div
+        id="recorrido-section"
+        class="
+          m-5
+          flex flex-col items-center
+        "
+      >
+        <figure
+          id="recorrido-container"
+          class="w-70 md:w-100"
+        >
+          <img
+            id="recorrido-10k"
+            class="transition-all duration-500 cursor-pointer"
+            src="/images/index/recorrido/Recorrido1.webp"
+            alt="Recorrido Media Maratón Ciudad de Motril de 10 kilómetros"
+          />
+
+          <img
+            id="recorrido-21k"
+            class="transition-all duration-500 cursor-pointer"
+            src="/images/index/recorrido/Recorrido2.webp"
+            alt="Recorrido Media Maratón Ciudad de Motril de 21 kilómetros"
+          />
+        </figure>
+        <div 
+          id="recorrido-buttons"
+          class="
+            flex flex-row
+            justify-center items-center
+            gap-4 mt-4
+          "
+        >
+          <ButtonSecondary
+            id="mostrar-10k"
+          >
+            10k
+          </ButtonSecondary>
+
+          <ButtonSecondary
+            id="mostrar-21k"
+          >
+          21k
+          </ButtonSecondary>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const recorrido10k = document.getElementById('recorrido-10k');
+      const recorrido21k = document.getElementById('recorrido-21k');
+      const mostrar10k = document.getElementById('mostrar-10k');
+      const mostrar21k = document.getElementById('mostrar-21k');
+
+      function mostrarSolo10k() {
+        recorrido10k.classList.remove('hidden');
+        recorrido21k.classList.add('hidden');
+      }
+
+      function mostrarSolo21k() {
+        recorrido21k.classList.remove('hidden');
+        recorrido10k.classList.add('hidden');
+      }
+
+      function ampliarRecorrido(e) {
+        // Solo amplía la imagen sobre la que se hizo click
+        e.currentTarget.classList.toggle('scale-135');
+        e.currentTarget.classList.toggle('shadow-2xl');
+        e.currentTarget.classList.toggle('z-10');
+      }
+
+      mostrar10k?.addEventListener('click', mostrarSolo10k);
+      mostrar21k?.addEventListener('click', mostrarSolo21k);
+      recorrido10k?.addEventListener('click', ampliarRecorrido);
+      recorrido21k?.addEventListener('click', ampliarRecorrido);
+
+      // Inicialmente mostrar solo el recorrido de 21k
+      mostrarSolo21k();
+    </script>
+
+
+    <section
+      id="voluntarios"
+      class="
+        bg-white text-primarioMMM
+        p-8 md:p-16 mt-8
+      "
+    >
+      <div 
+        class="
+          mx-auto
+        "
+      >
+        <h2
+          class="
+          text-4xl font-bold text-center 
+          mb-6 
+          "
+        >
+          Voluntarios
+        </h2>
+
+    </section>
+
+    <section 
+      id="preguntas"
+      class="
+      bg-primarioMMM text-white 
+      p-8 md:p-16 mt-8
+      "
+    >
+      <div
+        class="
+        container mx-auto
+        "
+      >
+        <h2 
+          class="
+          text-4xl font-bold text-center
+          mb-6 
+          "
+        >
+          Preguntas Frecuentes
+        </h2>
 
     </section>
   </main>

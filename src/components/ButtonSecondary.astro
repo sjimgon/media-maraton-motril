@@ -2,7 +2,8 @@
 const { 
   href = undefined, 
   type = "button", 
-  class: additionalClass = '' 
+  class: additionalClass = '',
+  id = ""
 } = Astro.props;
 
 const baseClass = "font-bold bg-white text-primarioMMM px-4 py-2 rounded-lg ring hover:bg-primarioMMM hover:text-white transition-colors";
@@ -10,14 +11,16 @@ const baseClass = "font-bold bg-white text-primarioMMM px-4 py-2 rounded-lg ring
 
 {href ? (
   <a 
-    href={href} 
+    href={href}
+    id={id}       
     class={`${baseClass} ${additionalClass}`}
   >
     <slot />
   </a>
 ) : (
   <button 
-    type={type} 
+    type={type}
+    id={id} 
     class={`${baseClass} ${additionalClass}`}
   >
     <slot />
