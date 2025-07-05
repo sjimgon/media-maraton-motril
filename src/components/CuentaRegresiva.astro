@@ -4,24 +4,24 @@ const { fecha } = Astro.props;
 
 <div
   id="cuenta-regresiva"
-  class="flex gap-4 font-semibold text-4xl m-3"
+  class="flex gap-4 font-semibold text-4xl"
   data-fecha={fecha}
 >
-  <div class="flex flex-col items-center text-black">
+  <div class="flex flex-col items-center text-negroMMM font-heading ">
     <span id="dias">00</span>
-    <span class="text-xl ">DÍAS</span>
+    <span class="text-xl">DÍAS</span>
   </div>
-  <div class="flex flex-col items-center text-black">
+  <div class="flex flex-col items-center text-negroMMM font-heading">
     <span id="horas">00</span>
     <span class="text-xl ">H</span>
   </div>
-  <div class="flex flex-col items-center text-black">
+  <div class="flex flex-col items-center text-negroMMM font-heading">
     <span id="minutos">00</span>
     <span class="text-xl ">M</span>
   </div>
-  <div class="flex flex-col items-center text-black">
+  <div class="flex flex-col items-center text-negroMMM font-heading">
     <span id="segundos">00</span>
-    <span class="text-xl ">S</span>
+    <span class="text-xl">S</span>
   </div>
 </div>
 

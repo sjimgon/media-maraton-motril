@@ -1,53 +1,159 @@
 ---
-import logo from '../assets/marca/MMM - White.svg';
-import ButtonSecondary from './ButtonSecondary.astro';
+// filepath: /home/ser/media-maraton-motril/src/components/Footer.astro
+import ButtonPrimaryNegativo from './ButtonPrimaryNegativo.astro';
 ---
-<footer class="bg-cover bg-[url('/images/Footer.webp')] w-full flex flex-col">
-  <div class="footer-content text-white flex flex-col md:flex-row justify-evenly p-5 items-center gap-y-6 md:gap-y-0">
+<footer
+  class="
+    bg-cover
+    bg-[url('/images/Footer.webp')]
+    w-full
+    flex flex-col
+  "
+>
+  <div
+    id="footer-top"
+    class="
+      text-blancoMMM
+      m-5
+      flex flex-col md:flex-row
+      md:justify-evenly
+      gap-x-15
+      items-center
+      
+    "
+  >
     <a href="/">
-      <img src={logo.src} alt="Logo Media Maratón Ciudad de Motril" class="h-[80px] mb-4 md:mb-0">
+      <img
+        src="/svg/marca/MMM - White.svg"
+        alt="Logo Media Maratón Ciudad de Motril"
+        class="h-[80px] mb-4 md:mb-0"
+      />
     </a>
 
-<section class="link-section hidden md:flex flex-col md:flex-row w-full md:w-auto m-5 md:gap-x-15 gap-y-4 md:gap-y-0 items-center md:items-start text-center md:text-left">
-  <div class="link-section-1 flex flex-col [&>a]:inline [&>a]:hover:opacity-80 [&>a]:cursor-pointer mb-4 md:mb-0">
-    <a href="/">Inicio</a>
-    <a href="/inscripciones">Inscripciones</a>
-    <a href="/recorrido">Recorrido</a>
-    <a href="/servicios">Servicios al corredor</a>
-  </div>
-  <div class="link-section-2 flex flex-col [&>a]:inline [&>a]:hover:opacity-80 [&>a]:cursor-pointer">
-    <a href="/normativa">Normativa</a>
-    <a href="/campeones">Ruta de los campeones</a>
-    <a href="/multimedia">Multimedia</a>
-    <a href="/contacto">Contacto</a>
-  </div>
-</section>
+    <section
+      id="links-footer"
+      class="
+        hidden md:flex flex-row
+        gap-x-5
+      "
+    >
+      <div class="link-section-1 flex flex-col mb-4 md:mb-0">
+        <a
+          href="/"
+          class="inline hover:text-primarioMMM-200 cursor-pointer"
+        >
+          Inicio
+        </a>
+        <a
+          href="/inscripciones"
+          class="inline hover:opacity-80 cursor-pointer"
+        >
+          Inscripciones
+        </a>
+        <a
+          href="/recorrido"
+          class="inline hover:opacity-80 cursor-pointer"
+        >
+          Recorrido
+        </a>
+        <a
+          href="/servicios"
+          class="inline hover:opacity-80 cursor-pointer"
+        >
+          Servicios al corredor
+        </a>
+      </div>
+      <div class="link-section-2 flex flex-col">
+        <a
+          href="/normativa"
+          class="inline hover:opacity-80 cursor-pointer"
+        >
+          Normativa
+        </a>
+        <a
+          href="/campeones"
+          class="inline hover:opacity-80 cursor-pointer"
+        >
+          Ruta de los campeones
+        </a>
+        <a
+          href="/voluntarios"
+          class="inline hover:opacity-80 cursor-pointer"
+        >
+          Voluntarios
+        </a>
+        <a
+          href="/contacto"
+          class="inline hover:opacity-80 cursor-pointer"
+        >
+          Contacto
+        </a>
+      </div>
+    </section>
 
-    <section class="faq flex flex-col items-center gap-y-2 w-full md:w-auto text-center">
-      <p class="text-xl font-black">¿Tienes dudas?</p>
-      <ButtonSecondary href="/contacto" class="mt-2">
-        Pregúntanos
-      </ButtonSecondary>
+    <section
+      id="inscripciones-footer"
+      class="
+        m-2
+        flex flex-col items-center
+      "
+    >
+      <p class="text-center">La cuenta atrás ya ha comenzado.</p>
+      <p class="text-xl font-bold">
+        NO LO DEJES PASAR
+      </p>
+      <ButtonPrimaryNegativo
+        href="/inscripciones"
+        class="mt-4 w-auto"
+      >
+        INSCRÍBETE
+      </ButtonPrimaryNegativo>
     </section>
   </div>
 
-  <hr class="w-full border-t border-white/60 mx-auto">
+  <hr class="w-full border-t border-blancoMMM/60 mx-auto" />
 
-  <section class="footer-sub flex flex-col md:flex-row justify-center items-center m-5 gap-y-4 md:gap-x-4 text-center md:text-right">
-    <div class="text-white text-xs">
+  <section
+    id="footer-bottom"
+    class="
+      flex flex-col md:flex-row
+      justify-center items-center
+      m-5
+      gap-y-4 md:gap-x-4
+      text-center
+    "
+  >
+    <div class="text-blancoMMM text-xs">
       <p>Área de Deportes, Ayuntemiento de Motril</p>
-      <p>© <span id="year"></span> Todos los derechos reservados</p>
+      <p>
+        © <span id="year"></span> Todos los derechos reservados
+      </p>
     </div>
     <script is:inline>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
     <div class="social-links flex flex-row justify-center md:justify-end items-center gap-x-4">
-      <a href="https://www.facebook.com/MediaMaratonMotril" target="_blank">
-        <img src="/src/assets/rrss/fb-round.svg" alt="Facebook" class="h-7 hover:scale-125 transition-transform">
+      <a
+        href="https://www.facebook.com/MediaMaratonMotril"
+        target="_blank"
+        class="inline-block"
+      >
+        <img
+          src="/svg/rrss/fb-round.svg"
+          alt="Facebook"
+          class="h-7 hover:scale-125 transition-transform"
+        />
       </a>
-      <a href="https://www.instagram.com/motrilmedia/" target="_blank">
-        <img src="/src/assets/rrss/ig-round.svg" alt="Instagram" class="h-7 hover:scale-125 transition-transform">
+      <a
+        href="https://www.instagram.com/motrilmedia/"
+        target="_blank"
+        class="inline-block"
+      >
+        <img
+          src="/svg/rrss/ig-round.svg"
+          alt="Instagram"
+          class="h-7 hover:scale-125 transition-transform"
+        />
       </a>
     </div>
   </section>
-</footer>

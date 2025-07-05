@@ -1,82 +1,330 @@
 ---
 // filepath: /home/ser/media-maraton-motril/src/components/Header.astro
-import logo from '../assets/marca/MMM - Blue.svg';
 ---
 
-<header id="main-header" class="fixed top-0 left-0 w-full z-40 flex justify-center bg-white backdrop-blur transition-all duration-300">
-  <nav id="main-nav" class="flex items-center w-full py-0 relative transition-all duration-300">
+<header
+  id="main-header"
+  class="
+    fixed top-0 left-0 w-full z-40
+    flex justify-center
+    bg-blancoMMM
+    backdrop-blur
+    transition-all duration-300
+  "
+>
+  <nav
+    id="main-nav"
+    class="
+      flex items-center w-full py-0
+      relative
+      transition-all duration-300
+    "
+  >
 
     <!-- Botón hamburguesa solo móvil -->
     <button
       id="menu-toggle"
-      class="md:hidden fixed right-4 top-4 z-30 flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-lg"
+      class="
+        md:hidden
+        fixed right-4 top-4 z-30
+        flex items-center justify-center
+        w-14 h-14
+        bg-blancoMMM
+        rounded-full shadow-lg
+      "
       aria-label="Abrir menú"
       type="button"
     >
       <div class="flex flex-col items-center justify-center w-8 h-8">
-        <span class="block w-8 h-1 bg-primarioMMM mb-1 rounded transition-all duration-300"></span>
-        <span class="block w-8 h-1 bg-primarioMMM mb-1 rounded transition-all duration-300"></span>
-        <span class="block w-8 h-1 bg-primarioMMM rounded transition-all duration-300"></span>
+        <span class="block w-8 h-1 bg-primarioMMM-500 mb-1 rounded transition-all duration-300"></span>
+        <span class="block w-8 h-1 bg-primarioMMM-500 mb-1 rounded transition-all duration-300"></span>
+        <span class="block w-8 h-1 bg-primarioMMM-500 rounded transition-all duration-300"></span>
       </div>
     </button>
 
     <!-- Menú móvil -->
     <ul
       id="main-menu-mobile"
-      class="w-screen flex flex-col items-center justify-evenly bg-white fixed top-0 right-0 h-screen transition-transform duration-300 translate-x-full z-10 md:hidden"
+      class="
+        w-screen
+        flex flex-col items-center justify-evenly
+        bg-blancoMMM
+        fixed top-0 right-0 h-screen
+        transition-transform duration-300
+        translate-x-full
+        z-10
+        md:hidden
+      "
     >
       <li>
         <button
           id="prueba-toggle"
           type="button"
-          class="font-black text-primarioMMM hover:text-gray-400 mb-5 cursor-pointer w-full transition-all duration-300"
+          class="
+            font-black text-primarioMMM-500
+            hover:text-primarioMMM-600
+            mb-5 cursor-pointer w-full
+            transition-all duration-300
+          "
           aria-expanded="false"
         >
           PRUEBA
         </button>
         <ul
           id="prueba-dropdown"
-          class="bg-white rounded shadow-lg z-10 max-h-0 overflow-hidden transition-all duration-300"
+          class="
+            bg-blancoMMM
+            rounded shadow-lg z-10
+            max-h-0 overflow-hidden
+            transition-all duration-300
+          "
         >
-          <li><a href="/recorrido" class="block px-4 py-2 font-black text-primarioMMM hover:text-gray-400 hover:bg-gray-100 transition-all duration-300">Recorrido</a></li>
-          <li><a href="/servicios" class="block px-4 py-2 font-black text-primarioMMM hover:text-gray-400 hover:bg-gray-100 transition-all duration-300">Servicios al corredor</a></li>
-          <li><a href="/normativa" class="block px-4 py-2 font-black text-primarioMMM hover:text-gray-400 hover:bg-gray-100 transition-all duration-300">Normativa</a></li>
-          <li><a href="/campeones" class="block px-4 py-2 font-black text-primarioMMM hover:text-gray-400 hover:bg-gray-100 transition-all duration-300">Ruta de los campeones</a></li>
+          <li>
+            <a
+              href="/recorrido"
+              class="
+                block
+                px-4 py-2
+                font-bold text-primarioMMM-500 text-sm
+                hover:text-primarioMMM-600 hover:bg-primarioMMM-50 transition-all duration-300
+              "
+            >
+              RECORRIDO
+            </a>
+          </li>
+          <li>
+            <a
+              href="/servicios"
+              class="
+                block
+                px-4 py-2
+                font-bold text-primarioMMM-500 text-sm
+                hover:text-primarioMMM-600 hover:bg-primarioMMM-50 transition-all duration-300
+              "
+            >
+              SERVICIOS AL CORREDOR
+            </a>
+          </li>
+          <li>
+            <a
+              href="/normativa"
+              class="
+                block
+                px-4 py-2
+                font-bold text-primarioMMM-500 text-sm
+                hover:text-primarioMMM-600 hover:bg-primarioMMM-50 transition-all duration-300
+              "
+            >
+              NORMATIVA
+            </a>
+          </li>
+          <li>
+            <a
+              href="/campeones"
+              class="
+                block
+                px-4 py-2
+                font-bold text-primarioMMM-500 text-sm
+                hover:text-primarioMMM-600 hover:bg-primarioMMM-50 transition-all duration-300
+              "
+            >
+              RUTA DE LOS CAMPEONES
+            </a>
+          </li>
+          <li>
+            <a
+              href="/voluntarios"
+              class="
+                block
+                px-4 py-2
+                font-bold text-primarioMMM-500 text-sm
+                hover:text-primarioMMM-600 hover:bg-primarioMMM-50 transition-all duration-300
+              "
+            >
+              VOLUNTARIOS
+            </a>
+          </li>
         </ul>
       </li>
-      <li><a href="/inscripciones" class="font-black text-primarioMMM hover:text-gray-400 m-5 transition-all duration-300">INSCRIPCIONES</a></li>
       <li>
-        <a href="/" class="font-black text-primarioMMM hover:text-gray-400 m-5 transition-all duration-300">
-          <img src={logo.src} alt="Media Maratón Ciudad de Motril" class="h-14 w-min-16px transition-all duration-300">
+        <a href="/inscripciones" class="font-black text-primarioMMM-500 hover:text-primarioMMM-600 m-5 transition-all duration-300">INSCRIPCIONES</a>
+      </li>
+      <li>
+        <a href="/" class="font-black text-primarioMMM-500 hover:text-primarioMMM-600 m-5 transition-all duration-300">
+          <img
+            src="/svg/marca/MMM - Blue.svg"
+            alt="Logo Media Maratón Ciudad de Motril"
+            class="h-14 w-min-16px transition-all duration-300"
+          />
         </a>
       </li>
-      <li><a href="/multimedia" class="font-black text-primarioMMM hover:text-gray-400 m-5 transition-all duration-300">MULTIMEDIA</a></li>
-      <li><a href="/contacto" class="font-black text-primarioMMM hover:text-gray-400 m-5 transition-all duration-300">CONTACTO</a></li>
+      <li>
+        <a href="/multimedia" class="font-black text-primarioMMM-500 hover:text-primarioMMM-600 m-5 transition-all duration-300">MULTIMEDIA</a>
+      </li>
+      <li>
+        <a href="/contacto" class="font-black text-primarioMMM-500 hover:text-primarioMMM-600 m-5 transition-all duration-300">CONTACTO</a>
+      </li>
     </ul>
 
     <!-- Menú escritorio -->
-    <ul class="w-screen flex-row items-center justify-evenly md:flex md:static md:h-auto md:bg-transparent hidden transition-all duration-300">
+    <ul
+      class="
+        w-screen flex-row items-center justify-evenly
+        md:flex md:static md:h-auto md:bg-transparent
+        hidden
+        transition-all duration-300
+      "
+    >
       <li class="relative group">
-        <p class="font-black text-primarioMMM hover:text-gray-400 m-5 transition-all duration-300 hover:scale-105">PRUEBA</p>
-        <ul class="absolute left-0 min-w-max bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-opacity z-10">
-          <li><a href="/recorrido" class="block px-4 py-2 font-black text-primarioMMM hover:text-gray-400 hover:bg-gray-100 hover:scale-105 transition-all duration-300">Recorrido</a></li>
-          <li><a href="/servicios" class="block px-4 py-2 font-black text-primarioMMM hover:text-gray-400 hover:bg-gray-100 hover:scale-105 transition-all duration-300">Servicios al corredor</a></li>
-          <li><a href="/normativa" class="block px-4 py-2 font-black text-primarioMMM hover:text-gray-400 hover:bg-gray-100 hover:scale-105 transition-all duration-300">Normativa</a></li>
-          <li><a href="/campeones" class="block px-4 py-2 font-black text-primarioMMM hover:text-gray-400 hover:bg-gray-100 hover:scale-105 transition-all duration-300">Ruta de los campeones</a></li>
+        <p
+          class="
+            font-black
+            text-primarioMMM-500
+            hover:text-primarioMMM-600
+            m-5
+            transition-all duration-300
+            hover:scale-105
+          "
+        >
+          PRUEBA
+        </p>
+        <ul
+          class="
+            absolute left-0 min-w-max
+            bg-blancoMMM
+            rounded shadow-lg
+            opacity-0 group-hover:opacity-100
+            group-hover:pointer-events-auto pointer-events-none
+            transition-opacity z-10
+          "
+        >
+          <li>
+            <a
+              href="/recorrido"
+              class="
+                block
+                px-4 py-2
+                font-black text-primarioMMM-500
+                hover:text-primarioMMM-600 hover:bg-primarioMMM-50 hover:scale-105
+                transition-all duration-300
+              "
+            >
+              Recorrido
+            </a>
+          </li>
+          <li>
+            <a
+              href="/servicios"
+              class="
+                block
+                px-4 py-2
+                font-black text-primarioMMM-500
+                hover:text-primarioMMM-600 hover:bg-primarioMMM-50 hover:scale-105
+                transition-all duration-300
+              "
+            >
+              Servicios al corredor
+            </a>
+          </li>
+          <li>
+            <a
+              href="/normativa"
+              class="
+                block
+                px-4 py-2
+                font-black text-primarioMMM-500
+                hover:text-primarioMMM-600 hover:bg-primarioMMM-50 hover:scale-105
+                transition-all duration-300
+              "
+            >
+              Normativa
+            </a>
+          </li>
+          <li>
+            <a
+              href="/campeones"
+              class="
+                block
+                px-4 py-2
+                font-black text-primarioMMM-500
+                hover:text-primarioMMM-600 hover:bg-primarioMMM-50 hover:scale-105
+                transition-all duration-300
+              "
+            >
+              Ruta de los campeones
+            </a>
+          </li>
+          <li>
+            <a
+              href="/voluntarios"
+              class="
+                block
+                px-4 py-2
+                font-black text-primarioMMM-500
+                hover:text-primarioMMM-600 hover:bg-primarioMMM-50 hover:scale-105
+                transition-all duration-300
+              "
+            >
+              Voluntarios
+            </a>
+          </li>
         </ul>
       </li>
-      <a href="/inscripciones" class="font-black text-primarioMMM hover:text-gray-400 m-1 text-sm transition-all duration-300 hover:scale-105">
+      <a
+        href="/inscripciones"
+        class="
+          font-black
+          text-primarioMMM-500
+          hover:text-primarioMMM-600
+          m-1 text-sm
+          transition-all duration-300
+          hover:scale-105
+        "
+      >
         INSCRIPCIONES
       </a>
       <li>
-        <a href="/" class="font-black text-primarioMMM hover:text-gray-400 m-1 text-sm transition-all duration-300">
-          <img src={logo.src} alt="Media Maratón Ciudad de Motril" class="h-14 w-min-16px transition-all duration-300 hover:scale-105">
+        <a
+          href="/"
+          class="
+            font-black
+            text-primarioMMM-500
+            hover:text-primarioMMM-600
+            m-1 text-sm
+            transition-all duration-300
+          "
+        >
+          <img
+            src="/svg/marca/MMM - Blue.svg"
+            alt="Logo Media Maratón Ciudad de Motril"
+            class="h-14 w-min-16px transition-all duration-300 hover:scale-105"
+          />
         </a>
       </li>
-      <a href="/multimedia" class="font-black text-primarioMMM hover:text-gray-400 m-1 text-sm transition-all duration-300 hover:scale-105">
+      <a
+        href="/multimedia"
+        class="
+          font-black
+          text-primarioMMM-500
+          hover:text-primarioMMM-600
+          m-1 text-sm
+          transition-all duration-300
+          hover:scale-105
+        "
+      >
         MULTIMEDIA
       </a>
-      <a href="/contacto" class="font-black text-primarioMMM hover:text-gray-400 m-1 text-sm transition-all duration-300 hover:scale-105">
+      <a
+        href="/contacto"
+        class="
+          font-black
+          text-primarioMMM-500
+          hover:text-primarioMMM-600
+          m-1 text-sm
+          transition-all duration-300
+          hover:scale-105
+        "
+      >
         CONTACTO
       </a>
     </ul>
@@ -127,7 +375,7 @@ import logo from '../assets/marca/MMM - Blue.svg';
 
   function setOriginalSize() {
     if (header) {
-      header.classList.remove('bg-white/60', 'backdrop-blur-md');
+      header.classList.remove('bg-blancoMMM/60', 'backdrop-blur-md');
     }
     if (nav) {
       nav.classList.remove('py-1', 'py-2', 'py-3', 'p-5');
@@ -146,7 +394,7 @@ import logo from '../assets/marca/MMM - Blue.svg';
 
   function setReducedSize() {
     if (header) {
-      header.classList.add('bg-white/60', 'backdrop-blur-md');
+      header.classList.add('bg-blancoMMM/60', 'backdrop-blur-md');
     }
     if (nav) {
       nav.classList.remove('py-3', 'p-5', 'py-1', 'py-2');

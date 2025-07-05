@@ -26,12 +26,37 @@
 
 @theme {
   /* Colores */
-  --color-primarioMMM: #0077bd;
-  --color-secundarioMMM: #33b4ff;
+
+    /* PrimarioMMM escala */
+  --color-primarioMMM-50:  #CAEBFF;
+  --color-primarioMMM-100: #94D7FF;
+  --color-primarioMMM-200: #5FC4FF;
+  --color-primarioMMM-300: #29B0FF;
+  --color-primarioMMM-400: #0099F3;
+  --color-primarioMMM-500: #0077BD;
+  --color-primarioMMM-600: #0083DE;
+  --color-primarioMMM-700: #004F7E;
+  --color-primarioMMM-800: #00385F;
+  --color-primarioMMM-900: #00283F;
+  
+  /*SecundarioMMM escala-Naranja amarillento*/
+  --color-secundarioMMM-50:  #FFF0D9;
+  --color-secundarioMMM-100: #FFE0B3;
+  --color-secundarioMMM-200: #FFD08C;
+  --color-secundarioMMM-300: #FFC966;
+  --color-secundarioMMM-400: #FFB84D;
+  --color-secundarioMMM-500: #FFA633;
+  --color-secundarioMMM-600: #FF8C00;
+  --color-secundarioMMM-700: #CC6F00;
+  --color-secundarioMMM-800: #995200;
+  --color-secundarioMMM-900: #663600;
+
+  --color-blancoMMM: #ffffff;
+  --color-negroMMM: #000000;
 
   /* Fuentes personalizadas */
   --font-sans: 'DMSans-Variable', system-ui, sans-serif;
-  --font-display: 'DMSans Italic-Variable', system-ui, sans-serif;
+  --font-italic: 'DMSans Italic-Variable', system-ui, sans-serif;
   --font-heading: 'ClashDisplay-Variable', system-ui, sans-serif;
 }
 html,
