@@ -1,9 +1,11 @@
 ---
+// filepath: /src/pages/servicios.astro
 import Layout from '../layouts/LayoutMaster.astro';
+import Card from '../components/Card.astro';
+import Icon from '../components/Iconos.astro';
 ---
 
 <Layout title="Servicios al corredor | Media Maratón Ciudad de Motril">
-
   <main>
     <h1 
       class="
@@ -11,16 +13,86 @@ import Layout from '../layouts/LayoutMaster.astro';
         font-heading text-4xl md:text-6xl font-extrabold
         text-center
         pt-20 md:pt-25
-        "
+      "
+    >
+      SERVICIOS AL CORREDOR
+    </h1>
+    <section 
+      id="servicios_cards"
+      class="p-8 grid grid-cols-1 md:grid-cols-3 gap-8 w-auto"
+    >
+      <Card
+        color="primary"
+        title="Guardarropa"
+        description="Ubicado en el salón social del recinto portuario. Abierto de 8:00 a 14:00 h."
+        class="order-1 md:order-1"
       >
-        SERVICIOS AL CORREDOR
-      </h1>
-
-      <section
-        id="circuito-21k
-      ">
-         
-      </section>
+        <Icon slot="image" name="guardarropa" class="w-30 md:w-23 mb-4" />
+      </Card>
+      <Card
+        color="secondary"
+        title="Zona de Calentamiento"
+        description="Tráfico cerrado 2h antes en Avda. Norman Betune para calentamiento seguro. Avituallamiento disponible."
+        class:list={"order-2 md:order-2"}
+        >
+        <Icon slot="image" name="calentamiento" class="w-14 md:w-12 mb-4" />
+      </Card>
+      <Card
+        color="tertiary"
+        title="Puntos de Control"
+        description="Varios pasos obligatorios de control durante el recorrido para garantizar la seguridad."
+        class:list={"order-3 md:order-3"}
+      >
+        <Icon slot="image" name="checkpoint" class="w-18 md:w-16 mb-4" />
+      </Card>
+      <Card
+        color="tertiary"
+        title="Duchas"
+        description="Disponibles en las instalaciones del Real Club Náutico (Recinto Portuario)."
+        class="order-6 md:order-4"
+      >
+        <Icon slot="image" name="ducha" class="w-16 md:w-12 mb-4" />
+      </Card>
+      <Card
+        color="primary"
+        title="Avituallamientos"
+        description="En carrera cada 2,5 km y avituallamiento final con fruta, agua, isotónico, barritas y geles."
+        class:list={"order-4 md:order-5"}
+      >
+        <Icon slot="image" name="agua" class="w-10 md:w-10 mb-4" />
+      </Card>
+      <Card
+        color="secondary"
+        title="Medalla Finisher"
+        description="Medalla para cada atleta que finalice la prueba."
+        class:list={"order-5 md:order-6"}
+      >
+        <Icon slot="image" name="medalla" class="w-16 md:w-18 mb-4" />
+      </Card>
+      <Card
+        color="secondary"
+        title="Feria de la Pasta"
+        description="Bol de pasta gratuito para cada atleta inscrito."
+        class:list={"order-9 md:order-7"}
+      >
+        <Icon slot="image" name="pasta" class="w-22 md:w-22 mb-4" />
+      </Card>
+      <Card
+        color="tertiary"
+        title="Masajes"
+        description="Servicio de masajes gratuito en la zona de recuperación."
+        class:list={"order-8 md:order-8"}
+      >
+        <Icon slot="image" name="masaje" class="w-22 md:w-24 mb-4" />
+      </Card>
+      <Card
+        color="primary"
+        title="Retransmisión y Resultados"
+        description="Sigue la prueba en Onda Sur Motril (107.7 FM), YouTube (Cruzando la Meta) y consulta resultados en la App de Cruzando la Meta."
+        class:list={"order-7 md:order-9"}
+      >
+        <Icon slot="image" name="radio" class="w-20 md:w-22 mb-4" />
+      </Card>
+    </section>
   </main>
-
 </Layout>
