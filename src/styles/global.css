@@ -25,34 +25,46 @@
 }
 
 @theme {
-  /* Colores */
+   /* Colores */
 
-    /* PrimarioMMM escala */
-  --color-primarioMMM-50:  #CAEBFF;
-  --color-primarioMMM-100: #94D7FF;
-  --color-primarioMMM-200: #5FC4FF;
-  --color-primarioMMM-300: #29B0FF;
-  --color-primarioMMM-400: #0099F3;
-  --color-primarioMMM-500: #0077BD;
-  --color-primarioMMM-600: #0083DE;
-  --color-primarioMMM-700: #004F7E;
-  --color-primarioMMM-800: #00385F;
-  --color-primarioMMM-900: #00283F;
+    /* PrimarioMMM 41 EDICION - AZUL  */
+  --color-primarioMMM-50:  #248ccc;
+  --color-primarioMMM-100: #1c7fc3;
+  --color-primarioMMM-200: #1673ba;
+  --color-primarioMMM-300: #1367b0;
+  --color-primarioMMM-400: #135ba7;
+  --color-primarioMMM-500: #144f9f;
+  --color-primarioMMM-600: #184687;
+  --color-primarioMMM-700: #1a3c71;
+  --color-primarioMMM-800: #1a335c;
+  --color-primarioMMM-900: #192b49;
   
-  /*SecundarioMMM escala-Naranja amarillento*/
-  --color-secundarioMMM-50:  #FFF0D9;
-  --color-secundarioMMM-100: #FFE0B3;
-  --color-secundarioMMM-200: #FFD08C;
-  --color-secundarioMMM-300: #FFC966;
-  --color-secundarioMMM-400: #FFB84D;
-  --color-secundarioMMM-500: #FFA633;
-  --color-secundarioMMM-600: #FF8C00;
-  --color-secundarioMMM-700: #CC6F00;
-  --color-secundarioMMM-800: #995200;
-  --color-secundarioMMM-900: #663600;
+  /*SecundarioMMM 41 EDICION - MAGENTA*/
+  --color-secundarioMMM-50:  #e75499;
+  --color-secundarioMMM-100: #e54c8d;
+  --color-secundarioMMM-200: #e34481;
+  --color-secundarioMMM-300: #e03c76;
+  --color-secundarioMMM-400: #de356b;
+  --color-secundarioMMM-500: #dc2e60;
+  --color-secundarioMMM-600: #bc2651;
+  --color-secundarioMMM-700: #9f1f43;
+  --color-secundarioMMM-800: #831835;
+  --color-secundarioMMM-900: #681128;
 
-  --color-blancoMMM: #ffffff;
-  --color-negroMMM: #000000;
+ /*TerciarioMMM 41 EDICION - Amarillo*/
+  --color-terciarioMMM-50:  #efe752;
+  --color-terciarioMMM-100: #eee64a;
+  --color-terciarioMMM-200: #ede542;
+  --color-terciarioMMM-300: #ede439;
+  --color-terciarioMMM-400: #ece42f;
+  --color-terciarioMMM-500: #ebe325;
+  --color-terciarioMMM-600: #c0b825;
+  --color-terciarioMMM-700: #999223;
+  --color-terciarioMMM-800: #777120;
+  --color-terciarioMMM-900: #59541b;
+
+  --color-blancoMMM: #f2f2fa;
+  --color-negroMMM: #0e0e1e;
 
   /* Fuentes personalizadas */
   --font-sans: 'DMSans-Variable', system-ui, sans-serif;
@@ -65,5 +77,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #f2f2fa;
 }
 
