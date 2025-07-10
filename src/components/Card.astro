@@ -1,0 +1,45 @@
+---
+import Iconos from "./Iconos.astro";
+
+type colorCard = "primary" | "secondary" | "tertiary";
+
+const {
+    color = "",
+    title,
+    description,
+    class: className = "",
+} = Astro.props as {
+    color?: colorCard;
+    title: string;
+    description: string;
+    class?: string;
+};
+
+let baseClass = "";
+
+if (color === "primary") {
+    baseClass = "bg-radial from-primarioMMM-400 to-primarioMMM-500 text-blancoMMM";
+} else if (color === "secondary") {
+    baseClass = "bg-radial from-secundarioMMM-400 to-secundarioMMM-600 text-blancoMMM";
+} else if (color === "tertiary") {
+    baseClass = "bg-radial from-terciarioMMM-50 to-terciarioMMM-500 text-primarioMMM-500";
+}
+---
+
+<div
+    id="carta"
+    class={`
+        flex flex-col items-center justify-center
+        text-center p-6
+        hover:scale-105 transition-transform duration-300 ease-in-out
+        rounded-lg shadow-lg ${baseClass} ${className}`}
+>
+        <slot name="image"/>
+        <div 
+            class=""
+            id="contenido-carta"
+         >
+                <h3 class="text-3xl font-bold mb-2">{title}</h3>
+                <p class="">{description}</p>
+        </div>
+</div>
