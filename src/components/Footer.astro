@@ -1,11 +1,10 @@
 ---
-// filepath: /home/ser/media-maraton-motril/src/components/Footer.astro
-import ButtonPrimaryNegativo from './ButtonPrimaryNegativo.astro';
+import Boton from './Botones.astro';
 ---
 <footer
   class="
     bg-cover
-    bg-[url('/images/Footer.webp')]
+    bg-[url('/images/components/Footers.webp')]
     w-full
     flex flex-col
   "
@@ -102,12 +101,14 @@ import ButtonPrimaryNegativo from './ButtonPrimaryNegativo.astro';
       <p class="text-xl font-bold">
         NO LO DEJES PASAR
       </p>
-      <ButtonPrimaryNegativo
+      <Boton
+        color="primary"
+        version="negativo"
         href="/inscripciones"
         class="mt-4 w-auto"
       >
         INSCRÍBETE
-      </ButtonPrimaryNegativo>
+      </Boton>
     </section>
   </div>
 

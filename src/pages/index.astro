@@ -1,10 +1,7 @@
 ---
 import Layout from '../layouts/LayoutMaster.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import ButtonPrimaryPositivo from '../components/ButtonPrimaryPositivo.astro';
-import ButtonPrimaryNegativo from '../components/ButtonPrimaryNegativo.astro';
-import ButtonSecondaryNegativo from '../components/ButtonSecondaryNegativo.astro';
+import Boton from '../components/Botones.astro';
+
 import Conteo from '../components/CuentaRegresiva.astro';
 ---
 
@@ -12,8 +9,9 @@ import Conteo from '../components/CuentaRegresiva.astro';
 
   <main >
     <section 
-      id="hero"
+      id="hero-index"
       class="
+        
         text-primarioMMM-500 
         w-full
         min-h-screen
@@ -44,12 +42,14 @@ import Conteo from '../components/CuentaRegresiva.astro';
         19 DE OCTUBRE DE 2025
       </h2>
 
-      <ButtonPrimaryPositivo
+      <Boton 
+        color="primary"
+        version="positivo"
         href="/inscripciones"
-        class = "text-3xl md:text-2xl font-bold"
+        class="text-3xl md:text-2xl font-bold"
       >
         INSCRÍBETE
-      </ButtonPrimaryPositivo>
+      </Boton>
       <p
         class="
         text-center
@@ -63,10 +63,11 @@ import Conteo from '../components/CuentaRegresiva.astro';
         <!-- SECCION CONDICIONES METEOROLÓGICAS -->
 
     <section 
-      id="tiempo"
+      id="meteorologia-index"
       class="
-      bg-secundarioMMM-600 text-blancoMMM 
+      bg-radial from-secundarioMMM-100 to-secundarioMMM-600 text-blancoMMM
       p-8 md:p-16 mt-8
+      
       "
     >
       <div
@@ -90,9 +91,9 @@ import Conteo from '../components/CuentaRegresiva.astro';
 
 
     <section
-      id="recorrido"
+      id="recorrido-index"
       class="
-        bg-primarioMMM-500
+        bg-radial from-primarioMMM-400 to-primarioMMM-700
         text-blancoMMM
         md:w-full
         p-8 md:p-12
@@ -101,7 +102,7 @@ import Conteo from '../components/CuentaRegresiva.astro';
       "
     >
       <div
-        id="contenedor-recorrido"
+        id="contenedor-recorrido-index"
         class="
           w-3/5
           gap-y-4 md:gap-x-8
@@ -111,7 +112,7 @@ import Conteo from '../components/CuentaRegresiva.astro';
       >
     
         <div
-          id="info-recorrido"
+          id="info-recorrido-index"
           class="
             flex-1
             gap-y-4
@@ -136,17 +137,18 @@ import Conteo from '../components/CuentaRegresiva.astro';
           >
             Con tramos por el centro urbano y la zona de playa, la Media Maratón Ciudad de Motril ofrece una experiencia única a sus corredores.
           </p>
-
-          <ButtonPrimaryNegativo
-            href="/recorrido"
+          <Boton 
+            color="primary"
+            version="negativo"
+            href="/inscripciones"
             class="text-center md:text-left text-lg font-bold w-auto"
           >
             Conocer más
-          </ButtonPrimaryNegativo>
+          </Boton>
         </div>
 
         <div
-          id="imagenes-recorrido"
+          id="imagenes-recorrido-index"
           class="
             flex-1
             flex flex-col items-center
@@ -154,52 +156,59 @@ import Conteo from '../components/CuentaRegresiva.astro';
           "
         >
           <figure
-            id="recorrido-container"
+            id="recorrido-container-index"
             class="w-72 md:w-96"
           >
             <img
-              id="recorrido-10k"
-              class="transition-all duration-500 cursor-pointer mb-4"
+              id="recorrido-10k-index"
+              class="transition-all duration-500 cursor-pointer "
               src="/images/index/recorrido/Recorrido1.webp"
               alt="Recorrido Media Maratón Ciudad de Motril de 10 kilómetros"
             />
 
             <img
-              id="recorrido-21k"
+              id="recorrido-21k-index"
               class="transition-all duration-500 cursor-pointer"
               src="/images/index/recorrido/Recorrido2.webp"
               alt="Recorrido Media Maratón Ciudad de Motril de 21 kilómetros"
             />
           </figure>
           <div 
-            id="recorrido-buttons"
+            id="recorrido-buttons-index"
             class="
               flex flex-row
               justify-center items-center
               gap-4 mt-4
             "
           >
-            <ButtonPrimaryNegativo
-              id="mostrar-10k"
+
+            <Boton
+              id="mostrar-10k-index"
+              color="primary"
+              version="negativo"
+              class="text-center md:text-left text-lg font-bold w-auto"
             >
               10k
-            </ButtonPrimaryNegativo>
-
-            <ButtonPrimaryNegativo
-              id="mostrar-21k"
+            </Boton>
+            
+            <Boton
+              id="mostrar-21k-index"
+              color="primary"
+              version="negativo"
+              class="text-center md:text-left text-lg font-bold w-auto"
             >
-            21k
-            </ButtonPrimaryNegativo>
+              21k
+            </Boton>
           </div>
         </div>
       </div>
     </section>
 
     <script>
-      const recorrido10k = document.getElementById('recorrido-10k');
-      const recorrido21k = document.getElementById('recorrido-21k');
-      const mostrar10k = document.getElementById('mostrar-10k');
-      const mostrar21k = document.getElementById('mostrar-21k');
+      const recorrido10k = document.getElementById('recorrido-10k-index');
+      const recorrido21k = document.getElementById('recorrido-21k-index');
+      const mostrar10k = document.getElementById('mostrar-10k-index');
+      const mostrar21k = document.getElementById('mostrar-21k-index');
 
       function mostrarSolo10k() {
         recorrido10k.classList.remove('hidden');
@@ -211,11 +220,11 @@ import Conteo from '../components/CuentaRegresiva.astro';
         recorrido10k.classList.add('hidden');
       }
 
-      function ampliarRecorrido(e) {
+      function ampliarRecorrido(images) {
         // Solo amplía la imagen sobre la que se hizo click
-        e.currentTarget.classList.toggle('scale-110');
-        e.currentTarget.classList.toggle('shadow-2xl');
-        e.currentTarget.classList.toggle('z-10');
+        images.currentTarget.classList.toggle('scale-130');
+        images.currentTarget.classList.toggle('shadow-2xl');
+        images.currentTarget.classList.toggle('z-10');
       }
 
       mostrar10k?.addEventListener('click', mostrarSolo10k);
@@ -231,17 +240,18 @@ import Conteo from '../components/CuentaRegresiva.astro';
     <!-- SECCION DE VOLUNTARIOS -->
 
     <section
-  id="voluntarios"
+  id="voluntarios-index"
   class="
-    bg-blancoMMM-500
-    text-primarioMMM-500
+    md:bg-radial from-terciarioMMM-50 to-terciarioMMM-200
+    bg-terciarioMMM-50
+    text-primarioMMM-400
     md:w-full
     p-8 md:p-12
     flex justify-center items-center
   "
 >
   <div
-    id="contenedor-voluntarios"
+    id="contenedor-voluntarios-index"
     class="
       w-3/5
       gap-y-4 md:gap-x-8
@@ -250,7 +260,7 @@ import Conteo from '../components/CuentaRegresiva.astro';
     "
   >
     <div
-      id="info-voluntarios"
+      id="info-voluntarios-index"
       class="
         md:order-2
         flex-1
@@ -263,6 +273,7 @@ import Conteo from '../components/CuentaRegresiva.astro';
         class="
           text-5xl font-black
           text-center md:text-left
+          text-primarioMMM-400
         "
       >
         VOLUNTARIOS
@@ -274,20 +285,21 @@ import Conteo from '../components/CuentaRegresiva.astro';
           text-center md:text-left
         "
       >
-        Contamos con un grupo de profesionales excelentes pero <b class="font-black text-secundarioMMM-600">SIN TU AYUDA NO SERÍA POSIBLE.</b>
+        Contamos con un grupo de profesionales excelentes pero <b class="font-black text-secundarioMMM-200">SIN TU AYUDA NO SERÍA POSIBLE.</b>
         Si quieres colaborar con nosotros, ¡no dudes en inscribirte!
       </p>
 
-      <ButtonPrimaryNegativo
-        href="/voluntarios"
+      <Boton
+        color="tertiary"
+        version="negativo"
         class="text-center md:text-left text-lg font-bold w-auto"
       >
         QUIERO SER VOLUNTARIO
-      </ButtonPrimaryNegativo>
+      </Boton>
     </div>
 
     <div
-      id="imagenes-voluntarios"
+      id="imagenes-voluntarios-index"
       class="
         w-72 md:w-96
         flex-1
@@ -296,7 +308,7 @@ import Conteo from '../components/CuentaRegresiva.astro';
       "
     >
       <figure
-        id="voluntarios-container"
+        id="voluntarios-container-index"
         class=""
       >
         <img
@@ -312,15 +324,16 @@ import Conteo from '../components/CuentaRegresiva.astro';
     <!-- SECCION DE PREGUNTAS -->
 
     <section 
-      id="preguntas"
+      id="preguntas-index"
       class="
-      bg-secundarioMMM-600 text-blancoMMM 
+      bg-radial from-secundarioMMM-500 to-secundarioMMM-600
+      text-blancoMMM 
       p-8
       flex flex-col items-center
       "
     >
       <div
-        id="contenedor-preguntas"
+        id="contenedor-preguntas-index"
         class="
           md:w-3/5
           flex flex-col items-center
@@ -341,19 +354,21 @@ import Conteo from '../components/CuentaRegresiva.astro';
           Si no has encontrado lo que buscabas, visita nuestras redes o deja un mensaje aquí mismo. Responderemos lo antes posible.
         </p>
 
-         <ButtonSecondaryNegativo
+      <Boton
+        color="secondary"
+        version="negativo"
         href="/voluntarios"
         class="w-auto"
       >
         PREGÚNTANOS
-      </ButtonSecondaryNegativo>
+      </Boton>
 
     </section>
 
     <!-- SECCION DE PATROCINADORES -->
 
     <section
-      id="patros"
+      id="patros-index"
       class="
         bg-blancoMMM
         text-primarioMMM-500
@@ -365,7 +380,7 @@ import Conteo from '../components/CuentaRegresiva.astro';
       <h2 class="text-4xl font-bold text-center mb-4">
         PATROCINADORES
       </h2>
-      <div id="patros-principales" class="w-full mb-8">
+      <div id="patros-principales-index" class="w-full mb-8">
         <h3
           id="patros-principales-titulo"
           class="text-medium md:font-lg font-heading font-medium text-center mb-4 md:mb-6"
@@ -373,7 +388,7 @@ import Conteo from '../components/CuentaRegresiva.astro';
           PATROCINADORES PRINCIPALES
         </h3>
         <div
-          id="patros-principales-logos"
+          id="patros-principales-logos-index"
           class="
             w-full
             grid grid-cols-1 place-items-center gap-y-4
@@ -387,33 +402,33 @@ import Conteo from '../components/CuentaRegresiva.astro';
             <img
               src="/svg/patrocinadores/area_deportes_color.svg"
               alt="Área de Deportes, Ayuntamiento de Motril"
-              class="w-50 md:w-50 transition-all duration-500 cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+              class="w-50 md:w-50 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
             />
           </a>
           <a href="https://www.apmotril.com/">
             <img
               src="/svg/patrocinadores/autoridad_portuaria_color.svg"
               alt="Autoridad Portuaria de Motril"
-              class="w-30 md:w-35 transition-all duration-500 cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+              class="w-30 md:w-35 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
             />
           </a>
           <a href="https://granadalapalma.com/">
             <img
               src="/svg/patrocinadores/lapalma_color.svg"
               alt="Cooperativa La Palma"
-              class="w-20 md:w-25 transition-all duration-500 cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+              class="w-20 md:w-25 transition-allcursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
             />
           </a>
           <a href="https://www.aguasyservicios.es/">
             <img
               src="/svg/patrocinadores/aguas_Y_servicios_color.svg"
               alt="Aguas y Servicios Costa Tropical"
-              class="w-35 md:w-40 transition-all duration-500 cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+              class="w-35 md:w-40 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
             />
           </a>
         </div>
       </div>
-      <section id="patros-colaboradores" class="w-full">
+      <section id="patros-colaboradores-index" class="w-full">
         <h3
           id="patros-colaboradores-titulo"
           class="
@@ -423,7 +438,7 @@ import Conteo from '../components/CuentaRegresiva.astro';
           COLABORADORES
         </h3>
         <div
-          id="patros-colaboradores-logos"
+          id="patros-colaboradores-logos-index"
           class="
             w-full
             flex flex-wrap
@@ -436,77 +451,77 @@ import Conteo from '../components/CuentaRegresiva.astro';
             <img
               src="/svg/patrocinadores/miguel_garcia_color.svg"
               alt="Fundación Miguel García"
-              class="w-20 transition-all duration-500 cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+              class="w-20 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
             />
           </a>
           <a href="https://www.toyota.es/concesionarios/yokamotril">
             <img
               src="/svg/patrocinadores/toyota_yokamotril_color.svg"
               alt="Toyota Yokamotril"
-              class="w-20 transition-all duration-500 cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+              class="w-20 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
             />
           </a>
           <a href="https://www.decathlon.es/es/store-view/tienda-de-deportes-motril-0070222302223">
             <img
               src="/svg/patrocinadores/decathlon_color.svg"
               alt="Decathlon Motril"
-              class="w-22 transition-all duration-500 cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+              class="w-22 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
             />
           </a>
           <a href="https://relaxfv.com/">
             <img
               src="/svg/patrocinadores/relax_color.svg"
               alt="Relax, Fruits and Vegetables"
-              class="w-24 transition-all duration-500 cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+              class="w-24 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
             />
           </a>
           <a href="https://reymapinturas.com/">
             <img
               src="/svg/patrocinadores/reyma_color.svg"
               alt="Pinturas Reyma"
-              class="w-24 transition-all duration-500 cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+              class="w-24 transition-all ursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
             />
           </a>
           <a href="https://lanjaron.danone.es/">
             <img
               src="/svg/patrocinadores/lanjaron_color.svg"
               alt="Agua Lanjaron"
-              class="w-22 transition-all duration-500 cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+              class="w-22 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
             />
           </a>
           <a href="https://www.gmcash.es/">
             <img
               src="/svg/patrocinadores/gm_cash_color.svg"
               alt="GM Cash"
-              class="w-24 transition-all duration-500 cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+              class="w-24 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
             />
           </a>
           <a href="https://www.bodegasmar.com/">
             <img
               src="/svg/patrocinadores/bodegas_mar_color.svg"
               alt="Bodegas Mar"
-              class="w-24 transition-all duration-500 cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+              class="w-24 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
             />
           </a>
           <a href="https://www.instagram.com/quesoslamontejaquena/">
             <img
               src="/svg/patrocinadores/queseria_color.svg"
               alt="Quesos La Montejaqueña"
-              class="w-24 transition-all duration-500 cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+              class="w-24 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
             />
           </a>
           <a href="https://www.instagram.com/padelloiberia.indoor/">
             <img
               src="/svg/patrocinadores/padello_color.svg"
               alt="Padello, pádel indoor"
-              class="w-24 transition-all duration-500 cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+              class="w-24 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
             />
           </a>
           <a href="https://dma-dra.es/">
             <img
               src="/svg/patrocinadores/dma_dra_color.svg"
               alt="DMA DRA, Carpintería y Diseño"
-              class="w-24 transition-all duration-500 cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+              class="w-26 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
             />
           </a>
         </div>

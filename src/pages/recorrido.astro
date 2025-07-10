@@ -1,15 +1,111 @@
 ---
 import Layout from '../layouts/LayoutMaster.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import ButtonPrimaryPositivo from '../components/Botones/ButtonPrimaryPositivo.astro';
+import ButtonPrimaryNegativo from '../components/Botones/ButtonPrimaryNegativo.astro';
+import Icon from '../components/Iconos.astro';
+import Boton from '../components/Botones.astro';
 ---
 
 <Layout title="Recorrido | Media Maratón Ciudad de Motril">
 
   <main>
-    <Header />
-    <h2 class="text-primarioMMM">Recorrido</h2>
-  </main>
+    <h1 
+      class="
+        text-primarioMMM-500 
+        font-heading text-4xl md:text-6xl font-extrabold
+        text-center
+        pt-20 md:pt-25
+        "
+      >
+        RECORRIDO
+      </h1>
 
-  <Footer />
+      <section
+        id="circuito-21k"
+        class="px-8 pb-8 md:px-12 md:pb-8 flex flex-col items-center justify-center text-center"
+      >
+        <h2
+          class="
+            text-primarioMMM-500
+            text-2xl md:text-3xl font-bold
+          ">
+            CIRCUITO 21K
+        </h2>
+        <img src="images/pages/recorrido/21k.webp" alt="Recorrido 21K" class="
+          mt-4 mb-8
+          w-full md:w-3/4 lg:w-1/2
+          shadow-lg
+          transition-transform duration-300 ease-in-out transform hover:scale-125
+        ">
+        <div
+          id="botones-recorrido"
+          class="flex flex-row gap-4 justify-center items-center">
+
+          <Boton 
+            color="primary" 
+            version="positivo"
+            href="/images/pages/recorrido/21k-hq.webp"
+            download="recorrido-21k.webp"
+            class="flex items-center gap-2"
+          >
+            Descargar imagen
+            <Icon name="arrowdown" class="inline-block w-4 md:w-3 h-5" />
+          </Boton>
+          <Boton 
+            color="" 
+            version=""
+            target="_blank"
+            href="https://es.wikiloc.com/rutas-carrera/circuito-21-k-39-media-maraton-internacional-ciudad-de-motril-homologacion-134498764"
+            class="bg-green-600  text-blancoMMM hover:bg-blancoMMM hover:text-green-600"
+          >
+            Ver en wikiloc
+            <Icon name="wikiloc" class="inline-block w-4 md:w-4 h-5 ml-1 pb-1" />
+          </Boton>
+        </div>
+      </section>
+
+      <section
+        id="circuito-10k"
+        class="px-8 pb-8 md:px-12 md:pb-12 flex flex-col items-center justify-center text-center"
+      >
+        <h2
+          class="
+            text-primarioMMM-500
+            text-2xl md:text-3xl font-bold
+          ">
+          CIRCUITO 10K
+        </h2>
+                <img src="images/pages/recorrido/10k.webp" alt="Recorrido 10K" class="
+          mt-4 mb-8
+          w-full md:w-3/4 lg:w-1/2
+          shadow-lg
+          transition-transform duration-300 ease-in-out transform hover:scale-125
+        ">
+        <div
+          id="botones-recorrido"
+          class="flex flex-row gap-4 justify-center items-center">
+          <Boton 
+            color="primary" 
+            version="positivo"
+            href="/images/pages/recorrido/10k-hq.webp"
+            download="recorrido-10k.webp"
+            class="flex items-center gap-2"
+          >
+            Descargar imagen
+            <Icon name="arrowdown" class="inline-block w-4 md:w-3 h-5" />
+          </Boton>
+          <Boton 
+            color="" 
+            version=""
+            target="_blank"
+            href="https://es.wikiloc.com/rutas-carrera/circuito-10k-media-maraton-internacional-ciudad-de-motril-10-de-junio-de-2023-129667844"
+            class="bg-green-600  text-blancoMMM hover:bg-blancoMMM hover:text-green-600"
+          >
+            Ver en wikiloc
+            <Icon name="wikiloc" class="inline-block w-4 md:w-4 h-5 ml-1 pb-1" />
+          </Boton>
+        </div>
+      </section>
+
+  </main>
 </Layout>
