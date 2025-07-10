@@ -1,0 +1,59 @@
+---
+// filepath: /src/components/Botones.astro
+type ButtonColor = 'primary' | 'secondary' | 'tertiary';
+type ButtonVersion = 'positivo' | 'negativo';
+
+const { 
+  color = '', 
+  version = '', 
+  href, 
+  download, 
+  class: className = "", 
+  type = "button",
+  ...rest
+} = Astro.props as {
+  color?: ButtonColor;
+  version?: ButtonVersion;
+  href?: string;
+  download?: string;
+  class?: string;
+  type?: "button" | "submit" | "reset";
+};
+
+let colorClass = "";
+if (color === "primary" && version === "positivo") {
+  colorClass = "bg-primarioMMM-500 text-blancoMMM hover:bg-blancoMMM hover:text-primarioMMM-500";
+} else if (color === "primary" && version === "negativo") {
+  colorClass = "bg-blancoMMM text-primarioMMM-500 hover:bg-primarioMMM-800 hover:text-blancoMMM";
+}else if (color === "secondary" && version === "positivo") {
+  colorClass = "bg-secundarioMMM-500 text-blancoMMM hover:bg-blancoMMM hover:text-secundarioMMM-500";
+} else if (color === "secondary" && version === "negativo") {
+  colorClass = "bg-blancoMMM text-secundarioMMM-500 hover:bg-secundarioMMM-800 hover:text-blancoMMM";
+} else if (color === "tertiary" && version === "positivo") {
+  colorClass = "bg-blancoMMM text-terciarioMMM-600 hover:bg-terciarioMMM-700 hover:text-blancoMMM transition-colors";
+} else if (color === "tertiary" && version === "negativo") {
+  colorClass = "bg-primarioMMM-300 text-blancoMMM hover:bg-blancoMMM hover:text-primarioMMM-300";
+}
+
+
+const baseClass = `font-bold px-4 py-2 rounded-lg shadow-lg transition-colors hover:scale-105 transition-transform ${colorClass} ${className}`;
+---
+
+{href ? (
+  <a 
+    href={href} 
+    download={download}
+    class={baseClass}
+    {...rest}
+  >
+    <slot />
+  </a>
+) : (
+  <button
+    type={type}
+    class={baseClass}
+    {...rest}
+  >
+    <slot />
+  </button>
+)}
