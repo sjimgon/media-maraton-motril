@@ -1,5 +1,6 @@
 ---
 // filepath: /home/ser/media-maraton-motril/src/components/Header.astro
+import Icon from '../components/Iconos.astro';
 ---
 
 <header
@@ -69,6 +70,11 @@
           aria-expanded="false"
         >
           PRUEBA
+          <Icon
+            id = "pointer-down"
+            name="pointer-down"
+            class="inline-block fill-primarioMMM-500 w-3 mb-1"
+          />
         </button>
         <ul
           id="prueba-dropdown"
@@ -187,6 +193,11 @@
           "
         >
           PRUEBA
+          <Icon
+            id="pointer-down"
+            name="pointer-down"
+            class="inline-block fill-primarioMMM-500 w-3 mb-1"
+          />
         </p>
         <ul
           class="
@@ -350,20 +361,23 @@
   // Dropdown PRUEBA en móvil
   const pruebaToggle = document.getElementById('prueba-toggle');
   const pruebaDropdown = document.getElementById('prueba-dropdown');
+  const pruebaPointer = document.getElementById('pointer-down');
   let pruebaOpen = false;
-  if (pruebaToggle && pruebaDropdown) {
-    pruebaToggle.addEventListener('click', () => {
-      pruebaOpen = !pruebaOpen;
-      pruebaToggle.setAttribute('aria-expanded', pruebaOpen.toString());
-      if (pruebaOpen) {
-        pruebaDropdown.classList.remove('max-h-0', 'overflow-hidden');
-        pruebaDropdown.classList.add('max-h-96');
-      } else {
-        pruebaDropdown.classList.add('max-h-0', 'overflow-hidden');
-        pruebaDropdown.classList.remove('max-h-96');
-      }
-    });
-  }
+  if (pruebaToggle && pruebaDropdown && pruebaPointer) {
+  pruebaToggle.addEventListener('click', () => {
+    pruebaOpen = !pruebaOpen;
+    pruebaToggle.setAttribute('aria-expanded', pruebaOpen.toString());
+    if (pruebaOpen) {
+      pruebaDropdown.classList.remove('max-h-0', 'overflow-hidden');
+      pruebaDropdown.classList.add('max-h-96');
+      pruebaPointer.classList.add('rotate-180');
+    } else {
+      pruebaDropdown.classList.add('max-h-0', 'overflow-hidden');
+      pruebaDropdown.classList.remove('max-h-96');
+      pruebaPointer.classList.remove('rotate-180');
+    }
+  });
+}
 
   // Efecto scroll/reducción solo en escritorio + hover para restaurar tamaño
   const header = document.getElementById('main-header');
