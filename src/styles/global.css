@@ -25,50 +25,50 @@
 }
 
 @theme {
-   /* Colores */
+/* Colores */
 
     /* PrimarioMMM 41 EDICION - AZUL  */
-  --color-primarioMMM-50:  #248ccc;
-  --color-primarioMMM-100: #1c7fc3;
-  --color-primarioMMM-200: #1673ba;
-  --color-primarioMMM-300: #1367b0;
-  --color-primarioMMM-400: #135ba7;
-  --color-primarioMMM-500: #144f9f;
-  --color-primarioMMM-600: #184687;
-  --color-primarioMMM-700: #1a3c71;
-  --color-primarioMMM-800: #1a335c;
-  --color-primarioMMM-900: #192b49;
+  --color-primarioMMM-50:  #5373b7;
+  --color-primarioMMM-100: #4f6ab1;
+  --color-primarioMMM-200: #4260aa;
+  --color-primarioMMM-300: #3755a2;
+  --color-primarioMMM-400: #3d54a1;
+  --color-primarioMMM-500: #40519f;
+  --color-primarioMMM-600: #3a488e;
+  --color-primarioMMM-700: #36417b;
+  --color-primarioMMM-800: #343c67;
+  --color-primarioMMM-900: #2e3556;
   
   /*SecundarioMMM 41 EDICION - MAGENTA*/
-  --color-secundarioMMM-50:  #e75499;
-  --color-secundarioMMM-100: #e54c8d;
-  --color-secundarioMMM-200: #e34481;
-  --color-secundarioMMM-300: #e03c76;
-  --color-secundarioMMM-400: #de356b;
-  --color-secundarioMMM-500: #dc2e60;
-  --color-secundarioMMM-600: #bc2651;
-  --color-secundarioMMM-700: #9f1f43;
-  --color-secundarioMMM-800: #831835;
-  --color-secundarioMMM-900: #681128;
+  --color-secundarioMMM-50:  #d95995;
+  --color-secundarioMMM-100: #d9558a;
+  --color-secundarioMMM-200: #d65081;
+  --color-secundarioMMM-300: #d34b75;
+  --color-secundarioMMM-400: #d2456b;
+  --color-secundarioMMM-500: #d13f61;
+  --color-secundarioMMM-600: #b93854;
+  --color-secundarioMMM-700: #a23149;
+  --color-secundarioMMM-800: #8c293e;
+  --color-secundarioMMM-900: #742232;
 
  /*TerciarioMMM 41 EDICION - Amarillo*/
-  --color-terciarioMMM-50:  #efe752;
-  --color-terciarioMMM-100: #eee64a;
-  --color-terciarioMMM-200: #ede542;
-  --color-terciarioMMM-300: #ede439;
-  --color-terciarioMMM-400: #ece42f;
-  --color-terciarioMMM-500: #ebe325;
-  --color-terciarioMMM-600: #c0b825;
-  --color-terciarioMMM-700: #999223;
-  --color-terciarioMMM-800: #777120;
-  --color-terciarioMMM-900: #59541b;
+  --color-terciarioMMM-50:  #fcef79;
+  --color-terciarioMMM-100: #f6eb6b;
+  --color-terciarioMMM-200: #f0e75b;
+  --color-terciarioMMM-300: #e9e44b;
+  --color-terciarioMMM-400: #e3e039;
+  --color-terciarioMMM-500: #d0cc38;
+  --color-terciarioMMM-600: #beba37;
+  --color-terciarioMMM-700: #ada835;
+  --color-terciarioMMM-800: #9d9733;
+  --color-terciarioMMM-900: #8e8731;
 
   --color-blancoMMM: #f2f2fa;
   --color-negroMMM: #0e0e1e;
 
   /* Fuentes personalizadas */
   --font-sans: 'DMSans-Variable', system-ui, sans-serif;
-  --font-italic: 'DMSans Italic-Variable', system-ui, sans-serif;
+  --font-italica: 'DMSans Italic-Variable', system-ui, sans-serif;
   --font-heading: 'ClashDisplay-Variable', system-ui, sans-serif;
 }
 html,
