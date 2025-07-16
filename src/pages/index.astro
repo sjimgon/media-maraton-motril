@@ -3,6 +3,8 @@ import Layout from '../layouts/LayoutMaster.astro';
 import Boton from '../components/Botones.astro';
 
 import Conteo from '../components/CuentaRegresiva.astro';
+import { procesarClima } from '../utils/procesarClima.js';
+import Icono from '../components/Iconos.astro';
 ---
 
 <Layout title="Inicio | Media Maratón Ciudad de Motril">
@@ -39,7 +41,7 @@ import Conteo from '../components/CuentaRegresiva.astro';
         font-black text-negroMMM
         "
       >
-        19 DE OCTUBRE DE 2025
+        DOMINGO 19 DE OCTUBRE DE 2025
       </h2>
 
       <Boton 
@@ -65,25 +67,161 @@ import Conteo from '../components/CuentaRegresiva.astro';
     <section 
       id="meteorologia-index"
       class="
-      bg-secundarioMMM-500 text-blancoMMM
-      p-8 md:p-16 mt-8
-      
+      hidden
+      bg-secundarioMMM-500
+      text-blancoMMM
+      p-8 md:p-12
+      w-full
+      flex items-center justify-center
       "
     >
-      <div
+     <div
+        id="container-meteo-index"
         class="
-        container mx-auto
+        w-full md:w-3/5
+        gap-y-4 
+        flex flex-col
+        justify-center items-center
         "
       >
+      
         <h2 
           class="
-          text-4xl font-bold text-center
-          mb-8
+          text-4xl md:font-5xl font-black
+          text-center
           "
         >
           CONDICIONES METEOROLÓGICAS
         </h2>
+        <div
+          id="card-meteorología"
+          class="
+            flex flex-col md:flex-row
+            justify-center items-center
+          "
+        >
+          <div
+            id="card-dia-preevento-index"
+            class="              
+              md:w-3/10
+              p-3
+              bg-blancoMMM text-secundarioMMM-700
+              rounded-lg shadow-lg
+              hidden md:flex flex-col items-center justify-center
+              hover:scale-105 transition-transform duration-300 ease-in-out"
+          >
+            <img id="icono-16" class="w-12" />
+            <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-2" />
+            <h3 class="text-3xl font-black text-center">18 DE OCTUBRE</h3>
+            <section
+              id="info-clima"
+              class="text-sm font-black flex flex-col items-center justify-center"
+            >
+            <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-2" />
+              <p>CIELO: <span id="cielo-16" class="font-light text-xl"></span></p> 
+              <p>TEMPERATURA: <span id="temperatura-16" class="font-light text-xl"></span></p>
+              <p>VIENTO: <span id="viento-16" class="font-light text-xl"></span></p>
+              <p>HUMEDAD: <span id="humedad-16" class="font-light text-xl"></span></p>
+            </section>
+          </div>
+          <div
+            id="card-dia-evento-index"
+            class="
+              z-1
+              md:w-4/10
+              p-3
+              bg-blancoMMM text-secundarioMMM-700 
+              rounded-lg shadow-xl shadow-secundarioMMM-500/40
+              flex flex-col items-center justify-center
+              hover:scale-105 transition-transform duration-300 ease-in-out"
+          >
+            <img id="icono-17" class="w-20 " />
+            <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-2" />
+            <h3 class="text-4xl font-black text-center">19 DE OCTUBRE</h3>
+            <section
+              id="info-clima"
+              class=" text-sm font-black flex flex-col items-center justify-center"
+            >
+            <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-2" />
+              <p>CIELO: <span id="cielo-17" class="font-light text-2xl"></span></p>
+              <p>TEMPERATURA: <span id="temperatura-17" class="font-light text-2xl"></span></p>
+              <p>VIENTO: <span id="viento-17" class="font-light text-2xl"></span></p>
+              <p>HUMEDAD: <span id="humedad-17" class="font-light text-2xl"></span></p>
+            </section>
+          </div>
+          <div
+            id="card-dia-postevento-index"
+            class="
+              md:w-3/10
+              p-3
+              bg-blancoMMM text-secundarioMMM-700
+              rounded-lg shadow-lg
+              hidden md:flex flex-col items-center justify-center
+              hover:scale-105 transition-transform duration-300 ease-in-out
+              "
+          >
+            <img id="icono-18" class="w-12 " />
+            <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-2" />
+            <h3 class="text-3xl font-black text-center">20 DE OCTUBRE</h3>
+            <section
+              id="info-clima"
+              class="text-sm font-black flex flex-col items-center justify-center"
+            >
+              <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-2" />
+              <p>CIELO: <span id="cielo-18" class="font-medium text-xl"></span></p> 
+              <p>TEMPERATURA: <span id="temperatura-18" class="font-medium text-xl"></span></p>
+              <p>VIENTO: <span id="viento-18" class="font-medium text-xl"></span></p>
+              <p>HUMEDAD: <span id="humedad-18" class="font-medium text-xl"></span></p>
+            </section>
+          </div>
+        </div>
+        <script>
+          import { procesarClima } from '../utils/procesarClima.js';
 
+          procesarClima().then(resultados => {
+            console.log(resultados); 
+
+            const iconoMeteo = {
+              800: 'soleado',           
+              801: 'soleado',           
+              802: 'entrenublado',       
+              803: 'nublado',
+              804: 'nublado',
+              500: 'lluvia suave',             
+              501: 'lluvia',
+              502: 'lluvia',
+              200: 'tormentoso',          
+              201: 'tormentoso',            
+              701: 'niebla',             
+              711: 'viento'
+
+            };
+
+            for (const infoDia of resultados) {
+              const dia = infoDia.dia;
+
+              const diasEsperados = [19, 20, 21];
+              const diasDisponibles = resultados.map(r => r.dia);
+              const estanTodos = diasEsperados.every(dia => diasDisponibles.includes(dia));
+
+              if (estanTodos) {
+                document.getElementById("meteorologia-index").classList.remove("hidden");
+              }
+
+              document.getElementById(`cielo-${dia}`).textContent = infoDia.cielo;
+              document.getElementById(`temperatura-${dia}`).textContent = `${infoDia.temperatura} °C`;
+              document.getElementById(`viento-${dia}`).textContent = `${infoDia.viento} km/h`;
+              document.getElementById(`humedad-${dia}`).textContent = `${infoDia.humedad} %`;
+
+              // Icono por ID
+              const nombreIcono = iconoMeteo[infoDia.id] || 'clouds'; // Valor por defecto si no se encuentra
+              document.getElementById(`icono-${dia}`).src = `/svg/iconos-meteo/${nombreIcono}.svg`;
+            }
+          }).catch(error => {
+            console.error("Error en la visualización:", error);
+          });
+        </script>
+      </div>
     </section>
 
 
@@ -140,7 +278,7 @@ import Conteo from '../components/CuentaRegresiva.astro';
           <Boton 
             color="primary"
             version="negativo"
-            href="/inscripciones"
+            href="/recorrido"
             class="text-center md:text-left text-lg font-bold w-auto"
           >
             Conocer más
@@ -161,16 +299,16 @@ import Conteo from '../components/CuentaRegresiva.astro';
           >
             <img
               id="recorrido-10k-index"
-              class="transition-all duration-500 cursor-pointer "
-              src="/images/index/recorrido/Recorrido1.webp"
+              class="transition-all duration-500 cursor-pointer hover:scale-105 rounded-lg"
+              src="/images/index/recorrido/10k-cuadrado.webp"
               alt="Recorrido Media Maratón Ciudad de Motril de 10 kilómetros"
             />
 
             <img
               id="recorrido-21k-index"
-              class="transition-all duration-500 cursor-pointer"
-              src="/images/index/recorrido/Recorrido2.webp"
-              alt="Recorrido Media Maratón Ciudad de Motril de 21 kilómetros"
+              class="transition-all duration-500 cursor-pointer hover:scale-105 rounded-lg"
+              src="/images/index/recorrido/21k-cuadrado.webp"
+              alt="Recorrido Media Maratón Ciudad de Motril de 21 kilómetros "
             />
           </figure>
           <div 
@@ -313,7 +451,7 @@ import Conteo from '../components/CuentaRegresiva.astro';
         <img
           src="/images/index/voluntarios/voluntarios.webp"
           alt="Voluntarios de la Media Maratón Ciudad de Motril"
-          class="transition-transform duration-500 hover:scale-105 shadow-lg "
+          class="transition-transform duration-500 hover:scale-105 rounded-lg "
         />
       </figure>
     </div>
@@ -379,7 +517,45 @@ import Conteo from '../components/CuentaRegresiva.astro';
       <h2 class="text-4xl font-bold text-center mb-4">
         PATROCINADORES
       </h2>
-      <div id="patros-principales-index" class="w-full mb-8">
+      <div
+        id="organizan-index"
+        class="w-full mb-8"
+      >
+        <h3
+          id="patros-principales-titulo"
+          class="text-medium md:font-lg font-heading font-medium text-center mb-4 md:mb-6"
+        >
+          ORGANIZAN
+        </h3>
+        <div
+          id="organizan-logos-index"
+          class="
+            w-full
+            grid grid-cols-2 place-items-center gap-y-4
+            md:flex md:flex-wrap
+            md:gap-20
+            justify-center
+            items-center"  
+        >
+          <a href="https://motril.es/deportes/">
+            <img
+            src="/svg/patrocinadores/area_deportes_color.svg"
+            alt="Área de Deportes, Ayuntamiento de Motril"
+            class="w-35 md:w-50 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+            />
+          </a>
+          <a href="https://www.dipgra.es/servicios/areas/deportes/">
+            <img
+            src="/svg/patrocinadores/diputacionGranada_horizontal_color.svg"
+              alt="Diputación de Granada"
+              class="w-35 md:w-50 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+              />
+            </a>
+
+            
+          </div>
+        </div>
+        <div id="patros-principales-index" class="w-full mb-8">
         <h3
           id="patros-principales-titulo"
           class="text-medium md:font-lg font-heading font-medium text-center mb-4 md:mb-6"
@@ -390,20 +566,14 @@ import Conteo from '../components/CuentaRegresiva.astro';
           id="patros-principales-logos-index"
           class="
             w-full
-            grid grid-cols-1 place-items-center gap-y-4
+            grid grid-cols-2 place-items-center gap-y-4
             md:flex md:flex-wrap
             md:gap-20
             justify-center
             items-center
           "
         >
-          <a href="https://motril.es/deportes/">
-            <img
-              src="/svg/patrocinadores/area_deportes_color.svg"
-              alt="Área de Deportes, Ayuntamiento de Motril"
-              class="w-50 md:w-50 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
-            />
-          </a>
+
           <a href="https://www.apmotril.com/">
             <img
               src="/svg/patrocinadores/autoridad_portuaria_color.svg"
