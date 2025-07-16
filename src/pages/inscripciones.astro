@@ -1,26 +1,175 @@
 ---
-import Layout from '../layouts/LayoutMaster.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/LayoutMaster.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import LogoSlider from "../components/LogoSlider.astro";
+import Boton from "../components/Botones.astro";
 ---
 
 <Layout title="Inscripciones | Media Maratón Ciudad de Motril">
   <main>
-    <h1 
-      class="
-        text-primarioMMM-500 
+    <h1
+      class="text-primarioMMM-500
         font-heading text-4xl md:text-6xl font-extrabold
         text-center
-        pt-20 md:pt-25
-        "
+        pt-20 md:pt-25"
+    >
+      INSCRIPCIONES
+    </h1>
+
+    <section
+      id="inscripciones-content"
+      class="mx-auto
+          w-4/5
+          md:w-3/5
+          mt-5
+          flex flex-col items-center gap-y-4"
+    >
+      <section
+        id="informacion-general-content"
+        class="bg-primarioMMM-50/10 rounded-lg shadow p-5"
       >
-        INSCRIPCIONES
-      </h1>
+        <h2
+          class="text-primarioMMM-500
+            text-2xl md:text-4xl font-black
+            mb-2
+            text-center md:text-left"
+        >
+          INFORMACIÓN GENERAL
+        </h2>
+          <ul class="list-disc pl-6 space-y-2 mb-6 text-primarioMMM-500">
+            <li>
+              <p>
+                Las inscripciones se realizarán en la web <a
+                  href="https://www.motrildeportes.es/cgi-bin/inFini"
+                  target="_blank"
+                  class="underline font-bold italic"
+                  >www.mediamaraton.motril.es</a
+                >
+                desde el <strong>21 de julio al 12 de octubre de 2025</strong>.
+                Las cuotas de inscripción son de <strong>10 €</strong>, tanto
+                para la prueba de 21k como para la de 10k.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong
+                  >*El importe de la inscripción no será retornable ni se podrá
+                  transferir el dorsal a otro corredor/a.</strong
+                >
+              </p>
+            </li>
+          </ul>
+        <Boton
+          color="primary"
+          version="positivo"
+          href="https://www.motrildeportes.es/cgi-bin/inFini"
+          class="text-xl md:text-2xl font-bold mx-auto block text-center"
+        >
+          INSCRÍBETE AQUÍ
+        </Boton>
+      </section>
 
       <section
-        id="circuito-21k
-      ">
-         
+        id="inscripciones-fondo-content"
+        class="bg-secundarioMMM-500/10 rounded-lg shadow p-5"
+      >
+        <h2
+          class="
+            text-secundarioMMM-500
+            text-2xl md:text-4xl font-black
+            mb-2
+            text-center md:text-left"
+        >
+          GRAN PREMIO DE FONDO DIPUTACIÓN UNIVERSO LORCA
+        </h2>
+        <ul class="list-disc pl-6 space-y-2 mb-6 text-secundarioMMM-500">
+          <li>
+            Los corredores/as inscritos/as en todo el circuito solo tendrán que
+            confirmar la asistencia a la prueba, hasta el <strong
+              >12 de octubre a las 24 horas</strong
+            >, en la página Web del Circuito
+            <a
+              href="https://www.gpfgranada.es"
+              target="_blank"
+              class="underline font-bold italic">www.gpfgranada.es</a
+            > y asistir con su dorsal y chip asignados para todo el circuito.
+          </li>
+          <li>
+            Todo aquel inscrito en el Circuito que no confirme la asistencia a
+            la prueba, <strong>no puntuará en el mismo</strong>.
+          </li>
+          <li>
+            En caso de incidencia contactar a través del correo electrónico:
+            <a href="mailto:info@cruzandolameta.es" class="underline"
+              >info@cruzandolameta.es</a
+            >
+            y al teléfono
+            <a href="tel:662154453" class="underline">662154453</a>
+            en horario de 10:00 a 14:00 horas y de 17:00 a 19:00 horas.
+          </li>
+        </ul>
       </section>
+
+      <section
+        id="inscripciones-solidarias-content"
+        class="bg-terciarioMMM-50/30 rounded-lg shadow p-5"
+      >
+        <h2
+           class="
+            text-terciarioMMM-700
+            text-2xl md:text-4xl font-black
+            mb-2
+            text-center md:text-left"
+        >
+          PARTICIPACIÓN FUERA DE PLAZO / CAMPAÑA CORRO POR LA VIDA
+        </h2>
+        <ul class="list-disc pl-6 space-y-2 mb-6 text-terciarioMMM-900">
+          <li>
+            Los/as atletas que no hayan formalizado su inscripción en los plazos
+            establecidos podrán participar en la prueba, comunicándolo hasta
+            media hora antes de la misma, adquiriendo el <strong
+              >dorsal solidario</strong
+            >, por el que deberán de abonar la cantidad de <strong>10 €</strong>
+            y en ningún caso se podrá inscribir como atleta local.
+          </li>
+          <li>
+            El/la atleta inscrito/a en esta modalidad correrá con un dorsal de
+            la Asociación contra el Cáncer, <strong>no llevará chip</strong>, y
+            asumirá el hecho de no optar a ningún premio, ni trofeo, aunque sí
+            tendrá derecho al resto de servicios. Al no ser cronometrado no
+            aparecerá en las clasificaciones de las mismas.
+          </li>
+          <li>
+            Este pago será íntegramente destinado a la <strong
+              >Asociación Española contra el Cáncer</strong
+            >.
+          </li>
+          <li>
+            Asimismo se establece un <strong>dorsal cero</strong> en la prueba, para
+            todas aquellas personas que sin participar, quieran colaborar con la
+            asociación, con una aportación voluntaria, entregando dicha aportación
+            a la organización local para su ingreso.
+          </li>
+        </ul>
+        <div class="bg-terciarioMMM-900/10 text-terciarioMMM-900 rounded-lg shadow p-4 mb-6">
+          <strong
+            >Asociación Española contra el Cáncer, Junta provincial de Granada:</strong
+          ><br />
+          Información: <a href="tel:958293929" class="underline">958293929</a><br
+          />
+          Email: <a href="mailto:granada@aecc.es" class="underline"
+            >granada@aecc.es</a
+          ><br />
+          Web: <a
+            href="https://www.contraelcancer.es"
+            target="_blank"
+            class="underline">www.contraelcancer.es</a
+          >
+        </div>
+      </section>
+
+    </section>
+    <LogoSlider />
   </main>
 </Layout>

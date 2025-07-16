@@ -1,27 +1,59 @@
 ---
 import Layout from '../layouts/LayoutMaster.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Boton from '../components/Botones.astro';
 ---
 
 <Layout title="Contacto | Media Maratón Ciudad de Motril">
-
- <main>
+  <main>
     <h1 
       class="
         text-primarioMMM-500 
         font-heading text-4xl md:text-6xl font-extrabold
         text-center
         pt-20 md:pt-25
+        flex flex-col
         "
       >
         CONTACTO
       </h1>
 
-      <section
-        id="circuito-21k
-      ">
-         
+      <section class="max-w-2xl mx-auto gap-8 my-10">
+        <div
+          class="
+          bg-white rounded-lg shadow p-6
+          flex flex-col justify-center
+          text-primarioMMM-500
+          hover:scale-105 transition-transform ease-in-out
+          "
+        >
+          <p class="mb-2"><strong>TELÉFONO:</strong> <a href="tel:958824530" class="underline">958 82 45 30</a></p>
+          <p class="mb-2"><strong>DONDE ENCONTRARNOS:</strong><br />Pabellón Municipal de Deportes<br />Calle Aguas del Hospital, 49<br />18600 Motril, Granada</p>
+          <p class="mb-2"><strong>EMAIL:</strong> <a href="mailto:deportes@motril.es" class="underline">deportes@motril.es</a></p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6 mt-4">
+          <h2 class="text-primarioMMM-500 text-2xl md:text-4xl font-bold mb-4">¿AÚN TE QUEDAN DUDAS?, MÁNDANOS UN MENSAJE</h2>
+          <form>
+            <div class="mb-4">
+              <label for="nombre" class="font-bold block mb-1 text-primarioMMM-500" >Nombre</label>
+              <input type="text" id="nombre" name="nombre" required class="w-full border rounded p-2" placeholder="Nombre"/>
+            </div>
+            <div class="mb-4">
+              <label for="email" class="font-bold block mb-1 text-primarioMMM-500">E-mail</label>
+              <input type="email" id="email" name="email" required class="w-full border rounded p-2" placeholder="ejemplo@email.com"/>
+            </div>
+            <div class="mb-4">
+              <label for="mensaje" class="font-bold block mb-1 text-primarioMMM-500">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4" required class="w-full border rounded p-2" placeholder="Cuéntanos, te responderemos lo antes posible"></textarea>
+            </div>
+            <Boton
+              color="primary"
+              version="positivo"
+              class=" mt-6 w-full text-md md:text-sm font-bold mx-auto block text-center"
+              type="submit"
+            >
+              ENVIAR
+            </Boton>
+          </form>
+        </div>
+
       </section>
-  </main>
-</Layout>
