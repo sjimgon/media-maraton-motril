@@ -1,18 +1,17 @@
 ---
 import Layout from "../layouts/LayoutMaster.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import LogoSlider from "../components/LogoSlider.astro";
 import Boton from "../components/Botones.astro";
+
 ---
 
 <Layout title="Inscripciones | Media Maratón Ciudad de Motril">
-  <main>
+  <main class="bg-primarioMMM-500">
     <h1
-      class="text-primarioMMM-500
+      class="text-blancoMMM
         font-heading text-4xl md:text-6xl font-extrabold
         text-center
-        pt-20 md:pt-25"
+        pt-26 md:pt-32 "
     >
       INSCRIPCIONES
     </h1>
@@ -22,12 +21,12 @@ import Boton from "../components/Botones.astro";
       class="mx-auto
           w-4/5
           md:w-3/5
-          mt-5
-          flex flex-col items-center gap-y-4"
+          mt-6
+          flex flex-col items-center gap-y-6"
     >
       <section
         id="informacion-general-content"
-        class="bg-primarioMMM-50/10 rounded-lg shadow p-5"
+        class="bg-terciarioMMM-50 rounded-lg shadow-terciarioMMM-200 p-5 hover:scale-105 transition-transform duration-300"
       >
         <h2
           class="text-primarioMMM-500
@@ -40,11 +39,11 @@ import Boton from "../components/Botones.astro";
           <ul class="list-disc pl-6 space-y-2 mb-6 text-primarioMMM-500">
             <li>
               <p>
-                Las inscripciones se realizarán en la web <a
-                  href="https://www.motrildeportes.es/cgi-bin/inFini"
+                Las inscripciones se realizarán en la web de <a
+                  href="https://www.cruzandolameta.es/ver/xli-media-maraton-ciudad-de-motril---2259/"
                   target="_blank"
                   class="underline font-bold italic"
-                  >www.mediamaraton.motril.es</a
+                  >CruzandoLaMeta</a
                 >
                 desde el <strong>21 de julio al 12 de octubre de 2025</strong>.
                 Las cuotas de inscripción son de <strong>10 €</strong>, tanto
@@ -63,7 +62,7 @@ import Boton from "../components/Botones.astro";
         <Boton
           color="primary"
           version="positivo"
-          href="https://www.motrildeportes.es/cgi-bin/inFini"
+          href="https://www.cruzandolameta.es/ver/xli-media-maraton-ciudad-de-motril---2259/"
           class="text-xl md:text-2xl font-bold mx-auto block text-center"
         >
           INSCRÍBETE AQUÍ
@@ -72,18 +71,17 @@ import Boton from "../components/Botones.astro";
 
       <section
         id="inscripciones-fondo-content"
-        class="bg-secundarioMMM-500/10 rounded-lg shadow p-5"
+        class="bg-secundarioMMM-400 rounded-lg shadow p-5 hover:scale-105 transition-transform duration-300"
       >
         <h2
           class="
-            text-secundarioMMM-500
+            text-blancoMMM
             text-2xl md:text-4xl font-black
-            mb-2
             text-center md:text-left"
         >
           GRAN PREMIO DE FONDO DIPUTACIÓN UNIVERSO LORCA
         </h2>
-        <ul class="list-disc pl-6 space-y-2 mb-6 text-secundarioMMM-500">
+        <ul class="list-disc pl-6 space-y-2 mb-6 text-blancoMMM">
           <li>
             Los corredores/as inscritos/as en todo el circuito solo tendrán que
             confirmar la asistencia a la prueba, hasta el <strong
@@ -113,18 +111,17 @@ import Boton from "../components/Botones.astro";
 
       <section
         id="inscripciones-solidarias-content"
-        class="bg-terciarioMMM-50/30 rounded-lg shadow p-5"
+        class="bg-blancoMMM rounded-lg shadow p-5 mb-6 text-primarioMMM-500 hover:scale-105 transition-transform duration-300"
       >
         <h2
            class="
-            text-terciarioMMM-700
             text-2xl md:text-4xl font-black
             mb-2
             text-center md:text-left"
         >
           PARTICIPACIÓN FUERA DE PLAZO / CAMPAÑA CORRO POR LA VIDA
         </h2>
-        <ul class="list-disc pl-6 space-y-2 mb-6 text-terciarioMMM-900">
+        <ul class="list-disc pl-6 space-y-2 mb-6 text-primarioMMM-500">
           <li>
             Los/as atletas que no hayan formalizado su inscripción en los plazos
             establecidos podrán participar en la prueba, comunicándolo hasta
@@ -152,7 +149,7 @@ import Boton from "../components/Botones.astro";
             a la organización local para su ingreso.
           </li>
         </ul>
-        <div class="bg-terciarioMMM-900/10 text-terciarioMMM-900 rounded-lg shadow p-4 mb-6">
+        <div class="bg-primarioMMM-500/20 rounded-lg shadow p-4 mb-6">
           <strong
             >Asociación Española contra el Cáncer, Junta provincial de Granada:</strong
           ><br />
