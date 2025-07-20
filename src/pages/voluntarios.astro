@@ -1,173 +1,289 @@
 ---
-import Layout from '../layouts/LayoutMaster.astro';
-import Boton from '../components/Botones.astro';
+import Layout from "../layouts/LayoutMaster.astro";
+import Boton from "../components/Botones.astro";
 ---
 
-<Layout title="Servicios al corredor | Media Maratón Ciudad de Motril">
-
+<Layout title="Voluntarios | Media Maratón Ciudad de Motril">
   <main>
-    <h1 
-      class="
-        text-primarioMMM-500 
+    <h1
+      class="text-primarioMMM-500
         font-heading text-4xl md:text-6xl font-extrabold
         text-center
-        pt-20 md:pt-25
-        "
+        pt-20 md:pt-25"
+    >
+      VOLUNTARIOS
+    </h1>
+
+    <section
+      id="form-voluntarios"
+      class="max-w-2xl mx-auto bg-white rounded-lg shadow p-6 my-8"
+    >
+      <h2
+        class="font-heading text-primarioMMM-500 text-3xl font-bold mb-6 text-center md:text-left"
       >
-        VOLUNTARIOS
-      </h1>
+        FORMULARIO
+      </h2>
+      <form id="form-voluntariado" class="text-primarioMMM-500">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="nombre" class="font-bold">
+              Nombre <span class="text-secundarioMMM-600">*</span>
+            </label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+              class="w-full border rounded p-2 mt-1"
+            />
+          </div>
+          <div>
+            <label for="apellido" class="font-bold">
+              Apellido <span class="text-secundarioMMM-600">*</span>
+            </label>
+            <input
+              type="text"
+              id="apellido"
+              name="apellido"
+              required
+              class="w-full border rounded p-2 mt-1"
+            />
+          </div>
+          <div>
+            <label for="dni" class="font-bold">
+              DNI o Pasaporte <span class="text-secundarioMMM-600">*</span>
+            </label>
+            <input
+              type="text"
+              id="dni"
+              name="dni"
+              required
+              class="w-full border rounded p-2 mt-1"
+            />
+          </div>
+          <div>
+            <label for="fechaNacimiento" class="font-bold">
+              Fecha de nacimiento <span class="text-secundarioMMM-600">*</span>
+            </label>
+            <input
+              type="date"
+              id="fechaNacimiento"
+              name="fechaNacimiento"
+              required
+              class="w-full border rounded p-2 mt-1"
+            />
+          </div>
+          <div>
+            <label for="domicilio" class="font-bold">
+              Domicilio <span class="text-secundarioMMM-600">*</span>
+            </label>
+            <input
+              type="text"
+              id="domicilio"
+              name="domicilio"
+              required
+              class="w-full border rounded p-2 mt-1"
+              placeholder="C/calle N/numero"
+            />
+          </div>
+          <div>
+            <label for="poblacion" class="font-bold">
+              Población <span class="text-secundarioMMM-600">*</span>
+            </label>
+            <input
+              type="text"
+              id="poblacion"
+              name="poblacion"
+              required
+              class="w-full border rounded p-2 mt-1"
+            />
+          </div>
+          <div>
+            <label for="codigoPostal" class="font-bold">
+              Código Postal <span class="text-secundarioMMM-600">*</span>
+            </label>
+            <input
+              type="text"
+              id="codigoPostal"
+              name="codigoPostal"
+              required
+              class="w-full border rounded p-2 mt-1"
+            />
+          </div>
+          <div>
+            <label for="provincia" class="font-bold">
+              Provincia <span class="text-secundarioMMM-600">*</span>
+            </label>
+            <input
+              type="text"
+              id="provincia"
+              name="provincia"
+              required
+              class="w-full border rounded p-2 mt-1"
+            />
+          </div>
+          <div>
+            <label for="telefonoMovil" class="font-bold">
+              Teléfono móvil <span class="text-secundarioMMM-600">*</span>
+            </label>
+            <input
+              type="tel"
+              id="telefonoMovil"
+              name="telefonoMovil"
+              required
+              class="w-full border rounded p-2 mt-1"
+            />
+          </div>
+          <div>
+            <label for="telefono2" class="font-bold">
+              Teléfono 2 (opcional)
+            </label>
+            <input
+              type="tel"
+              id="telefono2"
+              name="telefono2"
+              class="w-full border rounded p-2 mt-1"
+            />
+          </div>
+          <div>
+            <label for="email" class="font-bold">
+              Email <span class="text-secundarioMMM-600">*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full border rounded p-2 mt-1"
+            />
+          </div>
+          <div>
+            <fieldset class="md:col-span-2">
+              <legend class="font-bold mb-1">
+                Carnet de conducir <span class="text-secundarioMMM-600">*</span>
+              </legend>
+              <div class="flex gap-4 mt-1">
+                <label
+                  ><input
+                    type="radio"
+                    name="carnetConducir"
+                    value="sí"
+                    required
+                  /> Sí</label
+                >
+                <label
+                  ><input type="radio" name="carnetConducir" value="no" /> No</label
+                >
+              </div>
+            </fieldset>
+          </div>
+          <div>
+            <label for="talla" class="font-bold">
+              Talla de camiseta <span class="text-secundarioMMM-600">*</span>
+            </label>
+            <select
+              id="talla"
+              name="talla"
+              required
+              class="w-full border rounded p-2 mt-1"
+            >
+              <option value="">Selecciona talla</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+            </select>
+          </div>
+          <div>
+            <fieldset class="md:col-span-2">
+              <legend class="font-bold mb-1">
+                ¿Ha colaborado en otras ediciones? <span
+                  class="text-secundarioMMM-600">*</span
+                >
+              </legend>
+              <div class="flex gap-4 mt-1">
+                <label
+                  ><input
+                    type="radio"
+                    name="colaboradoOtrasEdiciones"
+                    value="sí"
+                    required
+                  /> Sí</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="colaboradoOtrasEdiciones"
+                    value="no"
+                  /> No</label
+                >
+              </div>
+            </fieldset>
+          </div>
+          <div class="md:col-span-2">
+            <label for="tareasRealizadas" class="font-bold">
+              Indique tareas realizadas
+            </label>
+            <textarea
+              id="tareasRealizadas"
+              name="tareasRealizadas"
+              rows="2"
+              class="w-full border rounded p-2 mt-1"></textarea>
+          </div>
+          <div class="md:col-span-2">
+            <label for="otrosDatos" class="font-bold">
+              Indique otros datos de interés
+            </label>
+            <textarea
+              id="otrosDatos"
+              name="otrosDatos"
+              rows="2"
+              class="w-full border rounded p-2 mt-1"></textarea>
+          </div>
+          <div class="md:col-span-2 flex items-center gap-2 justify-center">
+            <label class="inline-flex items-start gap-2">
+              <input type="checkbox" name="politica" value="si" required />
+              <span class="font-black"
+                >Acepto la política de protección de datos *</span
+              >
+            </label>
+          </div>
+          <div>
+            <label for="preferenciaPuesto" class="font-bold">
+              Preferencia de puesto <span class="text-secundarioMMM-600">*</span
+              >
+            </label>
+            <select
+              id="preferenciaPuesto"
+              name="preferenciaPuesto"
+              required
+              class="w-full border rounded p-2 mt-1"
+            >
+              <option value="">Selecciona puesto</option>
+              <option value="carrera">Carrera</option>
+              <option value="servicio">Servicio</option>
+              <option value="protocolo">Protocolo</option>
+              <option value="medico">Médico</option>
+              <option value="seguridad">Seguridad</option>
+              <option value="tecnologia">Tecnología</option>
+            </select>
+          </div>
+        </div>
+        <div class="g-recaptcha" data-sitekey={import.meta.env.RECAPTCHA_SITE_KEY_MMM}></div>
 
-      <section id="form-voluntarios" class="max-w-2xl mx-auto bg-white rounded-lg shadow p-6 my-8">
-  <h2 class="font-heading text-primarioMMM-500 text-3xl font-medium mb-6 text-left">FORMULARIO</h2>
-  <form>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div>
-        <label for="nombre" class="font-bold">
-          Nombre <span class="text-secundarioMMM-600">*</span>
-        </label>
-        <input type="text" id="nombre" name="nombre" required class="w-full border rounded p-2 mt-1" />
-      </div>
-      <div>
-        <label for="apellido" class="font-bold">
-          Apellido <span class="text-secundarioMMM-600">*</span>
-        </label>
-        <input type="text" id="apellido" name="apellido" required class="w-full border rounded p-2 mt-1" />
-      </div>
-      <div>
-        <label for="dni" class="font-bold">
-          DNI o Pasaporte <span class="text-secundarioMMM-600">*</span>
-        </label>
-        <input type="text" id="dni" name="dni" required class="w-full border rounded p-2 mt-1" />
-      </div>
-      <div>
-        <label for="fecha-nacimiento" class="font-bold">
-          Fecha de nacimiento <span class="text-secundarioMMM-600">*</span>
-        </label>
-        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required class="w-full border rounded p-2 mt-1" />
-      </div>
-      <div>
-        <label for="domicilio" class="font-bold" aria-placeholder="C/calle N/numero">
-          Domicilio <span class="text-secundarioMMM-600">*</span>
-        </label>
-        <input type="text" id="domicilio" name="domicilio" required class="w-full border rounded p-2 mt-1" />
-      </div>
-      <div>
-        <label for="poblacion" class="font-bold">
-          Población <span class="text-secundarioMMM-600">*</span>
-        </label>
-        <input type="text" id="poblacion" name="poblacion" required class="w-full border rounded p-2 mt-1" />
-      </div>
-      <div>
-        <label for="codigo-postal" class="font-bold">
-          Código Postal <span class="text-secundarioMMM-600">*</span>
-        </label>
-        <input type="text" id="codigo-postal" name="codigo-postal" required class="w-full border rounded p-2 mt-1" />
-      </div>
-      <div>
-        <label for="provincia" class="font-bold">
-          Provincia <span class="text-secundarioMMM-600">*</span>
-        </label>
-        <input type="text" id="provincia" name="provincia" required class="w-full border rounded p-2 mt-1" />
-      </div>
-      <div>
-        <label for="telefono-movil" class="font-bold">
-          Teléfono móvil <span class="text-secundarioMMM-600">*</span>
-        </label>
-        <input type="tel" id="telefono-movil" name="telefono-movil" required class="w-full border rounded p-2 mt-1" />
-      </div>
-      <div>
-        <label for="telefono2" class="font-bold">
-          Teléfono 2 (opcional)
-        </label>
-        <input type="tel" id="telefono2" name="telefono2" class="w-full border rounded p-2 mt-1" />
-      </div>
-      <div>
-        <label for="email" class="font-bold">
-          Email <span class="text-secundarioMMM-600">*</span>
-        </label>
-        <input type="email" id="email" name="email" required class="w-full border rounded p-2 mt-1" />
-      </div>
-      <div>
-        <label class="font-bold">
-          Carnet de conducir <span class="text-secundarioMMM-600">*</span>
-        </label>
-        <div class="flex gap-4 mt-1">
-          <label><input type="radio" name="carnet" value="sí" required /> Sí</label>
-          <label><input type="radio" name="carnet" value="no" /> No</label>
-        </div>
-      </div>
-      <div>
-        <label for="talla" class="font-bold">
-          Talla de camiseta <span class="text-secundarioMMM-600">*</span>
-        </label>
-        <select id="talla" name="talla" required class="w-full border rounded p-2 mt-1">
-          <option value="">Selecciona talla</option>
-          <option value="S">S</option>
-          <option value="M">M</option>
-          <option value="L">L</option>
-          <option value="XL">XL</option>
-          <option value="XXL">XXL</option>
-        </select>
-      </div>
-      <div>
-        <label class="font-bold">
-          ¿Ha colaborado en otras ediciones? <span class="text-secundarioMMM-600">*</span>
-        </label>
-        <div class="flex gap-4 mt-1">
-          <label><input type="radio" name="colaborado" value="sí" required /> Sí</label>
-          <label><input type="radio" name="colaborado" value="no" /> No</label>
-        </div>
-      </div>
-      <div class="md:col-span-2">
-        <label for="otros-datos" class="font-bold">
-          Indique otros datos de interés
-        </label>
-        <textarea id="otros-datos" name="otros-datos" rows="2" class="w-full border rounded p-2 mt-1"></textarea>
-      </div>
-      <div class="md:col-span-2">
-        <label for="tareas-realizadas" class="font-bold">
-          Indique tareas realizadas
-        </label>
-        <textarea id="tareas-realizadas" name="tareas-realizadas" rows="2" class="w-full border rounded p-2 mt-1"></textarea>
-      </div>
-      <div>
-        <label class="font-bold">
-          ¿Acepta la política de datos? <span class="text-secundarioMMM-600">*</span>
-        </label>
-        <div class="flex gap-4 mt-1">
-          <label><input type="radio" name="politica" value="sí" required /> Sí</label>
-          <label><input type="radio" name="politica" value="no" /> No</label>
-        </div>
-      </div>
-      <div>
-        <label for="preferencia-puesto" class="font-bold">
-          Preferencia de puesto <span class="text-secundarioMMM-600">*</span>
-        </label>
-        <select id="preferencia-puesto" name="preferencia-puesto" required class="w-full border rounded p-2 mt-1">
-          <option value="">Selecciona puesto</option>
-          <option value="carrera">Carrera</option>
-          <option value="servicio">Servicio</option>
-          <option value="protocolo">Protocolo</option>
-          <option value="medico">Médico</option>
-          <option value="seguridad">Seguridad</option>
-          <option value="tecnologia">Tecnología</option>
-        </select>
-      </div>
-    </div>
-   
-
-     <Boton
+        <Boton
           color="primary"
           version="positivo"
-          class=" mt-6 w-full text-md md:text-sm font-bold mx-auto block text-center"
+          class="mt-6 w-full text-md md:text-sm font-bold mx-auto block text-center"
           type="submit"
         >
           ENVIAR
-      </Boton>
+        </Boton>
+      </form>
+    </section>
+    <script src="/js/validarVoluntarios.js" type="module"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-
-         
-      </section>
   </main>
-
 </Layout>
