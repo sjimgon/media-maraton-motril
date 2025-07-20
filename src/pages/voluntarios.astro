@@ -270,8 +270,6 @@ import Boton from "../components/Botones.astro";
             </select>
           </div>
         </div>
-        <div class="g-recaptcha" data-sitekey={import.meta.env.RECAPTCHA_SITE_KEY_MMM}></div>
-
         <Boton
           color="primary"
           version="positivo"
@@ -282,6 +280,7 @@ import Boton from "../components/Botones.astro";
         </Boton>
       </form>
     </section>
+    <script src="/js/validarVoluntarios.js" type="module"></script>
 
   </main>
 </Layout>
