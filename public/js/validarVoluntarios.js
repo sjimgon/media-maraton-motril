@@ -80,16 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData(form);
     const datos = Object.fromEntries(formData.entries());
 
-    const token = grecaptcha.getResponse();
-
-    if (!token) {
-      alert("Por favor, confirma que no eres un robot.");
-      e.preventDefault();
-      return;
-    }
-
-    datos["g-recaptcha-response"] = token;
-
     fetch("/api/enviarVoluntario", {
       method: "POST",
       headers: {
