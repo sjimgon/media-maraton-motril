@@ -110,7 +110,7 @@ import Icono from '../components/Iconos.astro';
               hidden md:flex flex-col items-center justify-center
               hover:scale-105 transition-transform duration-300 ease-in-out"
           >
-            <img id="icono-16" class="w-12" />
+            <img id="icono-18" class="w-12" />
             <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-2" />
             <h3 class="text-3xl font-black text-center">18 DE OCTUBRE</h3>
             <section
@@ -118,10 +118,10 @@ import Icono from '../components/Iconos.astro';
               class="text-sm font-black flex flex-col items-center justify-center"
             >
             <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-2" />
-              <p>CIELO: <span id="cielo-16" class="font-light text-xl"></span></p> 
-              <p>TEMPERATURA: <span id="temperatura-16" class="font-light text-xl"></span></p>
-              <p>VIENTO: <span id="viento-16" class="font-light text-xl"></span></p>
-              <p>HUMEDAD: <span id="humedad-16" class="font-light text-xl"></span></p>
+              <p>CIELO: <span id="cielo-18" class="font-light text-xl"></span></p> 
+              <p>TEMPERATURA: <span id="temperatura-18" class="font-light text-xl"></span></p>
+              <p>VIENTO: <span id="viento-18" class="font-light text-xl"></span></p>
+              <p>HUMEDAD: <span id="humedad-18" class="font-light text-xl"></span></p>
             </section>
           </div>
           <div
@@ -135,7 +135,7 @@ import Icono from '../components/Iconos.astro';
               flex flex-col items-center justify-center
               hover:scale-105 transition-transform duration-300 ease-in-out"
           >
-            <img id="icono-17" class="w-20 " />
+            <img id="icono-19" class="w-20 " />
             <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-2" />
             <h3 class="text-4xl font-black text-center">19 DE OCTUBRE</h3>
             <section
@@ -143,10 +143,10 @@ import Icono from '../components/Iconos.astro';
               class=" text-sm font-black flex flex-col items-center justify-center"
             >
             <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-2" />
-              <p>CIELO: <span id="cielo-17" class="font-light text-2xl"></span></p>
-              <p>TEMPERATURA: <span id="temperatura-17" class="font-light text-2xl"></span></p>
-              <p>VIENTO: <span id="viento-17" class="font-light text-2xl"></span></p>
-              <p>HUMEDAD: <span id="humedad-17" class="font-light text-2xl"></span></p>
+              <p>CIELO: <span id="cielo-19" class="font-light text-2xl"></span></p>
+              <p>TEMPERATURA: <span id="temperatura-19" class="font-light text-2xl"></span></p>
+              <p>VIENTO: <span id="viento-19" class="font-light text-2xl"></span></p>
+              <p>HUMEDAD: <span id="humedad-19" class="font-light text-2xl"></span></p>
             </section>
           </div>
           <div
@@ -160,7 +160,7 @@ import Icono from '../components/Iconos.astro';
               hover:scale-105 transition-transform duration-300 ease-in-out
               "
           >
-            <img id="icono-18" class="w-12 " />
+            <img id="icono-20" class="w-12 " />
             <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-2" />
             <h3 class="text-3xl font-black text-center">20 DE OCTUBRE</h3>
             <section
@@ -168,10 +168,10 @@ import Icono from '../components/Iconos.astro';
               class="text-sm font-black flex flex-col items-center justify-center"
             >
               <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-2" />
-              <p>CIELO: <span id="cielo-18" class="font-medium text-xl"></span></p> 
-              <p>TEMPERATURA: <span id="temperatura-18" class="font-medium text-xl"></span></p>
-              <p>VIENTO: <span id="viento-18" class="font-medium text-xl"></span></p>
-              <p>HUMEDAD: <span id="humedad-18" class="font-medium text-xl"></span></p>
+              <p>CIELO: <span id="cielo-20" class="font-medium text-xl"></span></p> 
+              <p>TEMPERATURA: <span id="temperatura-20" class="font-medium text-xl"></span></p>
+              <p>VIENTO: <span id="viento-20" class="font-medium text-xl"></span></p>
+              <p>HUMEDAD: <span id="humedad-20" class="font-medium text-xl"></span></p>
             </section>
           </div>
         </div>
@@ -200,12 +200,15 @@ import Icono from '../components/Iconos.astro';
             for (const infoDia of resultados) {
               const dia = infoDia.dia;
 
-              const diasEsperados = [19, 20, 21];
+              const diasEsperados = [18,19,20];
               const diasDisponibles = resultados.map(r => r.dia);
               const estanTodos = diasEsperados.every(dia => diasDisponibles.includes(dia));
 
               if (estanTodos) {
-                document.getElementById("meteorologia-index").classList.remove("hidden");
+                const meteoSection = document.getElementById("meteorologia-index");
+                if (meteoSection) {
+                  meteoSection.classList.remove("hidden");
+                }
               }
 
               document.getElementById(`cielo-${dia}`).textContent = infoDia.cielo;
@@ -214,7 +217,7 @@ import Icono from '../components/Iconos.astro';
               document.getElementById(`humedad-${dia}`).textContent = `${infoDia.humedad} %`;
 
               // Icono por ID
-              const nombreIcono = iconoMeteo[infoDia.id] || 'clouds'; // Valor por defecto si no se encuentra
+              const nombreIcono = iconoMeteo[infoDia.id] || 'soleado'; // Valor por defecto si no se encuentra
               document.getElementById(`icono-${dia}`).src = `/svg/iconos-meteo/${nombreIcono}.svg`;
             }
           }).catch(error => {
