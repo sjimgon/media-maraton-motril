@@ -1,26 +1,88 @@
 ---
-import Layout from '../layouts/LayoutMaster.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/LayoutMaster.astro";
+import LogoSlider from "../components/LogoSlider.astro";
+import Boton from "../components/Botones.astro";
 ---
 
 <Layout title="Multimedia | Media Maratón Ciudad de Motril">
-<main>
-    <h1 
-      class="
-        text-primarioMMM-500 
+  <main>
+    <h1
+      class="text-primarioMMM-500
         font-heading text-4xl md:text-6xl font-extrabold
         text-center
-        pt-20 md:pt-25
+        pt-20 md:pt-25"
+    >
+      MULTIMEDIA
+    </h1>
+
+    <section
+      id="multimedia"
+      class="
+        p-6 md:px-12 md:pb-8
+        flex flex-col md:flex-row items-center md:items-start justify-center
+        gap-y-4 md:gap-x-12"
+    >
+      <div
+        id="content-multimedia"
+        class="
+        wfull md:w-4/5
+        flex flex-col md:flex-row
+        items-center md:items-start
+        gap-y-4 md:gap-x-8
         "
       >
-        MULTIMEDIA
-      </h1>
+      <div id="carteleria" class="md:w-3/5">
+        <figure>
+          <img
+            src="images/pages/multimedia/MMM25' - CARTEL.webp"
+            alt="Cartel Media Maratón Motril 2025"
+            class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+          />
+        </figure>
+      </div>
+      <div
+        id="descargables"
+        class="w-full md:w-2/5
+            mx-auto
+            flex flex-col justify-center items-center md:items-start
+            gap-2"
+      >
+        <h3 class="text-2xl md:text-5xl font-black text-primarioMMM-500">
+          ENLACES DE DESCARGA
+        </h3>
+        <div
+          id="botones-descargables"
+          class="
+          w-2/3
+          text-center md:text-left
+          flex flex-col
+          gap-3
 
-      <section
-        id="circuito-21k
-      ">
-         
-      </section>
+          "
+        >
+          <Boton
+            color="primary"
+            version="positivo"
+            href="/files/Cartelería MMM25'.zip"
+            download="Cartelería MMM25'.zip"
+            class=""
+          >
+            Cartelería MMM25'
+          </Boton>
+          <Boton
+            color="secondary"
+            version="positivo"
+            href="/files/LogoMMM.zip"
+            download="LogoMMM.zip"
+            class=""
+          >
+            Logotipo MMM
+          </Boton>
+        </div>
+        
+      </div>
+      </div>
+    </section>
+    <LogoSlider />
   </main>
 </Layout>
