@@ -95,15 +95,13 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .then((data) => {
         alert("Formulario enviado correctamente.");
-        grecaptcha.reset(); // Reinicia el reCAPTCHA para permitir nuevos envíos
-
-        form.reset(); // Resetea el formulario después de enviar
+        form.reset(); 
       })
       .catch((error) => {
         console.error("Error:", error);
         alert("Hubo un problema al enviar el formulario. Inténtelo más tarde.");
       });
 
-    e.preventDefault(); // Evita el envío del formulario hasta que se validen todos los campos
+    e.preventDefault(); 
   });
 });
