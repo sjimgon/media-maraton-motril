@@ -51,7 +51,7 @@ export async function POST({ request }) {
       const asunto = `Nuevo Voluntario: ${datos.nombre} ${datos.apellido}`;
       const mailOptions = {
         from: '"Solicitud de voluntariado" <webmediamaratonmotril@gmail.com>',
-        to: "seergiojimgon@gmail.com", 
+        to: "Voluntariosareadeportes@motril.es", 
         subject: asunto,
         text: "Una nueva persona ha solicitado unirse al equipo de voluntarios. En el archivo adjunto encontrarás los datos aportados por el usuario.",
         attachments: [

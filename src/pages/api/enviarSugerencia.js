@@ -22,7 +22,7 @@ export async function POST({ request }) {
         });
 
         const mailOptions = {
-            from: '"Formulario Dudas o Sugerencias" <webmediamaratonmotril@gmail.com>',
+            from: '"Consulta de Dudas o Sugerencias" <webmediamaratonmotril@gmail.com>',
             to: "Voluntariosareadeportes@motril.es",
             subject: `Nuevo mensaje de ${nombre}`,
             text: `
