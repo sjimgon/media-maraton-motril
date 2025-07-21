@@ -3,7 +3,6 @@ import Layout from '../layouts/LayoutMaster.astro';
 import Boton from '../components/Botones.astro';
 
 import Conteo from '../components/CuentaRegresiva.astro';
-import { procesarClima } from '../utils/procesarClima.js';
 import Icono from '../components/Iconos.astro';
 ---
 
@@ -176,7 +175,7 @@ import Icono from '../components/Iconos.astro';
           </div>
         </div>
         <script>
-          import { procesarClima } from '/js/procesarClima.js';
+          import { procesarClima } from '../utils/procesarClima.js';
 
           procesarClima().then(resultados => {
             console.log(resultados); 
