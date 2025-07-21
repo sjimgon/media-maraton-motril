@@ -31,19 +31,35 @@ import Boton from '../components/Botones.astro';
           <p class="mb-2"><strong>EMAIL:</strong> <a href="mailto:deportes@motril.es" class="underline">deportes@motril.es</a></p>
         </div>
         <div class="bg-white rounded-lg shadow p-6 mt-4">
-          <h2 class="text-primarioMMM-500 text-2xl md:text-4xl font-bold mb-4">¿AÚN TE QUEDAN DUDAS?, MÁNDANOS UN MENSAJE</h2>
-          <form>
+          <h2 class="text-primarioMMM-500 text-2xl md:text-4xl font-bold mb-4">¿AÚN TE QUEDAN DUDAS?, ¿TIENES ALGUNA SUGERENCIA?. <br>  MÁNDANOS UN MENSAJE</h2>
+          <form id="form-sugerencia">
             <div class="mb-4">
-              <label for="nombre" class="font-bold block mb-1 text-primarioMMM-500" >Nombre</label>
-              <input type="text" id="nombre" name="nombre" required class="w-full border rounded p-2" placeholder="Nombre"/>
+              <label
+                for="nombre"
+                class="font-bold block mb-1 text-primarioMMM-500" 
+              >
+                Nombre y apellidos <span class="text-secundarioMMM-600">*</span>
+              </label>
+              <input type="text" id="nombre" name="nombre" required class="w-full border rounded p-2" placeholder="Nombre y apellidos" required/>
+            </div>
+
+            <div class="mb-4">
+              <label
+                for="email"
+                class="font-bold block mb-1 text-primarioMMM-500"
+              >
+                E-mail<span class="text-secundarioMMM-600">*</span>
+              </label>
+              <input type="email" id="email" name="email" required class="w-full border rounded p-2" placeholder="ejemplo@email.com" required/>
             </div>
             <div class="mb-4">
-              <label for="email" class="font-bold block mb-1 text-primarioMMM-500">E-mail</label>
-              <input type="email" id="email" name="email" required class="w-full border rounded p-2" placeholder="ejemplo@email.com"/>
-            </div>
-            <div class="mb-4">
-              <label for="mensaje" class="font-bold block mb-1 text-primarioMMM-500">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" rows="4" required class="w-full border rounded p-2" placeholder="Cuéntanos, te responderemos lo antes posible"></textarea>
+              <label
+                for="mensaje"
+                class="font-bold block mb-1 text-primarioMMM-500"
+              >
+                Mensaje <span class="text-secundarioMMM-600">*</span>
+              </label>
+              <textarea id="mensaje" name="mensaje" rows="4" required class="w-full border rounded p-2" placeholder="Cuéntanos, te responderemos lo antes posible" required></textarea>
             </div>
             <Boton
               color="primary"
@@ -55,5 +71,5 @@ import Boton from '../components/Botones.astro';
             </Boton>
           </form>
         </div>
-
+        <script src="/src/utils/validarSugerencia.js" type="module"></script>
       </section>
