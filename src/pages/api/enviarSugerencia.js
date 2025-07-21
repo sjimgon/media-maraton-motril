@@ -23,7 +23,7 @@ export async function POST({ request }) {
 
         const mailOptions = {
             from: '"Consulta de Dudas o Sugerencias" <webmediamaratonmotril@gmail.com>',
-            to: "Voluntariosareadeportes@motril.es",
+            to: "deportes@motril.es",
             subject: `Nuevo mensaje de ${nombre}`,
             text: `
 El usuario ${nombre} ha enviado un mensaje:
