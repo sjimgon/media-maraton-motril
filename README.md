@@ -1,48 +1,90 @@
-# Astro Starter Kit: Basics
+# 🏃‍♂️ Media Maratón Ciudad de Motril - Web Oficial
 
-```sh
-npm create astro@latest -- --template basics
-```
+![Estado](https://img.shields.io/website?url=https%3A%2F%2Fmediamaraton.motril.es&label=Estado)
+![Astro](https://img.shields.io/badge/Astro-4.0-orange?style=flat&logo=astro)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38B2AC?style=flat&logo=tailwind-css)
+![Node.js](https://img.shields.io/badge/Node.js-Serverless-green?style=flat&logo=node.js)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Web oficial desarrollada para la **Media Maratón Ciudad de Motril**. Este proyecto moderniza la presencia digital del evento, ofreciendo una experiencia centrada en el usuario, tiempos de carga ultrarrápidos y funcionalidades dinámicas integradas en una arquitectura estática.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+🔗 **Demo en vivo:** [mediamaraton.motril.es](https://mediamaraton.motril.es/)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+---
 
-## 🚀 Project Structure
+## 📋 Características Principales
 
-Inside of your Astro project, you'll see the following folders and files:
+* **⚡ Rendimiento Óptimo:** Arquitectura "Zero JS by default" gracias a Astro. La web sirve HTML estático y solo hidrata los componentes interactivos necesarios.
+* **📱 Diseño Responsivo (Mobile First):** Interfaz adaptada a corredores que consultan desde el móvil, maquetada con Tailwind CSS.
+* **🌤️ Módulo Meteorológico Inteligente:** Conexión con la API de *OpenWeatherMap*. Filtra automáticamente los datos para mostrar solo la previsión de la hora de la carrera (11:00 AM) durante los días del evento.
+* **⏳ Cuenta Regresiva:** Componente interactivo que calcula en tiempo real el tiempo restante hasta el evento.
+* **📩 Sistema de Contacto Seguro:** Formulario funcional gestionado con *Serverless Functions* y **Nodemailer**, protegiendo el buzón institucional del Ayuntamiento.
+* **🧩 Arquitectura de Componentes:** Uso de componentes reutilizables (`Cards`, `Botones` polimórficos, `Iconos`, `LogoSlider`) para mantener la coherencia visual y el principio DRY.
+
+---
+
+## 🛠️ Stack Tecnológico
+
+* **Frontend Framework:** [Astro](https://astro.build/)
+* **Estilos:** [Tailwind CSS](https://tailwindcss.com/)
+* **Lenguaje:** JavaScript (ES6+) / HTML5
+* **Backend (Serverless):** Node.js endpoints (`src/pages/api/`)
+* **Librerías Clave:**
+    * `nodemailer`: Gestión de correos SMTP para el formulario de contacto.
+* **Diseño:** Figma (Prototipado UI/UX de alta fidelidad).
+* **Despliegue:** Vercel + Configuración DNS (CNAME) para dominio institucional.
+
+---
+
+## 📂 Estructura del Proyecto
 
 ```text
 /
-├── public/
-│   └── favicon.svg
+├── public/             # Archivos estáticos (imágenes, fuentes, documentos descargables)
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+│   ├── components/     # Bloques UI reutilizables (Header, Footer, Card, Botones...)
+│   ├── layouts/        # Plantillas maestras (LayoutMaster.astro)
+│   ├── pages/          # Rutas de la web
+│   │   └── api/        # Endpoints de servidor (clima.js, enviarSugerencia.js)
+│   ├── utils/          # Lógica de negocio (procesarClima.js)
+│   └── styles/         # Estilos globales y configuración de fuentes
+└── astro.config.mjs    # Configuración del framework
+🚀 Instalación y Despliegue Local
+Sigue estos pasos para ejecutar el proyecto en tu máquina local:
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Clonar el repositorio:
 
-## 🧞 Commands
+Bash
 
-All commands are run from the root of the project, from a terminal:
+git clone [https://github.com/tu-usuario/media-maraton-motril.git](https://github.com/tu-usuario/media-maraton-motril.git)
+cd media-maraton-motril
+Instalar dependencias:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Bash
 
-## 👀 Want to learn more?
+npm install
+Configurar Variables de Entorno: Crea un archivo .env en la raíz del proyecto y añade tus credenciales (necesarias para que funcionen el clima y los correos):
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Fragmento de código
+
+OPENWEATHER_API_KEY_MMM=tu_api_key_aqui
+GMAIL_PASSWORD_MMM=tu_password_de_aplicacion_aqui
+Ejecutar en modo desarrollo:
+
+Bash
+
+npm run dev
+La web estará disponible en http://localhost:4321.
+
+☁️ Despliegue
+El proyecto está optimizado para desplegarse en Vercel:
+
+Conectar el repositorio de GitHub a Vercel.
+
+Configurar las Variables de Entorno en el panel de Vercel (Settings > Environment Variables).
+
+Vercel detectará automáticamente el framework Astro y ejecutará el build.
+
+✒️ Autor
+Sergio Jiménez - Desarrollo Fullstack y Diseño UI/UX
+
+<p align="center"> <sub>Desarrollado para el Área de Deportes del Ayuntamiento de Motril - Proyecto Final DAW</sub> </p>
