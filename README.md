@@ -29,8 +29,8 @@ Web oficial desarrollada para la **Media Maratón Ciudad de Motril**. Este proye
 * **Lenguaje:** JavaScript (ES6+) / HTML5
 * **Backend (Serverless):** Node.js endpoints (`src/pages/api/`)
 * **Librerías Clave:**
-    * `nodemailer`: Gestión de correos SMTP para el formulario de contacto.
-* **Diseño:** Figma (Prototipado UI/UX de alta fidelidad).
+    * `nodemailer`: Gestión de correos para el formulario de contacto.
+* **Diseño:** Figma (Prototipado UI/UX ).
 * **Despliegue:** Vercel + Configuración DNS (CNAME) para dominio institucional.
 
 ---
@@ -49,31 +49,6 @@ Web oficial desarrollada para la **Media Maratón Ciudad de Motril**. Este proye
 │   └── styles/         # Estilos globales y configuración de fuentes
 └── astro.config.mjs    # Configuración del framework
 🚀 Instalación y Despliegue Local
-Sigue estos pasos para ejecutar el proyecto en tu máquina local:
-
-Clonar el repositorio:
-
-Bash
-
-git clone [https://github.com/tu-usuario/media-maraton-motril.git](https://github.com/tu-usuario/media-maraton-motril.git)
-cd media-maraton-motril
-Instalar dependencias:
-
-Bash
-
-npm install
-Configurar Variables de Entorno: Crea un archivo .env en la raíz del proyecto y añade tus credenciales (necesarias para que funcionen el clima y los correos):
-
-Fragmento de código
-
-OPENWEATHER_API_KEY_MMM=tu_api_key_aqui
-GMAIL_PASSWORD_MMM=tu_password_de_aplicacion_aqui
-Ejecutar en modo desarrollo:
-
-Bash
-
-npm run dev
-La web estará disponible en http://localhost:4321.
 
 ☁️ Despliegue
 El proyecto está optimizado para desplegarse en Vercel:
@@ -85,6 +60,5 @@ Configurar las Variables de Entorno en el panel de Vercel (Settings > Environmen
 Vercel detectará automáticamente el framework Astro y ejecutará el build.
 
 ✒️ Autor
-Sergio Jiménez - Desarrollo Fullstack y Diseño UI/UX
-
-<p align="center"> <sub>Desarrollado para el Área de Deportes del Ayuntamiento de Motril - Proyecto Final DAW</sub> </p>
+Sergio Jiménez - Desarrollo Frontend y Diseño UI/UX
+Desarrollado para el Área de Deportes del Ayuntamiento de Motril
