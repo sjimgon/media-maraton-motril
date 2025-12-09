@@ -2,7 +2,8 @@
 import Layout from '../layouts/LayoutMaster.astro';
 import Boton from '../components/Botones.astro';
 
-import Conteo from '../components/CuentaRegresiva.astro';
+import CuentaRegresiva from '../components/CuentaRegresiva.astro';
+import '../utils/procesarClima.js';
 import Icono from '../components/Iconos.astro';
 ---
 
@@ -40,25 +41,9 @@ import Icono from '../components/Iconos.astro';
         font-black text-negroMMM
         "
       >
-        DOMINGO 19 DE OCTUBRE DE 2025
+        DOMINGO 18 DE OCTUBRE DE 2025
       </h2>
-
-      <Boton 
-        color="primary"
-        version="positivo"
-        href="/inscripciones"
-        class="text-3xl md:text-2xl font-bold"
-      >
-        INSCRÍBETE
-      </Boton>
-      <p
-        class="
-        text-center
-        text-xl md:text-2xl
-        font-bold text-negroMMM">
-        FALTAN:
-      </p>
-      <Conteo fecha="2025-10-19T10:30:00" />
+      <CuentaRegresiva fecha="2025-10-18T10:30:00" />
     </section>
 
         <!-- SECCION CONDICIONES METEOROLÓGICAS -->
@@ -176,10 +161,25 @@ import Icono from '../components/Iconos.astro';
           </div>
         </div>
         <script>
+          // @ts-nocheck
           import { procesarClima } from '../utils/procesarClima.js';
 
           procesarClima().then(resultados => {
             console.log(resultados); 
+            
+            for (const infoDia of resultados) {
+              const dia = infoDia.dia;
+
+              const diasEsperados = [18,19,20];
+              const diasDisponibles = resultados.map(r => r.dia);
+              const estanTodos = diasEsperados.every(dia => diasDisponibles.includes(dia));
+
+              if (estanTodos) {
+                const meteoSection = document.getElementById("meteorologia-index");
+                if (meteoSection) {
+                  meteoSection.classList.remove("hidden");
+                }
+              }
 
             const iconoMeteo = {
               800: 'soleado',           
@@ -197,19 +197,6 @@ import Icono from '../components/Iconos.astro';
 
             };
 
-            for (const infoDia of resultados) {
-              const dia = infoDia.dia;
-
-              const diasEsperados = [18,19,20];
-              const diasDisponibles = resultados.map(r => r.dia);
-              const estanTodos = diasEsperados.every(dia => diasDisponibles.includes(dia));
-
-              if (estanTodos) {
-                const meteoSection = document.getElementById("meteorologia-index");
-                if (meteoSection) {
-                  meteoSection.classList.remove("hidden");
-                }
-              }
 
               document.getElementById(`cielo-${dia}`).textContent = infoDia.cielo;
               document.getElementById(`temperatura-${dia}`).textContent = `${infoDia.temperatura} °C`;
@@ -346,6 +333,7 @@ import Icono from '../components/Iconos.astro';
     </section>
 
     <script>
+      // @ts-nocheck
       const recorrido10k = document.getElementById('recorrido-10k-index');
       const recorrido21k = document.getElementById('recorrido-21k-index');
       const mostrar10k = document.getElementById('mostrar-10k-index');

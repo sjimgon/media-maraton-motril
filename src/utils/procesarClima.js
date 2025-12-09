@@ -1,3 +1,7 @@
+/**
+ * @returns {Promise<any>}
+ */
+
 export async function procesarClima(){
     const response = await fetch('/api/clima');
     if (!response.ok) {

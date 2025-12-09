@@ -1,31 +1,50 @@
 ---
 const { fecha } = Astro.props;
+import Boton from '../components/Botones.astro';
 ---
 
 <div
   id="cuenta-regresiva"
-  class="flex gap-4 font-semibold text-4xl"
+  class="flex flex-col gap-4 font-semibold text-4xl mt-5 text-center"
   data-fecha={fecha}
 >
-  <div class="flex flex-col items-center text-negroMMM font-heading ">
-    <span id="dias">00</span>
-    <span class="text-xl">DÍAS</span>
-  </div>
-  <div class="flex flex-col items-center text-negroMMM font-heading">
-    <span id="horas">00</span>
-    <span class="text-xl ">H</span>
-  </div>
-  <div class="flex flex-col items-center text-negroMMM font-heading">
-    <span id="minutos">00</span>
-    <span class="text-xl ">M</span>
-  </div>
-  <div class="flex flex-col items-center text-negroMMM font-heading">
-    <span id="segundos">00</span>
-    <span class="text-xl">S</span>
+        <Boton 
+        color="primary"
+        version="positivo"
+        href="/inscripciones"
+        class="text-3xl md:text-2xl font-bold"
+      >
+        INSCRÍBETE
+      </Boton>
+  <p
+    class="
+      text-center
+      text-xl md:text-2xl
+      font-bold text-negroMMM">
+      FALTAN:
+  </p>
+  <div class="flex gap-4">
+    <div class="flex flex-col items-center text-negroMMM font-heading ">
+      <span id="dias">00</span>
+      <span class="text-xl">DÍAS</span>
+    </div>
+    <div class="flex flex-col items-center text-negroMMM font-heading">
+      <span id="horas">00</span>
+      <span class="text-xl ">H</span>
+    </div>
+    <div class="flex flex-col items-center text-negroMMM font-heading">
+      <span id="minutos">00</span>
+      <span class="text-xl ">M</span>
+    </div>
+    <div class="flex flex-col items-center text-negroMMM font-heading">
+      <span id="segundos">00</span>
+      <span class="text-xl">S</span>
+    </div>
   </div>
 </div>
 
 <script>
+  // @ts-nocheck
   const el = document.getElementById('cuenta-regresiva');
   const fechaObjetivo = new Date(el.dataset.fecha);
   function actualizarCuentaRegresiva() {
