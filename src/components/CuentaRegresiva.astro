@@ -12,18 +12,19 @@ import Boton from '../components/Botones.astro';
         color="primary"
         version="positivo"
         href="/inscripciones"
-        class="text-3xl md:text-2xl font-bold"
+        class="text-3xl md:text-2xl font-bold w-80"
       >
         INSCRÍBETE
       </Boton>
-  <p
+  <div class="flex-col">
+    <p
     class="
       text-center
       text-xl md:text-2xl
       font-bold text-negroMMM">
       FALTAN:
   </p>
-  <div class="flex gap-4">
+  <div class="flex gap-4 mt-3 justify-center" >
     <div class="flex flex-col items-center text-negroMMM font-heading ">
       <span id="dias">00</span>
       <span class="text-xl">DÍAS</span>
@@ -40,6 +41,8 @@ import Boton from '../components/Botones.astro';
       <span id="segundos">00</span>
       <span class="text-xl">S</span>
     </div>
+  </div>
+
   </div>
 </div>
 
