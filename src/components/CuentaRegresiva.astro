@@ -51,7 +51,8 @@ import Boton from '../components/Botones.astro';
     const ahora = new Date();
     const diferencia = fechaObjetivo - ahora;
     if (diferencia <= 0) {
-      el.innerHTML = '¡HA LLEGADO EL MOMENTO!';
+      // el.innerHTML = '¡HA LLEGADO EL MOMENTO!';
+      el.innerHTML = '¡GRACIAS A TODOS POR PARTICIPAR, NOS VEMOS EL AÑO QUE VIENE!';
       clearInterval(intervalo);
       return;
     }
