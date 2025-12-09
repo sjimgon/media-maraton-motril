@@ -41,9 +41,9 @@ import Icono from '../components/Iconos.astro';
         font-black text-negroMMM
         "
       >
-        DOMINGO 18 DE OCTUBRE DE 2026
+        DOMINGO 17 DE OCTUBRE DE 2026
       </h2>
-      <CuentaRegresiva fecha="2026-10-18T10:30:00" />
+      <CuentaRegresiva fecha="2026-10-17T10:30:00" />
     </section>
 
         <!-- SECCION CONDICIONES METEOROLÓGICAS -->
@@ -94,18 +94,18 @@ import Icono from '../components/Iconos.astro';
               hidden md:flex flex-col items-center justify-center
               hover:scale-105 transition-transform duration-300 ease-in-out"
           >
-            <img id="icono-18" class="w-12" />
+            <img id="icono-10" class="w-12" />
             <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-2" />
-            <h3 class="text-3xl font-black text-center">18 DE OCTUBRE</h3>
+            <h3 class="text-3xl font-black text-center">10 DE DICIEMBRE</h3>
             <section
               id="info-clima"
               class="text-sm font-black flex flex-col items-center justify-center"
             >
             <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-2" />
-              <p>CIELO: <span id="cielo-18" class="font-light text-xl"></span></p> 
-              <p>TEMPERATURA: <span id="temperatura-18" class="font-light text-xl"></span></p>
-              <p>VIENTO: <span id="viento-18" class="font-light text-xl"></span></p>
-              <p>HUMEDAD: <span id="humedad-18" class="font-light text-xl"></span></p>
+              <p>CIELO: <span id="cielo-10" class="font-light text-xl"></span></p> 
+              <p>TEMPERATURA: <span id="temperatura-10" class="font-light text-xl"></span></p>
+              <p>VIENTO: <span id="viento-10" class="font-light text-xl"></span></p>
+              <p>HUMEDAD: <span id="humedad-10" class="font-light text-xl"></span></p>
             </section>
           </div>
           <div
@@ -120,18 +120,18 @@ import Icono from '../components/Iconos.astro';
               flex flex-col items-center justify-center
               hover:scale-105 transition-transform duration-300 ease-in-out"
           >
-            <img id="icono-19" class="w-20 " />
+            <img id="icono-11" class="w-20 " />
             <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-4" />
-            <h3 class="text-4xl font-black text-center">19 DE OCTUBRE</h3>
+            <h3 class="text-4xl font-black text-center">11 DE DICIEMBRE</h3>
             <section
               id="info-clima"
               class=" text-sm font-black flex flex-col items-center justify-center"
             >
             <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-4" />
-              <p>CIELO: <span id="cielo-19" class="font-light text-2xl"></span></p>
-              <p>TEMPERATURA: <span id="temperatura-19" class="font-light text-2xl"></span></p>
-              <p>VIENTO: <span id="viento-19" class="font-light text-2xl"></span></p>
-              <p>HUMEDAD: <span id="humedad-19" class="font-light text-2xl"></span></p>
+              <p>CIELO: <span id="cielo-11" class="font-light text-2xl"></span></p>
+              <p>TEMPERATURA: <span id="temperatura-11" class="font-light text-2xl"></span></p>
+              <p>VIENTO: <span id="viento-11" class="font-light text-2xl"></span></p>
+              <p>HUMEDAD: <span id="humedad-11" class="font-light text-2xl"></span></p>
             </section>
           </div>
           <div
@@ -145,18 +145,18 @@ import Icono from '../components/Iconos.astro';
               hover:scale-105 transition-transform duration-300 ease-in-out
               "
           >
-            <img id="icono-20" class="w-12 " />
+            <img id="icono-12" class="w-12 " />
             <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-2" />
-            <h3 class="text-3xl font-black text-center">20 DE OCTUBRE</h3>
+            <h3 class="text-3xl font-black text-center">12 DE DICIEMBRE</h3>
             <section
               id="info-clima"
               class="text-sm font-black flex flex-col items-center justify-center"
             >
               <hr class="w-1/2 mx-auto border-t-1 border-secundarioMMM-700 my-2" />
-              <p>CIELO: <span id="cielo-20" class="font-medium text-xl"></span></p> 
-              <p>TEMPERATURA: <span id="temperatura-20" class="font-medium text-xl"></span></p>
-              <p>VIENTO: <span id="viento-20" class="font-medium text-xl"></span></p>
-              <p>HUMEDAD: <span id="humedad-20" class="font-medium text-xl"></span></p>
+              <p>CIELO: <span id="cielo-12" class="font-medium text-xl"></span></p> 
+              <p>TEMPERATURA: <span id="temperatura-12" class="font-medium text-xl"></span></p>
+              <p>VIENTO: <span id="viento-12" class="font-medium text-xl"></span></p>
+              <p>HUMEDAD: <span id="humedad-12" class="font-medium text-xl"></span></p>
             </section>
           </div>
         </div>
@@ -164,13 +164,30 @@ import Icono from '../components/Iconos.astro';
           // @ts-nocheck
           import { procesarClima } from '../utils/procesarClima.js';
 
+          
+          const iconoMeteo = {
+            800: 'soleado',           
+            801: 'soleado',           
+            802: 'entrenublado',       
+            803: 'nublado',
+            804: 'nublado',
+            500: 'lluvia suave',             
+            501: 'lluvia',
+            502: 'lluvia',
+            200: 'tormentoso',          
+            201: 'tormentoso',            
+            701: 'niebla',             
+            711: 'viento'
+            
+          };
+          
           procesarClima().then(resultados => {
             console.log(resultados); 
             
             for (const infoDia of resultados) {
               const dia = infoDia.dia;
 
-              const diasEsperados = [18,19,20];
+              const diasEsperados = [10,11,12];
               const diasDisponibles = resultados.map(r => r.dia);
               const estanTodos = diasEsperados.every(dia => diasDisponibles.includes(dia));
 
@@ -180,23 +197,6 @@ import Icono from '../components/Iconos.astro';
                   meteoSection.classList.remove("hidden");
                 }
               }
-
-            const iconoMeteo = {
-              800: 'soleado',           
-              801: 'soleado',           
-              802: 'entrenublado',       
-              803: 'nublado',
-              804: 'nublado',
-              500: 'lluvia suave',             
-              501: 'lluvia',
-              502: 'lluvia',
-              200: 'tormentoso',          
-              201: 'tormentoso',            
-              701: 'niebla',             
-              711: 'viento'
-
-            };
-
 
               document.getElementById(`cielo-${dia}`).textContent = infoDia.cielo;
               document.getElementById(`temperatura-${dia}`).textContent = `${infoDia.temperatura} °C`;

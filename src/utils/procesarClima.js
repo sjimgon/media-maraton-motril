@@ -9,8 +9,8 @@ export async function procesarClima(){
     }
     const data = await response.json();
     
-    const diasEvento = [18,19,20];
-    const mesEvento = 9; //Para los Date, enero es 0, febrero es 1, etc.
+    const diasEvento = [10,11,12];
+    const mesEvento = 11; //Para los Date, enero es 0, febrero es 1, etc.
     const yearEvento = 2025;
 
     const resultados = [];
@@ -23,7 +23,7 @@ export async function procesarClima(){
         const hora = fecha.getHours();
 
         if (diasEvento.includes(dia) && mes === mesEvento && year === yearEvento) {
-            if(hora === 11){
+            if(hora === 10){
                 resultados.push({
                     dia,
                     cielo: bloque.weather[0].description,
