@@ -13,27 +13,34 @@ import Icono from '../components/Iconos.astro';
     <section 
       id="hero-index"
       class="
-        
-        text-primarioMMM-500 
         w-full
         min-h-screen
         p-8  md:pt-30
         flex flex-col
         gap-y-4 md:gap-y-2
-        items-center justify-center 
+        items-center justify-center
+        bg-[url('/images/index/hero/hero-bg-web.webp')] bg-cover bg-center bg-no-repeat
       "
     >
+
+    <div>
       <h1 
         class=" 
-        font-heading text-center
-        text-6xl md:text-9xl
+        font-morganite text-left
+        text-[9xl] md:text-[12rem]
         font-black
+        text-blancoMMM
         flex 
         justify-center 
         "
       >
-        41º MEDIA MARATÓN CIUDAD DE MOTRIL
+        42º MEDIA MARATÓN
       </h1>
+      <div class="mt-4 inline-block bg-primary px-4 py-2">
+            <span class="display text-2xl sm:text-3xl text-primary-foreground">
+              CIUDAD DE MOTRIL
+            </span>
+          </div>
       <h2
         class="
         text-center
@@ -41,9 +48,10 @@ import Icono from '../components/Iconos.astro';
         font-black text-negroMMM
         "
       >
-        DOMINGO 18 DE OCTUBRE DE 2025
+        DOMINGO 18 DE OCTUBRE DE 2026
       </h2>
-      <CuentaRegresiva fecha="2025-10-18T10:30:00" />
+      <CuentaRegresiva fecha="2026-10-18T10:30:00" />
+    </div>
     </section>
 
         <!-- SECCION CONDICIONES METEOROLÓGICAS -->
