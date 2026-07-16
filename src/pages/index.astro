@@ -19,37 +19,75 @@ import Icono from '../components/Iconos.astro';
         flex flex-col
         gap-y-4 md:gap-y-2
         items-center justify-center
-        bg-[url('/images/index/hero/hero-bg-web.webp')] bg-cover bg-center bg-no-repeat
+        bg-[url('/images/index/hero/hero5-bg-web.webp')] bg-cover bg-center bg-no-repeat
       "
     >
 
-    <div>
-      <h1 
-        class=" 
-        font-morganite text-left
-        text-[9xl] md:text-[12rem]
-        font-black
-        text-blancoMMM
-        flex 
-        justify-center 
+    <div
+    class="
+      w-full md:w-2/3
+      flex flex-col items-start justify-start
+      gap-y-4 md:gap-y-6
+    "
+    >
+
+    <div class="mx-auto w-fit">
+      <h1
+        class="
+          font-morganite
+          whitespace-nowrap
+          leading-none
+          font-black
+          text-blancoMMM
+          text-[clamp(5rem,16vw,12rem)]
         "
       >
         42º MEDIA MARATÓN
       </h1>
-      <div class="mt-4 inline-block bg-primary px-4 py-2">
-            <span class="display text-2xl sm:text-3xl text-primary-foreground">
-              CIUDAD DE MOTRIL
-            </span>
-          </div>
-      <h2
-        class="
-        text-center
-        text-4xl md:text-6xl 
-        font-black text-negroMMM
-        "
+
+      <div class="mt-4 bg-secundarioMMM-500">
+        <span
+          class="
+            block
+            text-center
+            whitespace-nowrap
+            font-black
+            text-primarioMMM-500
+            text-[clamp(1.5rem,4vw,3.75rem)]
+          "
+        >
+          CIUDAD DE MOTRIL
+        </span>
+      </div>
+      <div
+      class="
+        mt-8
+        flex flex-col items-center justify-center
+        gap-y-4
+      "
       >
-        DOMINGO 18 DE OCTUBRE DE 2026
-      </h2>
+
+        <span
+          class="
+            block
+            border-2 border-secundarioMMM-500
+            rounded-full
+            bg-secundarioMMM-500/20
+            py-3 px-10
+          "
+        >
+        <h2
+          class="
+          text-center
+          text-5xl md:text-3xl 
+          font-black text-secundarioMMM-500
+          "
+        >
+          DOMINGO 18 DE OCTUBRE DE 2026
+        </h2>
+        </span>
+      </div> 
+    </div>
       <CuentaRegresiva fecha="2026-10-18T10:30:00" />
     </div>
     </section>

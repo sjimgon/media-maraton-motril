@@ -180,41 +180,41 @@
 @theme {
 /* Colores */
 
-    /* PrimarioMMM 41 EDICION - AZUL  */
-  --color-primarioMMM-50:  #5373b7;
-  --color-primarioMMM-100: #4f6ab1;
-  --color-primarioMMM-200: #4260aa;
-  --color-primarioMMM-300: #3755a2;
-  --color-primarioMMM-400: #3d54a1;
-  --color-primarioMMM-500: #40519f;
-  --color-primarioMMM-600: #3a488e;
-  --color-primarioMMM-700: #36417b;
-  --color-primarioMMM-800: #343c67;
-  --color-primarioMMM-900: #2e3556;
+/* PrimarioMMM 42 EDICION - AZUL OCEANO PROFUNDO (Fondo y Estructura) */
+  --color-primarioMMM-50:  #f0f9ff;
+  --color-primarioMMM-100: #e0f2fe;
+  --color-primarioMMM-200: #bae6fd;
+  --color-primarioMMM-300: #7dd3fc;
+  --color-primarioMMM-400: #38bdf8;
+  --color-primarioMMM-500: #0ea5e9; /* Azul océano medio */
+  --color-primarioMMM-600: #0284c7;
+  --color-primarioMMM-700: #0369a1;
+  --color-primarioMMM-800: #075985;
+  --color-primarioMMM-900: #0c4a6e; /* Azul noche (Excelente para el fondo de la web) */
   
-  /*SecundarioMMM 41 EDICION - MAGENTA*/
-  --color-secundarioMMM-50:  #d95995;
-  --color-secundarioMMM-100: #d9558a;
-  --color-secundarioMMM-200: #d65081;
-  --color-secundarioMMM-300: #d34b75;
-  --color-secundarioMMM-400: #d2456b;
-  --color-secundarioMMM-500: #d13f61;
-  --color-secundarioMMM-600: #b93854;
-  --color-secundarioMMM-700: #a23149;
-  --color-secundarioMMM-800: #8c293e;
-  --color-secundarioMMM-900: #742232;
+  /* SecundarioMMM 42 EDICION - AMARILLO ELÉCTRICO / VOLT (CTAs y Conversión) */
+  --color-secundarioMMM-50:  #fafdec;
+  --color-secundarioMMM-100: #f2fcbe;
+  --color-secundarioMMM-200: #e6f98c;
+  --color-secundarioMMM-300: #dcf75c;
+  --color-secundarioMMM-400: #d4ff00; /* El amarillo flúor exacto del cartel */
+  --color-secundarioMMM-500: #bde600;
+  --color-secundarioMMM-600: #99b800;
+  --color-secundarioMMM-700: #758c00;
+  --color-secundarioMMM-800: #556600;
+  --color-secundarioMMM-900: #3d4a00;
 
- /*TerciarioMMM 41 EDICION - Amarillo*/
-  --color-terciarioMMM-50:  #fcef79;
-  --color-terciarioMMM-100: #f6eb6b;
-  --color-terciarioMMM-200: #f0e75b;
-  --color-terciarioMMM-300: #e9e44b;
-  --color-terciarioMMM-400: #e3e039;
-  --color-terciarioMMM-500: #d0cc38;
-  --color-terciarioMMM-600: #beba37;
-  --color-terciarioMMM-700: #ada835;
-  --color-terciarioMMM-800: #9d9733;
-  --color-terciarioMMM-900: #8e8731;
+  /* TerciarioMMM 42 EDICION - CYAN / TURQUESA COSTA (Detalles, Badges y Hover) */
+  --color-terciarioMMM-50:  #ecfeff;
+  --color-terciarioMMM-100: #cffafe;
+  --color-terciarioMMM-200: #a5f3fc;
+  --color-terciarioMMM-300: #67e8f9;
+  --color-terciarioMMM-400: #22d3ee;
+  --color-terciarioMMM-500: #06b6d4; /* El tono turquesa del agua de Motril */
+  --color-terciarioMMM-600: #0891b2;
+  --color-terciarioMMM-700: #0e7490;
+  --color-terciarioMMM-800: #155e75;
+  --color-terciarioMMM-900: #164e63;
 
   --color-blancoMMM: #f2f2fa;
   --color-negroMMM: #0e0e1e;
