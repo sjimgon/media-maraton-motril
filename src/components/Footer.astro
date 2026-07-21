@@ -3,8 +3,7 @@ import Boton from './Botones.astro';
 ---
 <footer
   class="
-    bg-cover
-    bg-[url('/images/components/Footers.webp')]
+    bg-gradient-to-t from-terciarioMMM-900 to-primarioMMM-800
     w-full
     flex flex-col
   "
@@ -36,54 +35,48 @@ import Boton from './Botones.astro';
         gap-x-5
       "
     >
-      <div class="link-section-1 flex flex-col mb-4 md:mb-0">
+      <div class="link-section-1 flex flex-col mb-4 md:mb-0 font-helvetica text-bold ">
         <a
           href="/"
-          class="inline hover:text-primarioMMM-200 cursor-pointer"
+          class="inline hover:text-secundarioMMM-500 cursor-pointer"
         >
           Inicio
         </a>
         <a
           href="/inscripciones"
-          class="inline hover:opacity-80 cursor-pointer"
+          class="inline hover:text-secundarioMMM-500 cursor-pointer"
         >
           Inscripciones
         </a>
         <a
           href="/recorrido"
-          class="inline hover:opacity-80 cursor-pointer"
+          class="inline hover:text-secundarioMMM-500 cursor-pointer"
         >
           Recorrido
         </a>
         <a
           href="/servicios"
-          class="inline hover:opacity-80 cursor-pointer"
+          class="inline hover:text-secundarioMMM-500 cursor-pointer"
         >
           Servicios al corredor
         </a>
       </div>
-      <div class="link-section-2 flex flex-col">
+      <div class="link-section-2 flex flex-col font-helvetica text-bold">
         <a
           href="/normativa"
-          class="inline hover:opacity-80 cursor-pointer"
+          class="inline hover:text-secundarioMMM-500 cursor-pointer"
         >
           Normativa
         </a>
-        <!-- <a
-          href="/campeones"
-          class="inline hover:opacity-80 cursor-pointer"
-        >
-          Ruta de los campeones
-        </a> -->
         <a
           href="/voluntariado"
-          class="inline hover:opacity-80 cursor-pointer"
+          class="inline hover:text-secundarioMMM-500 cursor-pointer"
         >
           Voluntarios
         </a>
         <a
           href="/contacto"
-          class="inline hover:opacity-80 cursor-pointer"
+          class="inline hover:text-secundarioMMM-500 cursor-pointer"
         >
           Contacto
         </a>
@@ -105,7 +98,7 @@ import Boton from './Botones.astro';
         color="primary"
         version="negativo"
         href="/inscripciones"
-        class="mt-4 w-auto"
+        class="mt-4 w-auto font-bold"
       >
         INSCRÍBETE
       </Boton>

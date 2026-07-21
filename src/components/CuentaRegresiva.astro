@@ -5,7 +5,7 @@ import Boton from '../components/Botones.astro';
 
 <div
   id="cuenta-regresiva"
-  class="w-full flex flex-col gap-4 font-semibold text-4xl mt-5 text-center"
+  class="w-full flex flex-col gap-4 font-semibold text-4xl mt-5 text-center items-center justify-center"
   data-fecha={fecha}
 >
   <p
@@ -17,22 +17,22 @@ import Boton from '../components/Botones.astro';
       FALTAN:
   </p>
   
-  <div class="flex gap-4 bg-terciarioMMM-900/70 rounded-lg p-4 justify-around items-center border-2 border-secundarioMMM-500">
+  <div class="w-4/5 flex gap-4 bg-terciarioMMM-900/70 rounded-lg p-4 justify-around items-center border-2 border-secundarioMMM-500">
     <div class="flex flex-col items-center text-secundarioMMM-500 font-helvetica ">
       <span id="dias" class="text-5xl mb-1">00</span>
-      <span class="text-2xl">DÍAS</span>
+      <span class="text-2xl font-helvetica-cn">DÍAS</span>
     </div>
     <div class="flex flex-col items-center text-secundarioMMM-500 font-helvetica">
       <span id="horas" class="text-5xl mb-1">00</span>
-      <span class="text-2xl">HORAS </span>
+      <span class="text-2xl font-helvetica-cn">HORAS </span>
     </div>
     <div class="flex flex-col items-center text-secundarioMMM-500 font-helvetica">
       <span id="minutos" class="text-5xl mb-1">00</span>
-      <span class="text-2xl">MINUTOS</span>
+      <span class="text-2xl font-helvetica-cn">MINUTOS</span>
     </div>
     <div class="flex flex-col items-center text-secundarioMMM-500 font-helvetica">
       <span id="segundos" class="text-5xl mb-1">00</span>
-      <span class="text-2xl">SEGUNDOS</span>
+      <span class="text-2xl font-helvetica-cn">SEGUNDOS</span>
     </div>
   </div>
 </div>

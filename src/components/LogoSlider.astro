@@ -1,100 +1,155 @@
 ---
+const patrocinadores = [
+  // 1. ORGANIZAN
+  {
+    nombre: "Área de Deportes, Ayuntamiento de Motril",
+    src: "/svg/patrocinadores/area_deportes_color.svg",
+    href: "https://motril.es/deportes/",
+    maxH: "max-h-8 md:max-h-18",
+  },
+  {
+    nombre: "Diputación de Granada",
+    src: "/svg/patrocinadores/diputacionGranada_horizontal_color.svg",
+    href: "https://www.dipgra.es/servicios/areas/deportes/",
+    maxH: "max-h-6 md:max-h-16", // Muy horizontal
+  },
+  {
+    nombre: "Real Federación Andaluza de Atletismo",
+    src: "/svg/patrocinadores/rfaa2_color.svg",
+    href: "https://atletismofaa.es/",
+    maxH: "max-h-10 md:max-h-12", // Más vertical / compacto
+  },
+
+  // 2. PATROCINADORES PRINCIPALES
+  {
+    nombre: "Autoridad Portuaria de Motril",
+    src: "/svg/patrocinadores/autoridad_portuaria_color.svg",
+    href: "https://www.apmotril.com/",
+    maxH: "max-h-8 md:max-h-16",
+  },
+  {
+    nombre: "Cooperativa La Palma",
+    src: "/svg/patrocinadores/lapalma_color.svg",
+    href: "https://granadalapalma.com/",
+    maxH: "max-h-10 md:max-h-16", // Cuadrado / compacto
+  },
+  {
+    nombre: "Alcampo Motril",
+    src: "/svg/patrocinadores/alcampo_sales_ganando_color.svg",
+    href: "https://www.facebook.com/p/Alcampo-100090155612593/?locale=es_ES",
+    maxH: "max-h-8 md:max-h-12",
+  },
+  {
+    nombre: "Fundación Miguel García",
+    src: "/svg/patrocinadores/miguel_garcia_color.svg",
+    href: "https://www.fmiguelgarcia.es/",
+    maxH: "max-h-10 md:max-h-18", // Vertical
+  },
+  {
+    nombre: "Aguas y Servicios Costa Tropical",
+    src: "/svg/patrocinadores/aguas_Y_servicios_color.svg",
+    href: "https://www.aguasyservicios.es/",
+    maxH: "max-h-7 md:max-h-12", // Muy horizontal
+  },
+
+  // 3. COLABORADORES
+  {
+    nombre: "Toyota Yokamotril",
+    src: "/svg/patrocinadores/yokamotril_color.svg",
+    href: "https://www.toyota.es/concesionarios/yokamotril",
+    maxH: "max-h-7 md:max-h-12",
+  },
+  {
+    nombre: "Pinturas Reyma",
+    src: "/svg/patrocinadores/reyma_color.svg",
+    href: "https://reymapinturas.com/",
+    maxH: "max-h-6 md:max-h-8", // Muy horizontal
+  },
+  {
+    nombre: "Agua Lanjaron",
+    src: "/svg/patrocinadores/lanjaron_color.svg",
+    href: "https://lanjaron.danone.es/",
+    maxH: "max-h-10 md:max-h-12", // Vertical / Isotipo
+  },
+  {
+    nombre: "GM Cash",
+    src: "/svg/patrocinadores/gm_cash_color.svg",
+    href: "https://www.gmcash.es/",
+    maxH: "max-h-8 md:max-h-10",
+  },
+  {
+    nombre: "DMA DRA, Carpintería y Diseño",
+    src: "/svg/patrocinadores/dma_dra_color.svg",
+    href: "https://dma-dra.es/",
+    maxH: "max-h-8 md:max-h-14",
+  },
+  {
+    nombre: "Junta de Andalucía, Consejería de Turismo, Cultura y Deporte",
+    src: "/svg/patrocinadores/junta_deportes_color.svg",
+    href: "https://www.juntadeandalucia.es/organismos/culturaydeporte.html",
+    maxH: "max-h-8 md:max-h-14",
+  },
+  {
+    nombre: "Docunova - Soluciones de impresión",
+    src: "/svg/patrocinadores/logo-docunova.svg",
+    href: "https://docunova.es/",
+    maxH: "max-h-7 md:max-h-9",
+  },
+  {
+    nombre: "Dempo - Productos digitales a medida",
+    src: "/svg/patrocinadores/Dempo-Color.svg",
+    href: "https://dempo.es/",
+    maxH: "max-h-7 md:max-h-9",
+  },
+  {
+    nombre: "Centers Auto - Talleres de reparación",
+    src: "/svg/patrocinadores/centers-auto_color.svg",
+    href: "https://www.grupocentersauto.com/item/centers-auto-motril/",
+    maxH: "max-h-7 md:max-h-14",
+  },
+];
+
+const sliderItems = [...patrocinadores, ...patrocinadores];
 ---
-<div class="overflow-hidden w-full bg-gray-300">
-  <div class="logo-slider flex items-center gap-12 md:gap-18 animate-scroll p-4">
-    <a href="https://motril.es/deportes/">
-      <img src="/svg/patrocinadores/area_deportes_color.svg" alt="Área de Deportes, Ayuntamiento de Motril" class="grayscale hover:grayscale-0 h-12 md:h-12" />
-    </a>
-    <a href="https://www.dipgra.es/servicios/areas/deportes/">
-      <img src="/svg/patrocinadores/diputacionGranada_horizontal_color.svg" alt="Diputación de Granada" class="grayscale hover:grayscale-0 h-10 md:h-10" />
-    </a>
-    <a href="https://www.apmotril.com/">
-      <img src="/svg/patrocinadores/autoridad_portuaria_color.svg" alt="Autoridad Portuaria de Motril" class="grayscale hover:grayscale-0 h-16 md:h-14" />
-    </a>
-    <a href="https://granadalapalma.com/">
-      <img src="/svg/patrocinadores/lapalma_color.svg" alt="Cooperativa La Palma" class="grayscale hover:grayscale-0 h-12 md:h-12" />
-    </a>
-    <a href="https://www.fmiguelgarcia.es/">
-      <img src="/svg/patrocinadores/miguel_garcia_color.svg" alt="Fundación Miguel García" class="grayscale hover:grayscale-0 h-14 md:h-16" />
-    </a>
-    <a href="https://www.aguasyservicios.es/">
-      <img src="/svg/patrocinadores/aguas_Y_servicios_color.svg" alt="Aguas y Servicios Costa Tropical" class="grayscale hover:grayscale-0 h-12 md:h-12" />
-    </a>
-    <a href="https://www.toyota.es/concesionarios/yokamotril">
-      <img src="/svg/patrocinadores/toyota_yokamotril_color.svg" alt="Toyota Yokamotril" class="grayscale hover:grayscale-0 h-12 md:h-12" />
-    </a>
-    <a href="https://www.decathlon.es/es/store-view/tienda-de-deportes-motril-0070222302223">
-      <img src="/svg/patrocinadores/decathlon_color.svg" alt="Decathlon Motril" class="grayscale hover:grayscale-0 h-12 md:h-12" />
-    </a>
-    <a href="https://reymapinturas.com/">
-      <img src="/svg/patrocinadores/reyma_color.svg" alt="Pinturas Reyma" class="grayscale hover:grayscale-0 h-4 md:h-6" />
-    </a>
-    <a href="https://lanjaron.danone.es/">
-      <img src="/svg/patrocinadores/lanjaron_color.svg" alt="Agua Lanjaron" class="grayscale hover:grayscale-0 h-10 md:h-12" />
-    </a>
-    <a href="https://www.gmcash.es/">
-      <img src="/svg/patrocinadores/gm_cash_color.svg" alt="GM Cash" class="grayscale hover:grayscale-0 h-12 md:h-12" />
-    </a>
-    <a href="https://www.bodegasmar.com/">
-      <img src="/svg/patrocinadores/bodegas_mar_color.svg" alt="Bodegas Mar" class="grayscale hover:grayscale-0 h-6 md:h-5" />
-    </a>
-    <a href="https://dma-dra.es/">
-      <img src="/svg/patrocinadores/dma_dra_color.svg" alt="DMA DRA, Carpintería y Diseño" class="grayscale hover:grayscale-0 h-16 md:h-12" />
-    </a>
-    <a href="https://motril.es/deportes/">
-      <img src="/svg/patrocinadores/area_deportes_color.svg" alt="Área de Deportes, Ayuntamiento de Motril" class="grayscale hover:grayscale-0 h-12 md:h-12" />
-    </a>
-    <a href="https://www.dipgra.es/servicios/areas/deportes/">
-      <img src="/svg/patrocinadores/diputacionGranada_horizontal_color.svg" alt="Diputación de Granada" class="grayscale hover:grayscale-0 h-10 md:h-10" />
-    </a> 
-    <a href="https://www.apmotril.com/">
-      <img src="/svg/patrocinadores/autoridad_portuaria_color.svg" alt="Autoridad Portuaria de Motril" class="grayscale hover:grayscale-0 h-16 md:h-14" />
-    </a>
-    <a href="https://granadalapalma.com/">
-      <img src="/svg/patrocinadores/lapalma_color.svg" alt="Cooperativa La Palma" class="grayscale hover:grayscale-0 h-12 md:h-12" />
-    </a>
-    <a href="https://www.fmiguelgarcia.es/">
-      <img src="/svg/patrocinadores/miguel_garcia_color.svg" alt="Fundación Miguel García" class="grayscale hover:grayscale-0 h-14 md:h-16" />
-    </a>
-    <a href="https://www.aguasyservicios.es/">
-      <img src="/svg/patrocinadores/aguas_Y_servicios_color.svg" alt="Aguas y Servicios Costa Tropical" class="grayscale hover:grayscale-0 h-12 md:h-12" />
-    </a>
-    <a href="https://www.toyota.es/concesionarios/yokamotril">
-      <img src="/svg/patrocinadores/toyota_yokamotril_color.svg" alt="Toyota Yokamotril" class="grayscale hover:grayscale-0 h-12 md:h-12" />
-    </a>
-    <a href="https://www.decathlon.es/es/store-view/tienda-de-deportes-motril-0070222302223">
-      <img src="/svg/patrocinadores/decathlon_color.svg" alt="Decathlon Motril" class="grayscale hover:grayscale-0 h-12 md:h-12" />
-    </a>
-    <a href="https://reymapinturas.com/">
-      <img src="/svg/patrocinadores/reyma_color.svg" alt="Pinturas Reyma" class="grayscale hover:grayscale-0 h-4 md:h-6" />
-    </a>
-    <a href="https://lanjaron.danone.es/">
-      <img src="/svg/patrocinadores/lanjaron_color.svg" alt="Agua Lanjaron" class="grayscale hover:grayscale-0 h-10 md:h-12" />
-    </a>
-    <a href="https://www.gmcash.es/">
-      <img src="/svg/patrocinadores/gm_cash_color.svg" alt="GM Cash" class="grayscale hover:grayscale-0 h-12 md:h-12" />
-    </a>
-    <a href="https://www.bodegasmar.com/">
-      <img src="/svg/patrocinadores/bodegas_mar_color.svg" alt="Bodegas Mar" class="grayscale hover:grayscale-0 h-6 md:h-5" />
-    </a>
-    <a href="https://dma-dra.es/">
-      <img src="/svg/patrocinadores/dma_dra_color.svg" alt="DMA DRA, Carpintería y Diseño" class="grayscale hover:grayscale-0 h-16 md:h-12" />
-    </a>
+
+<div class="overflow-hidden w-full bg-gray-200 py-4">
+  <div class="logo-slider flex items-center gap-10 md:gap-14 animate-scroll">
+    {
+      sliderItems.map((patro) => (
+        <a
+          href={patro.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="shrink-0 flex items-center justify-center w-28 md:w-36 h-12 md:h-16 px-2 transition-all"
+        >
+          <img
+            src={patro.src}
+            alt={patro.nombre}
+            class={`w-auto max-w-full ${patro.maxH} grayscale hover:grayscale-0 transition-all duration-300 object-contain`}
+            loading="lazy"
+          />
+        </a>
+      ))
+    }
   </div>
 </div>
 
 <style>
-.logo-slider {
-  width: max-content;
-}
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-.animate-scroll {
-  animation: scroll 40s linear infinite;
-}
-.logo-slider:hover {
-  animation-play-state: paused;
-}
+  .logo-slider {
+    width: max-content;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-scroll {
+    animation: scroll 45s linear infinite;
+  }
+  .logo-slider:hover {
+    animation-play-state: paused;
+  }
 </style>

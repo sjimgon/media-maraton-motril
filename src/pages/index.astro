@@ -227,457 +227,434 @@ import Icono from '../components/Iconos.astro';
       </div>
     </section>
 
-
-    <!-- SECCION DE RECORRIDO -->
-
-
-    <section
-      id="recorrido-index"
-      class="
-        bg-terciarioMMM-700
-        text-blancoMMM
-        md:w-full
-        p-8 md:p-12
-        flex justify-center items-center
-
-      "
-    >
-      <div
-        id="contenedor-recorrido-index"
-        class="
-          w-3/5
-          gap-y-4 md:gap-x-8
-          flex flex-col md:flex-row
-          justify-center items-center
-        "
-      >
-    
-        <div
-          id="info-recorrido-index"
-          class="
-            flex-1
-            gap-y-4
-            flex flex-col items-center md:items-start
-            text-center md:text-left
-          "
-        >
-          <h2
-            class="
-              text-[7rem] font-morganite font-black
-              text-center md:text-left
-            "
-          >
-            RECORRIDO
-          </h2>
-
-          <p
-            class="
-              text-lg
-              text-center md:text-left
-            "
-          >
-            Con tramos por el centro urbano y la zona de playa, la Media Maratón Ciudad de Motril ofrece una experiencia única a sus corredores.
-          </p>
-          <Boton 
-            color="primary"
-            version="negativo"
-            href="/recorrido"
-            class="text-center md:text-left text-lg font-bold w-auto"
-          >
-            Conocer más
-          </Boton>
-        </div>
-
-        <div
-          id="imagenes-recorrido-index"
-          class="
-            flex-1
-            flex flex-col items-center
-            
-          "
-        >
-          <figure
-            id="recorrido-container-index"
-            class="w-72 md:w-96"
-          >
-            <img
-              id="recorrido-10k-index"
-              class="transition-all duration-500 cursor-pointer hover:scale-105 rounded-lg"
-              src="/images/index/recorrido/10k-cuadrado.webp"
-              alt="Recorrido Media Maratón Ciudad de Motril de 10 kilómetros"
-            />
-
-            <img
-              id="recorrido-21k-index"
-              class="transition-all duration-500 cursor-pointer hover:scale-105 rounded-lg"
-              src="/images/index/recorrido/21k-cuadrado.webp"
-              alt="Recorrido Media Maratón Ciudad de Motril de 21 kilómetros "
-            />
-          </figure>
-          <div 
-            id="recorrido-buttons-index"
-            class="
-              flex flex-row
-              justify-center items-center
-              gap-4 mt-4
-            "
-          >
-
-            <Boton
-              id="mostrar-10k-index"
-              color="primary"
-              version="negativo"
-              class="text-center md:text-left text-lg font-bold w-auto"
-            >
-              10k
-            </Boton>
-            
-            <Boton
-              id="mostrar-21k-index"
-              color="primary"
-              version="negativo"
-              class="text-center md:text-left text-lg font-bold w-auto"
-            >
-              21k
-            </Boton>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <script>
-      // @ts-nocheck
-      const recorrido10k = document.getElementById('recorrido-10k-index');
-      const recorrido21k = document.getElementById('recorrido-21k-index');
-      const mostrar10k = document.getElementById('mostrar-10k-index');
-      const mostrar21k = document.getElementById('mostrar-21k-index');
-
-      function mostrarSolo10k() {
-        recorrido10k.classList.remove('hidden');
-        recorrido21k.classList.add('hidden');
-      }
-
-      function mostrarSolo21k() {
-        recorrido21k.classList.remove('hidden');
-        recorrido10k.classList.add('hidden');
-      }
-
-      function ampliarRecorrido(images) {
-        // Solo amplía la imagen sobre la que se hizo click
-        images.currentTarget.classList.toggle('scale-130');
-        images.currentTarget.classList.toggle('shadow-2xl');
-        images.currentTarget.classList.toggle('z-10');
-      }
-
-      mostrar10k?.addEventListener('click', mostrarSolo10k);
-      mostrar21k?.addEventListener('click', mostrarSolo21k);
-      recorrido10k?.addEventListener('click', ampliarRecorrido);
-      recorrido21k?.addEventListener('click', ampliarRecorrido);
-
-      // Inicialmente mostrar solo el recorrido de 21k
-      mostrarSolo21k();
-    </script>
-
-
-    <!-- SECCION DE VOLUNTARIOS -->
-    <section
-  id="voluntarios-index"
+<section
+  id="recorrido-index"
   class="
-    bg-terciarioMMM-900
-    text-primarioMMM-400
-    md:w-full
-    p-8 md:p-12
-    flex justify-center items-center
+    bg-gradient-to-br from-terciarioMMM-900 to-primarioMMM-600
+    text-blancoMMM
+    w-full
+    grid grid-cols-1 md:grid-cols-7
+    items-stretch
+    overflow-hidden
   "
 >
+
   <div
-    id="contenedor-voluntarios-index"
+    id="info-recorrido-index"
     class="
-      w-3/5
-      gap-y-4 md:gap-x-8
-      flex flex-col md:flex-row
-      justify-center items-center
+      md:col-span-4
+      w-full
+      flex flex-col justify-center items-center md:items-start
+      text-center md:text-left
+      px-8 sm:px-12 md:px-16 md:py-16 lg:px-20 py-12 lg:pl-35
+      gap-y-4
     "
   >
-    <div
-      id="info-voluntarios-index"
+    <h2
       class="
-        md:order-2
-        flex-1
-        gap-y-4
-        flex flex-col items-center md:items-start
-        text-center md:text-left
+        text-[1.25rem] font-helvetica font-bold tracking-widest
+        text-secundarioMMM-500
       "
     >
-      <h2
-        class="
-          text-[7rem] font-morganite font-black
-          text-center md:text-left
-          text-primarioMMM-400
-        "
-      >
-        VOLUNTARIOS
-      </h2>
+      RECORRIDO
+    </h2>
 
-      <p
-        class="
-          text-lg
-          text-center md:text-left
-        "
-      >
-        Contamos con un grupo de profesionales excelentes pero <b class="font-black text-secundarioMMM-200">SIN TU AYUDA NO SERÍA POSIBLE.</b>
-        Si quieres colaborar con nosotros, ¡no dudes en inscribirte!
-      </p>
-
-      <Boton
-        color="tertiary"
-        version="negativo"
-        class="text-center md:text-left text-lg font-bold w-auto"
-        href="/voluntariado"
-      >
-        QUIERO SER VOLUNTARIO
-      </Boton>
-    </div>
-
-    <div
-      id="imagenes-voluntarios-index"
+    <h3
       class="
-        w-72 md:w-96
-        flex-1
-        md:order-1
-        flex flex-col items-center
+        text-[5rem] md:text-[6rem] font-bold font-morganite
+        leading-none
       "
     >
-      <figure
-        id="voluntarios-container-index"
-        class=""
-      >
-        <img
-          src="/images/index/voluntarios/voluntarios_index.webp"
-          alt="Voluntarios de la Media Maratón Ciudad de Motril"
-          class="transition-transform duration-500 hover:scale-105 rounded-lg "
-        />
-      </figure>
-    </div>
+      DESCUBRE EL NUEVO CIRCUITO
+    </h3>
+
+    <p class="text-lg font-helvetica">
+      Con tramos por el centro urbano y la zona de playa, la Media Maratón Ciudad de Motril 
+      <span class="font-bold italic text-secundarioMMM-500">
+        ofrece una experiencia única a sus corredores
+      </span>.
+    </p>
+
+    <Boton 
+      color="primary"
+      version="negativo"
+      href="/recorrido"
+      class="text-center md:text-left text-lg w-auto font-bold mt-2"
+    >
+      QUIERO SABER MÁS
+    </Boton>
+  </div>
+
+  <div 
+    id="imagen-recorrido-index"
+    class="
+      md:col-span-3
+      w-full 
+      h-72 sm:h-96 md:h-full 
+      min-h-[320px] md:min-h-[500px]
+      relative
+    "
+  >
+    <img
+      class="w-full h-full object-cover object-center"
+      src="/images/index/recorrido/web-index_recorrido.webp"
+      alt="Plano del recorrido de la Media Maratón Ciudad de Motril"
+      loading="lazy"
+    />
   </div>
 </section>
-
-    <!-- SECCION DE PREGUNTAS -->
-
-    <section 
-      id="preguntas-index"
+<!-- SECCION DE VOLUNTARIOS -->
+<section
+  id="voluntarios-index"
+  class="
+    bg-gradient-to-tl from-secundarioMMM-600 to-secundarioMMM-200
+    text-primarioMMM-400
+    w-full
+    grid grid-cols-1 md:grid-cols-7
+    items-stretch
+    overflow-hidden
+  "
+>
+  <!-- Información (Texto en la derecha) -->
+  <div
+    id="info-voluntarios-index"
+    class="
+      order-1 md:order-2
+      md:col-span-4
+      w-full
+      flex flex-col justify-center items-center md:items-start
+      text-center md:text-left
+      px-8 sm:px-12 md:px-16 md:py-16 lg:px-20 py-12 lg:pr-36
+      gap-y-4
+    "
+  >
+    <h2
       class="
-      bg-secundarioMMM-500
-      text-blancoMMM 
-      p-8
-      flex flex-col items-center
+        text-[1.25rem] font-helvetica font-bold tracking-widest
+        text-terciarioMMM-800
       "
     >
-      <div
-        id="contenedor-preguntas-index"
-        class="
-          md:w-3/5
-          flex flex-col items-center
-          gap-y-4
-        "
-      >
-        <h2 
-          class="
-          text-4xl font-bold text-center
-          "
-        >
-          ¿TIENES ALGUNA DUDA?
-        </h2>
-        <p
-        class="
-        text-center"
-        >
-          Si no has encontrado lo que buscabas, visita nuestras redes o deja un mensaje aquí mismo. Responderemos lo antes posible.
-        </p>
+      VOLUNTARIOS
+    </h2>
 
-      <Boton
-        color="secondary"
-        version="negativo"
-        href="/contacto"
-        class="w-auto"
-      >
-        PREGÚNTANOS
-      </Boton>
+    <h3
+      class="
+        text-[5rem] md:text-[6rem] font-bold font-morganite
+        text-terciarioMMM-800 leading-none
+      "
+    >
+      FORMA PARTE DE NUESTRO EQUIPO
+    </h3>
 
-    </section>
+    <p class="text-lg font-helvetica text-terciarioMMM-500">
+      Contamos con un grupo de profesionales excelentes pero 
+      <b class="font-helvetica italic text-terciarioMMM-800">
+        sin tu ayuda no sería posible.
+      </b>
+      Si quieres colaborar con nosotros, ¡no dudes en inscribirte!
+    </p>
+
+    <Boton
+      color="tertiary"
+      version="negativo"
+      href="/voluntariado"
+      class="text-center md:text-left text-lg font-bold w-auto mt-2"
+    >
+      QUIERO SER VOLUNTARIO
+    </Boton>
+  </div>
+
+  <div
+    id="imagen-voluntarios-index"
+    class="
+      order-2 md:order-1
+      md:col-span-3
+      w-full
+      h-72 sm:h-96 md:h-full
+      min-h-[320px] md:min-h-[500px]
+      relative
+    "
+  >
+    <img
+      src="/images/index/voluntarios/web-index_voluntarios.webp"
+      alt="Voluntarios de la Media Maratón Ciudad de Motril"
+      class="w-full h-full object-cover object-center"
+      loading="lazy"
+    />
+  </div>
+</section>
+    <!-- SECCION DE PREGUNTAS -->
+
+    <section
+  id="preguntas-index"
+  class="
+    bg-gradient-to-br from-terciarioMMM-900 to-primarioMMM-600
+    text-blancoMMM
+    w-full
+    grid grid-cols-1 md:grid-cols-7
+    items-stretch
+    overflow-hidden
+  "
+>
+  <!-- Información (4 columnas de 7) -->
+  <div
+    id="info-preguntas-index"
+    class="
+      md:col-span-4
+      w-full
+      flex flex-col justify-center items-center md:items-start
+      text-center md:text-left
+      px-8 sm:px-12 md:px-16 md:py-16 lg:px-20 py-12 lg:pl-32
+      gap-y-4
+    "
+  >
+    <h2
+      class="
+        text-[1.25rem] font-helvetica font-bold tracking-widest
+        text-secundarioMMM-500
+      "
+    >
+      CONTACTO
+    </h2>
+
+    <h3
+      class="
+        text-[5rem] md:text-[6rem] font-bold font-morganite
+        leading-none
+      "
+    >
+      ¿TIENES ALGUNA DUDA?
+    </h3>
+
+    <p class="text-lg font-helvetica">
+      Si no has encontrado lo que buscabas, visita nuestras redes o deja un mensaje aquí mismo. 
+      <span class="font-bold italic">Responderemos lo antes posible.</span>
+    </p>
+
+    <Boton
+      color="primary"
+      version="negativo"
+      href="/contacto"
+      class="text-center md:text-left text-lg w-auto font-bold mt-2"
+    >
+      PREGÚNTANOS
+    </Boton>
+  </div>
+
+  <!-- Imagen a Sangre (3 columnas de 7) -->
+  <div
+    id="imagen-preguntas-index"
+    class="
+      md:col-span-3
+      w-full
+      h-72 sm:h-96 md:h-full
+      min-h-[320px] md:min-h-[500px]
+      relative
+    "
+  >
+    <img
+      src="/images/otros/web-index_contacto.webp"
+      alt="Atención al corredor y dudas de la Media Maratón Ciudad de Motril"
+      class="w-full h-full object-cover object-center"
+      loading="lazy"
+    />
+  </div>
+</section>
 
     <!-- SECCION DE PATROCINADORES -->
 
     <section
-      id="patros-index"
+  id="patros-index"
+  class="
+    w-full
+    bg-blancoMMM
+    text-primarioMMM-500
+    px-6 py-12 md:py-16
+    flex flex-col items-center justify-center
+  "
+>
+  <h2 class="text-[5rem] md:text-[6rem] text-center font-morganite font-bold text-terciarioMMM-500 mb-8 md:mb-12 leading-none">
+    PATROCINADORES
+  </h2>
+
+  <!-- ORGANIZAN -->
+  <div id="organizan-index" class="w-full mb-10 md:mb-14">
+    <h3
+      id="organizan-titulo"
+      class="text-sm md:text-base font-helvetica font-bold tracking-widest text-center mb-6 text-terciarioMMM-500 uppercase"
+    >
+      ORGANIZAN
+    </h3>
+    <div
+      id="organizan-logos-index"
       class="
-        bg-blancoMMM
-        text-primarioMMM-500
-        p-8 md:p-16
-        flex flex-col
-        
+        w-full
+        grid grid-cols-2 place-items-center gap-6
+        md:flex md:flex-wrap md:gap-16
+        justify-center items-center
       "
     >
-      <h2 class="text-4xl font-bold text-center mb-4">
-        PATROCINADORES
-      </h2>
-      <div
-        id="organizan-index"
-        class="w-full mb-8"
-      >
-        <h3
-          id="patros-principales-titulo"
-          class="text-medium md:font-lg font-heading font-medium text-center mb-4 md:mb-6"
-        >
-          ORGANIZAN
-        </h3>
-        <div
-          id="organizan-logos-index"
-          class="
-            w-full
-            grid grid-cols-2 place-items-center gap-y-4
-            md:flex md:flex-wrap
-            md:gap-20
-            justify-center
-            items-center"  
-        >
-          <a href="https://motril.es/deportes/">
-            <img
-            src="/svg/patrocinadores/area_deportes_color.svg"
-            alt="Área de Deportes, Ayuntamiento de Motril"
-            class="w-35 md:w-50 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
-            />
-          </a>
-          <a href="https://www.dipgra.es/servicios/areas/deportes/">
-            <img
-            src="/svg/patrocinadores/diputacionGranada_horizontal_color.svg"
-              alt="Diputación de Granada"
-              class="w-35 md:w-50 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
-              />
-            </a>
+      <a href="https://motril.es/deportes/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/area_deportes_color.svg"
+          alt="Área de Deportes, Ayuntamiento de Motril"
+          class="w-36 md:w-48 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+      <a href="https://www.dipgra.es/servicios/areas/deportes/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/diputacionGranada_horizontal_color.svg"
+          alt="Diputación de Granada"
+          class="w-36 md:w-48 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+      <a href="https://atletismofaa.es/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/rfaa2_color.svg"
+          alt="Real Federación Andaluza de Atletismo"
+          class="w-36 md:w-48 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+    </div>
+  </div>
 
-            
-          </div>
-        </div>
-        <div id="patros-principales-index" class="w-full mb-8">
-        <h3
-          id="patros-principales-titulo"
-          class="text-medium md:font-lg font-heading font-medium text-center mb-4 md:mb-6"
-        >
-          PATROCINADORES PRINCIPALES
-        </h3>
-        <div
-          id="patros-principales-logos-index"
-          class="
-            w-full
-            grid grid-cols-2 place-items-center gap-y-4
-            md:flex md:flex-wrap
-            md:gap-20
-            justify-center
-            items-center
-          "
-        >
+  <!-- PATROCINADORES PRINCIPALES -->
+  <div id="patros-principales-index" class="w-full mb-10 md:mb-14">
+    <h3
+      id="patros-principales-titulo"
+      class="text-sm md:text-base font-helvetica font-bold tracking-widest text-center mb-6 text-terciarioMMM-500 uppercase"
+    >
+      PATROCINADORES PRINCIPALES
+    </h3>
+    <div
+      id="patros-principales-logos-index"
+      class="
+        w-full
+        grid grid-cols-2 place-items-center gap-6
+        md:flex md:flex-wrap md:gap-12
+        justify-center items-center
+      "
+    >
+      <a href="https://www.apmotril.com/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/autoridad_portuaria_color.svg"
+          alt="Autoridad Portuaria de Motril"
+          class="w-28 md:w-36 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+      <a href="https://granadalapalma.com/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/lapalma_color.svg"
+          alt="Cooperativa La Palma"
+          class="w-20 md:w-28 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+      <a href="https://www.facebook.com/p/Alcampo-100090155612593/?locale=es_ES" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/alcampo_sales_ganando_color.svg"
+          alt="Alcampo Motril"
+          class="w-24 md:w-32 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+      <a href="https://www.fmiguelgarcia.es/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/miguel_garcia_color.svg"
+          alt="Fundación Miguel García"
+          class="w-20 md:w-24 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+      <a href="https://www.aguasyservicios.es/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/aguas_Y_servicios_color.svg"
+          alt="Aguas y Servicios Costa Tropical"
+          class="w-32 md:w-40 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+    </div>
+  </div>
 
-          <a href="https://www.apmotril.com/">
-            <img
-              src="/svg/patrocinadores/autoridad_portuaria_color.svg"
-              alt="Autoridad Portuaria de Motril"
-              class="w-30 md:w-35 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
-            />
-          </a>
-          <a href="https://granadalapalma.com/">
-            <img
-              src="/svg/patrocinadores/lapalma_color.svg"
-              alt="Cooperativa La Palma"
-              class="w-20 md:w-25 transition-allcursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
-            />
-          </a>
-          <a href="https://www.fmiguelgarcia.es/">
-            <img
-              src="/svg/patrocinadores/miguel_garcia_color.svg"
-              alt="Fundación Miguel García"
-              class="w-22 md:w-24 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
-            />
-          </a>
-          <a href="https://www.aguasyservicios.es/">
-            <img
-              src="/svg/patrocinadores/aguas_Y_servicios_color.svg"
-              alt="Aguas y Servicios Costa Tropical"
-              class="w-35 md:w-40 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
-            />
-          </a>
-        </div>
-      </div>
-      <section id="patros-colaboradores-index" class="w-full">
-        <h3
-          id="patros-colaboradores-titulo"
-          class="
-            text-medium md:font-lg font-heading font-medium text-center
-            mb-4 md:mb-6"
-        >
-          COLABORADORES
-        </h3>
-        <div
-          id="patros-colaboradores-logos-index"
-          class="
-            w-full
-            flex flex-wrap
-            gap-x-10 gap-y-6 md:gap-8
-            justify-center
-            items-center
-          "
-        >
-
-          <a href="https://www.toyota.es/concesionarios/yokamotril">
-            <img
-              src="/svg/patrocinadores/toyota_yokamotril_color.svg"
-              alt="Toyota Yokamotril"
-              class="w-20 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
-            />
-          </a>
-          <a href="https://www.decathlon.es/es/store-view/tienda-de-deportes-motril-0070222302223">
-            <img
-              src="/svg/patrocinadores/decathlon_color.svg"
-              alt="Decathlon Motril"
-              class="w-22 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
-            />
-          </a>
-          <a href="https://reymapinturas.com/">
-            <img
-              src="/svg/patrocinadores/reyma_color.svg"
-              alt="Pinturas Reyma"
-              class="w-24 transition-all ursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
-            />
-          </a>
-          <a href="https://lanjaron.danone.es/">
-            <img
-              src="/svg/patrocinadores/lanjaron_color.svg"
-              alt="Agua Lanjaron"
-              class="w-22 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
-            />
-          </a>
-          <a href="https://www.gmcash.es/">
-            <img
-              src="/svg/patrocinadores/gm_cash_color.svg"
-              alt="GM Cash"
-              class="w-24 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
-            />
-          </a>
-          <a href="https://www.bodegasmar.com/">
-            <img
-              src="/svg/patrocinadores/bodegas_mar_color.svg"
-              alt="Bodegas Mar"
-              class="w-24 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
-            />
-          <a href="https://dma-dra.es/">
-            <img
-              src="/svg/patrocinadores/dma_dra_color.svg"
-              alt="DMA DRA, Carpintería y Diseño"
-              class="w-26 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
-            />
-          </a>
-        </div>
-      </section>
-    </section>
+  <!-- COLABORADORES -->
+  <div id="patros-colaboradores-index" class="w-full">
+    <h3
+      id="colaboradores-titulo"
+      class="text-sm md:text-base font-helvetica font-bold tracking-widest text-center mb-6 text-terciarioMMM-500 uppercase"
+    >
+      COLABORADORES
+    </h3>
+    <div
+      id="patros-colaboradores-logos-index"
+      class="
+        w-full
+        flex flex-wrap
+        gap-x-8 gap-y-6 md:gap-10
+        justify-center items-center
+      "
+    >
+      <a href="https://www.toyota.es/concesionarios/yokamotril" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/yokamotril_color.svg"
+          alt="Toyota Yokamotril"
+          class="w-20 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+      <a href="https://reymapinturas.com/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/reyma_color.svg"
+          alt="Pinturas Reyma"
+          class="w-24 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+      <a href="https://lanjaron.danone.es/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/lanjaron_color.svg"
+          alt="Agua Lanjaron"
+          class="w-20 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+      <a href="https://www.gmcash.es/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/gm_cash_color.svg"
+          alt="GM Cash"
+          class="w-24 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+      <a href="https://dma-dra.es/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/dma_dra_color.svg"
+          alt="DMA DRA, Carpintería y Diseño"
+          class="w-24 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+      <a href="https://www.juntadeandalucia.es/organismos/culturaydeporte.html" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/junta_deportes_color.svg"
+          alt="Junta de Andalucía, Consejería de Turismo, Cultura y Deporte"
+          class="w-24 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+      <a href="https://docunova.es/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/logo-docunova.svg"
+          alt="Docunova - Soluciones de impresión"
+          class="w-24 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+      <a href="https://dempo.es/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/Dempo-Color.svg"
+          alt="Dempo - Productos digitales a medida"
+          class="w-24 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+      <a href="https://www.grupocentersauto.com/item/centers-auto-motril/" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/svg/patrocinadores/centers-auto_color.svg"
+          alt="Centers Auto - Talleres de reparación y mantenimiento de vehículos"
+          class="w-24 transition-all cursor-pointer hover:scale-105 md:grayscale hover:grayscale-0"
+        />
+      </a>
+    </div>
+  </div>
+</section>
   </main>
 </Layout>
