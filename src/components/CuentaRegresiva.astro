@@ -5,40 +5,34 @@ import Boton from '../components/Botones.astro';
 
 <div
   id="cuenta-regresiva"
-  class="flex flex-col gap-4 font-semibold text-4xl mt-5 text-center"
+  class="w-full flex flex-col gap-4 font-semibold text-4xl mt-5 text-center"
   data-fecha={fecha}
 >
-        <Boton 
-        color="primary"
-        version="positivo"
-        href="/inscripciones"
-        class="text-3xl md:text-2xl font-bold"
-      >
-        INSCRÍBETE
-      </Boton>
   <p
     class="
       text-center
       text-xl md:text-2xl
-      font-bold text-negroMMM">
+      font-bold text-secundarioMMM-500
+      font-helvetica-ex text-black">
       FALTAN:
   </p>
-  <div class="flex gap-4">
-    <div class="flex flex-col items-center text-negroMMM font-heading ">
-      <span id="dias">00</span>
-      <span class="text-xl">DÍAS</span>
+  
+  <div class="flex gap-4 bg-terciarioMMM-900/70 rounded-lg p-4 justify-around items-center border-2 border-secundarioMMM-500">
+    <div class="flex flex-col items-center text-secundarioMMM-500 font-helvetica ">
+      <span id="dias" class="text-5xl mb-1">00</span>
+      <span class="text-2xl">DÍAS</span>
     </div>
-    <div class="flex flex-col items-center text-negroMMM font-heading">
-      <span id="horas">00</span>
-      <span class="text-xl ">H</span>
+    <div class="flex flex-col items-center text-secundarioMMM-500 font-helvetica">
+      <span id="horas" class="text-5xl mb-1">00</span>
+      <span class="text-2xl">HORAS </span>
     </div>
-    <div class="flex flex-col items-center text-negroMMM font-heading">
-      <span id="minutos">00</span>
-      <span class="text-xl ">M</span>
+    <div class="flex flex-col items-center text-secundarioMMM-500 font-helvetica">
+      <span id="minutos" class="text-5xl mb-1">00</span>
+      <span class="text-2xl">MINUTOS</span>
     </div>
-    <div class="flex flex-col items-center text-negroMMM font-heading">
-      <span id="segundos">00</span>
-      <span class="text-xl">S</span>
+    <div class="flex flex-col items-center text-secundarioMMM-500 font-helvetica">
+      <span id="segundos" class="text-5xl mb-1">00</span>
+      <span class="text-2xl">SEGUNDOS</span>
     </div>
   </div>
 </div>
@@ -51,8 +45,8 @@ import Boton from '../components/Botones.astro';
     const ahora = new Date();
     const diferencia = fechaObjetivo - ahora;
     if (diferencia <= 0) {
-      // el.innerHTML = '¡HA LLEGADO EL MOMENTO!';
-      el.innerHTML = '¡GRACIAS A TODOS POR PARTICIPAR, NOS VEMOS EL AÑO QUE VIENE!';
+      el.innerHTML = '¡HA LLEGADO EL MOMENTO!';
+      //el.innerHTML = '¡GRACIAS A TODOS POR PARTICIPAR, NOS VEMOS EL AÑO QUE VIENE!';
       clearInterval(intervalo);
       return;
     }

@@ -1,0 +1,454 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   1. HELVETICA NEUE LT STD (ESTÁNDAR)
+   ========================================================================== */
+
+/* 25 Thin (100) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-Th.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-ThIt.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 35 Ultra Light (200) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-UltLt.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-UltLtIt.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 45 Light (300) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-Lt.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-LtIt.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 55 Roman / Regular (400) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-Roman.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-It.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 65 Medium (500) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-Md.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-MdIt.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 75 Bold (700) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-BdIt.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 85 Heavy (800) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-Hv.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-HvIt.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 95 Black (900) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-Blk.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-BlkIt.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+/* ==========================================================================
+   2. HELVETICA NEUE LT STD CONDENSED (Cn)
+   ========================================================================== */
+
+/* Thin Condensed (100) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-ThCn.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-ThCnO.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Ultra Light Condensed (200) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-UltLtCn.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-UltLtCnO.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Light Condensed (300) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-LtCn.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-LtCnO.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Condensed Regular (400) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-Cn.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-CnO.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Medium Condensed (500) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-MdCn.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-MdCnO.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold Condensed (700) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-BdCn.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-BdCnO.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Heavy Condensed (800) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-HvCn.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-HvCnO.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Black Condensed (900) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-BlkCn.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-BlkCnO.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Extra Black Condensed (950) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-XBlkCn.woff2') format('woff2');
+  font-weight: 950;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-XBlkCnO.woff2') format('woff2');
+  font-weight: 950;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+/* ==========================================================================
+   3. HELVETICA NEUE LT STD EXTENDED (Ex)
+   ========================================================================== */
+
+/* Thin Extended (100) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Ex';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-ThEx.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Ex';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-ThExO.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Ultra Light Extended (200) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Ex';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-UltLtEx.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Ex';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-UltLtExO.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Light Extended (300) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Ex';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-LtEx.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Ex';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-LtExO.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Extended Regular (400) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Ex';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-Ex.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Ex';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-ExO.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Medium Extended (500) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Ex';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-MdEx.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Ex';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-MdExO.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold Extended (700) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Ex';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-BdEx.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Ex';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-BdExO.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Heavy Extended (800) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Ex';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-HvEx.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Ex';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-HvExO.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Black Extended (900) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Ex';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-BlkEx.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Ex';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-BlkExO.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+/* ==========================================================================
+   4. HELVETICA NEUE LT STD OUTLINE (Ou)
+   ========================================================================== */
+
+/* Bold Outline (700) */
+@font-face {
+  font-family: 'Helvetica Neue LT Std Outline';
+  src: url('/fonts/helvetica/HelveticaNeueLTStd-BdOu.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

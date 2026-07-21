@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./helvetica.css";
 
 @font-face {
   font-family: 'DMSans-Variable';
@@ -180,50 +181,74 @@
 @theme {
 /* Colores */
 
-/* PrimarioMMM 42 EDICION - AZUL OCEANO PROFUNDO (Fondo y Estructura) */
-  --color-primarioMMM-50:  #f0f9ff;
-  --color-primarioMMM-100: #e0f2fe;
-  --color-primarioMMM-200: #bae6fd;
-  --color-primarioMMM-300: #7dd3fc;
-  --color-primarioMMM-400: #38bdf8;
-  --color-primarioMMM-500: #0ea5e9; /* Azul océano medio */
-  --color-primarioMMM-600: #0284c7;
-  --color-primarioMMM-700: #0369a1;
-  --color-primarioMMM-800: #075985;
-  --color-primarioMMM-900: #0c4a6e; /* Azul noche (Excelente para el fondo de la web) */
-  
-  /* SecundarioMMM 42 EDICION - AMARILLO ELÉCTRICO / VOLT (CTAs y Conversión) */
-  --color-secundarioMMM-50:  #fafdec;
-  --color-secundarioMMM-100: #f2fcbe;
-  --color-secundarioMMM-200: #e6f98c;
-  --color-secundarioMMM-300: #dcf75c;
-  --color-secundarioMMM-400: #d4ff00; /* El amarillo flúor exacto del cartel */
-  --color-secundarioMMM-500: #bde600;
-  --color-secundarioMMM-600: #99b800;
-  --color-secundarioMMM-700: #758c00;
-  --color-secundarioMMM-800: #556600;
-  --color-secundarioMMM-900: #3d4a00;
+/* ==========================================================
+   PRIMARIO MMM 42ª EDICIÓN
+   AZUL MEDITERRÁNEO
+   Base: #55c4f2
+========================================================== */
 
-  /* TerciarioMMM 42 EDICION - CYAN / TURQUESA COSTA (Detalles, Badges y Hover) */
-  --color-terciarioMMM-50:  #ecfeff;
-  --color-terciarioMMM-100: #cffafe;
-  --color-terciarioMMM-200: #a5f3fc;
-  --color-terciarioMMM-300: #67e8f9;
-  --color-terciarioMMM-400: #22d3ee;
-  --color-terciarioMMM-500: #06b6d4; /* El tono turquesa del agua de Motril */
-  --color-terciarioMMM-600: #0891b2;
-  --color-terciarioMMM-700: #0e7490;
-  --color-terciarioMMM-800: #155e75;
-  --color-terciarioMMM-900: #164e63;
+--color-primarioMMM-50:  #f1fbff;
+--color-primarioMMM-100: #dff6fe;
+--color-primarioMMM-200: #bcecfb;
+--color-primarioMMM-300: #8bdef8;
+--color-primarioMMM-400: #67cff5;
+--color-primarioMMM-500: #55c4f2;
+--color-primarioMMM-600: #34afe9;
+--color-primarioMMM-700: #1b95d0;
+--color-primarioMMM-800: #0d73a8;
+--color-primarioMMM-900: #085a85;
 
-  --color-blancoMMM: #f2f2fa;
-  --color-negroMMM: #0e0e1e;
 
-  /* Fuentes personalizadas */
+/* ==========================================================
+   SECUNDARIO MMM 42ª EDICIÓN
+   AMARILLO CAMPEONATO
+   Base: #ffff32
+========================================================== */
+
+--color-secundarioMMM-50:  #fffff1;
+--color-secundarioMMM-100: #ffffd4;
+--color-secundarioMMM-200: #ffff9c;
+--color-secundarioMMM-300: #ffff69;
+--color-secundarioMMM-400: #ffff49;
+--color-secundarioMMM-500: #ffff32;
+--color-secundarioMMM-600: #e7e71d;
+--color-secundarioMMM-700: #c4c40d;
+--color-secundarioMMM-800: #969600;
+--color-secundarioMMM-900: #666600;
+
+
+/* ==========================================================
+   TERCIARIO MMM 42ª EDICIÓN
+   AZUL PROFUNDO
+   Base: #004f81
+========================================================== */
+
+--color-terciarioMMM-50:  #eef6ff;
+--color-terciarioMMM-100: #d9eaff;
+--color-terciarioMMM-200: #b9d8ff;
+--color-terciarioMMM-300: #87bcff;
+--color-terciarioMMM-400: #4d97f2;
+--color-terciarioMMM-500: #2679dc;
+--color-terciarioMMM-600: #0d67c9;
+--color-terciarioMMM-700: #005dbd;
+--color-terciarioMMM-800: #0055af; 
+--color-terciarioMMM-900: #003f82;
+
+--color-blancoMMM: #f8fbfd;
+--color-negroMMM: #08141d;
+
+  /* Fuentes personalizadas previa configuración */
   --font-sans: 'DMSans-Variable', system-ui, sans-serif;
   --font-italica: 'DMSans Italic-Variable', system-ui, sans-serif;
   --font-heading: 'ClashDisplay-Variable', system-ui, sans-serif;
   --font-morganite: 'Morganite', system-ui, sans-serif;
+
+  /* Familia Helvetica con sus variantes exactas */
+  --font-helvetica: "Helvetica Neue LT Std", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-helvetica-cn: "Helvetica Neue LT Std Cn", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-helvetica-ex: "Helvetica Neue LT Std Ex", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-helvetica-outline: "Helvetica Neue LT Std Outline", sans-serif;
+
 }
 
 :where(.font-morganite) {

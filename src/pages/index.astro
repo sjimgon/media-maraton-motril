@@ -18,78 +18,45 @@ import Icono from '../components/Iconos.astro';
         p-8  md:pt-30
         flex flex-col
         gap-y-4 md:gap-y-2
-        items-center justify-center
-        bg-[url('/images/index/hero/hero5-bg-web.webp')] bg-cover bg-center bg-no-repeat
+        items-start justify-center
+        bg-[url('/images/index/hero/hero7-bg-web.webp')] bg-cover bg-center bg-no-repeat
       "
     >
 
-    <div
-    class="
-      w-full md:w-2/3
-      flex flex-col items-start justify-start
-      gap-y-4 md:gap-y-6
-    "
-    >
-
-    <div class="mx-auto w-fit">
-      <h1
+      <div
+        id="index-container hero"
         class="
-          font-morganite
-          whitespace-nowrap
-          leading-none
-          font-black
-          text-blancoMMM
-          text-[clamp(5rem,16vw,12rem)]
+          w-full md:w-1/2
+          flex flex-col items-center justify-center 
+          gap-y-4 md:gap-y-2
         "
       >
-        42º MEDIA MARATÓN
-      </h1>
+        <h1 class="relative flex justify-center">
+          <span class="sr-only">
+            42 Media Maratón Ciudad de Motril
+          </span>
 
-      <div class="mt-4 bg-secundarioMMM-500">
-        <span
-          class="
-            block
-            text-center
-            whitespace-nowrap
-            font-black
-            text-primarioMMM-500
-            text-[clamp(1.5rem,4vw,3.75rem)]
-          "
-        >
-          CIUDAD DE MOTRIL
-        </span>
-      </div>
-      <div
-      class="
-        mt-8
-        flex flex-col items-center justify-center
-        gap-y-4
-      "
+          <img
+            src="./svg/index/title.svg"
+            alt=""
+            aria-hidden="true"
+            class="w-120 md:w-180"
+          />
+        </h1>
+
+         <Boton 
+        color="secondary"
+        version="positivo"
+        href="/inscripciones"
+        class="text-3xl md:text-2xl font-bold mt-2 font-helvetica"
       >
+        INSCRÍBETE
+      </Boton>
+            
+        <CuentaRegresiva fecha="2026-10-18T10:30:00" /> 
 
-        <span
-          class="
-            block
-            border-2 border-secundarioMMM-500
-            rounded-full
-            bg-secundarioMMM-500/20
-            py-3 px-10
-          "
-        >
-        <h2
-          class="
-          text-center
-          text-5xl md:text-3xl 
-          font-black text-secundarioMMM-500
-          "
-        >
-          DOMINGO 18 DE OCTUBRE DE 2026
-        </h2>
-        </span>
-      </div> 
-    </div>
-      <CuentaRegresiva fecha="2026-10-18T10:30:00" />
-    </div>
+      </div>
+
     </section>
 
         <!-- SECCION CONDICIONES METEOROLÓGICAS -->
@@ -267,7 +234,7 @@ import Icono from '../components/Iconos.astro';
     <section
       id="recorrido-index"
       class="
-        bg-primarioMMM-600
+        bg-terciarioMMM-700
         text-blancoMMM
         md:w-full
         p-8 md:p-12
@@ -296,7 +263,7 @@ import Icono from '../components/Iconos.astro';
         >
           <h2
             class="
-              text-5xl font-black
+              text-[7rem] font-morganite font-black
               text-center md:text-left
             "
           >
@@ -416,7 +383,7 @@ import Icono from '../components/Iconos.astro';
     <section
   id="voluntarios-index"
   class="
-    bg-terciarioMMM-200
+    bg-terciarioMMM-900
     text-primarioMMM-400
     md:w-full
     p-8 md:p-12
@@ -444,7 +411,7 @@ import Icono from '../components/Iconos.astro';
     >
       <h2
         class="
-          text-5xl font-black
+          text-[7rem] font-morganite font-black
           text-center md:text-left
           text-primarioMMM-400
         "

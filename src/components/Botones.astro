@@ -26,7 +26,7 @@ if (color === "primary" && version === "positivo") {
 } else if (color === "primary" && version === "negativo") {
   colorClass = "bg-blancoMMM text-primarioMMM-500 hover:bg-primarioMMM-800 hover:text-blancoMMM";
 }else if (color === "secondary" && version === "positivo") {
-  colorClass = "bg-secundarioMMM-500 text-blancoMMM hover:bg-blancoMMM hover:text-secundarioMMM-500";
+  colorClass = "bg-secundarioMMM-500 text-terciarioMMM-600 hover:bg-terciarioMMM-700 hover:text-secundarioMMM-500";
 } else if (color === "secondary" && version === "negativo") {
   colorClass = "bg-blancoMMM text-secundarioMMM-500 hover:bg-secundarioMMM-800 hover:text-blancoMMM";
 } else if (color === "tertiary" && version === "positivo") {
@@ -36,7 +36,7 @@ if (color === "primary" && version === "positivo") {
 }
 
 
-const baseClass = `font-bold px-4 py-2 rounded-lg shadow-lg transition-colors hover:scale-105 transition-transform ${colorClass} ${className}`;
+const baseClass = `px-4 py-2 rounded-lg shadow-lg transition-colors  hover:scale-105 transition-transform ${colorClass} ${className}`;
 ---
 
 {href ? (
