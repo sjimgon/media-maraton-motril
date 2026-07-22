@@ -7,410 +7,582 @@ import LogoSlider from '../components/LogoSlider.astro';
 
 <Layout title="Normativa | Media Maratón Ciudad de Motril">
 
- <main>
-    <h1 
+  <main class="bg-[url('/images/index/hero/hero10-bg-web.webp')] bg-cover bg-center bg-no-repeat">
+    <div
       class="
-        text-primarioMMM-500 
-        font-heading text-4xl md:text-6xl font-extrabold
-        text-center
-        pt-20 md:pt-25
+        w-full
+        flex flex-col items-center justify-center
+        pt-20 pb-6 md:pt-40 md:pb-2
+        px-4
+      "
+    >
+      <div
+        class="
+          px-8 py-3 md:px-14 md:py-5
+          bg-secundarioMMM-500
+          rounded-2xl
+          shadow-2xl
+          flex items-center justify-center
         "
       >
-        NORMATIVA
-      </h1>
+        <h1 
+          class="
+            text-terciarioMMM-700 
+            font-morganite text-9xl md:leading-none font-extrabold
+            text-center 
+          "
+        >
+          NORMATIVA
+        </h1>
+      </div>
+    </div>
 
-      <section
-        id="normativa-section"
-        class="p-8"
+    <section
+      id="normativa-section"
+      class="p-4 md:p-8 max-w-7xl mx-auto"
+    >
+      <!-- CONSIDERACIONES GENERALES -->
+      <details 
+        class="
+          mb-4 
+          bg-white
+          rounded shadow
+          hover:scale-102 transition-transform duration-300 ease-in-out"
       >
-        <details 
+        <summary
           class="
-            mb-4 
-            bg-white
-            rounded shadow
-            hover:scale-102 transition-transform duration-300 ease-in-out"
+            cursor-pointer
+            px-8 py-4
+            text-terciarioMMM-600
+            text-sm md:text-lg font-bold
+          "
         >
-          <summary
-            class="
-              cursor-pointer
-              px-8 py-4
-              text-primarioMMM-500
-              text-sm md:text-lg font-bold
-              "
-          >
-            CONSIDERACIONES GENERALES
-          </summary>
-          <div class="px-8 py-4 text-primarioMMM-500 text-md md:text-md">
-            El Área de Deportes del Excmo. Ayuntamiento de Motril, en colaboración con la Delegación de Deportes de la Diputación de Granada, organiza la 41º edición de la Media Maratón Ciudad de Motril que se celebrará el 19 de octubre de 2025 a las 10:00 h.<br>
-            - Las distancias a recorrer serán las de 21,097 km por un circuito homologado por la RFEA y 10 Km.<br>
-            - Podrá participar cualquier persona, federada o no, siempre que tenga cumplidos los 18 años de edad.<br>
-            - La prueba está incluida en el calendario oficial de la Federación Andaluza de Atletismo y controlada por Jueces Federativos.<br>
-            Atendiendo a lo que recoge el Artículo 10 del Reglamento de la Federación Andaluza de Atletismo, como normal general, los atletas federados obligatoriamente competirán bajo el nombre de su club, además de con la equipación del mismo.<br>
-            En esta competición no podrán participar ni atletas españoles ni atletas extranjeros que hayan realizado (durante la presente temporada o las 2 anteriores) una marca con un valor igual o superior a 950 puntos de la Tabla World Athletics vigente.<br>
-            Esta prohibición no afecta a los atletas con licencia por la Federación Andaluza de Atletismo.<br>
-            <strong>*En caso de que un atleta participe incumpliendo alguna de estas normas por desconocimiento del organizador o de la propia Federación Andaluza de Atletismo, podrá ser descalificado/a en cualquier momento. </strong>
-          </div>
-        </details>
-        <details 
+          CONSIDERACIONES GENERALES
+        </summary>
+        <div class="px-8 py-4 text-terciarioMMM-600 text-md space-y-3">
+          <p>
+            El Área de Deportes del Excmo. Ayuntamiento de Motril, en colaboración con la Delegación de Deportes de la Diputación de Granada y la Federación Andaluza de Atletismo, organiza la <strong>42º edición de la Media Maratón Ciudad de Motril Campeonato de Andalucía de Media Maratón</strong>, que se celebrará el <strong>18 de octubre de 2026 a las 10:00 h</strong>.
+          </p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Las distancias a recorrer serán las de 21,097 km por un circuito homologado por la RFEA y 10 Km.</li>
+            <li>Podrá participar cualquier persona, federada o no, siempre que tenga cumplidos los 18 años de edad.</li>
+            <li>Toda la información de la prueba, normativa, circuitos, servicios al corredor, etc., se encuentra en la web: <a href="https://www.mediamaraton.motril.es" target="_blank" rel="noopener noreferrer" class="italic font-bold underline">www.mediamaraton.motril.es</a> y en <a href="https://www.gpfgranada.es" target="_blank" rel="noopener noreferrer" class="italic font-bold underline">www.gpfgranada.es</a></li>
+            <li>La prueba está incluida en el calendario oficial de la Federación Andaluza de Atletismo y controlada por Jueces Federativos.</li>
+          </ul>
+          <p>
+            Atendiendo a lo que recoge el Artículo 10 del Reglamento de la Federación Andaluza de Atletismo, como norma general, los atletas federados obligatoriamente competirán bajo el nombre de su club, además de con la equipación del mismo.
+          </p>
+          <p>
+            En esta competición no podrán participar ni atletas españoles ni atletas extranjeros que hayan realizado (durante la presente temporada o las 2 anteriores) una marca con un valor igual o superior a 950 puntos de la Tabla World Athletics vigente. Esta prohibición no afecta a los atletas con licencia por la Federación Andaluza de Atletismo.
+          </p>
+          <p class="font-bold">
+            * En caso de que un atleta participe incumpliendo alguna de estas normas por desconocimiento del organizador o de la propia Federación Andaluza de Atletismo, podrá ser descalificado/a en cualquier momento.
+          </p>
+        </div>
+      </details>
+
+      <!-- 1. INSCRIPCIONES -->
+      <details 
+        class="
+          mb-4 
+          bg-white
+          rounded shadow
+          hover:scale-102 transition-transform duration-300 ease-in-out"
+      >
+        <summary
           class="
-            mb-4 
-            bg-white
-            rounded shadow
-            hover:scale-102 transition-transform duration-300 ease-in-out"
+            cursor-pointer
+            px-8 py-4
+            text-terciarioMMM-600
+            text-sm md:text-lg font-bold
+          "
         >
-          <summary
-            class="
-              cursor-pointer
-              px-8 py-4
-              text-primarioMMM-500
-              text-sm md:text-lg font-bold
-              "
-          >
-            1. INSCRIPCIONES
-          </summary>
-            <div>
-              <details>
-                <summary
-                  class="
-                  cursor-pointer
-                  pl-10 mb-2 pr-4
-                text-primarioMMM-500
-                  text-sm md:text-lg font-bold
-                  "
-                >
-                  1.1 NUEVAS INSCRIPCIONES
-                </summary>
-                  <p class="pl-10 pr-4 pb-4 text-primarioMMM-500 text-md md:text-md">
-                    - Las inscripciones se realizarán en la web <a href="/inscripciones" target="_blank" class="italic font-bold underline">www.mediamaraton.motril.es</a> desde el 21 de julio al 12 de octubre de 2024. <br>
-                    - Las cuotas de inscripción que se establecen en 10 €, tanto para la prueba de 21k como para la de 10k. <br>
-                    - El importe de la inscripción no será retornable ni se podrá transferir el dorsal a otro corredor/a. 
-                  </p>
-              </details>
-              <details>
-                <summary
-                  class="
-                  cursor-pointer
-                  pl-10 mb-2 pr-4
-                text-primarioMMM-500
-                  text-sm md:text-lg font-bold
-                  "
-                >
-                   1.2 INSCRIPCIONES ATLETAS DEL GRAN PREMIO DE FONDO DIPUTACIÓN UNIVERSO LORCA
-                </summary>
-                  <p class="pl-10 pr-4 pb-4 text-primarioMMM-500 text-md md:text-md">
-                    - Los corredores/as inscritos/as en todo el circuito del Gran Premio de Fondo Diputación Universo Lorca, solo tendrán que confirmar la asistencia a la prueba,
-                      hasta el 12 de octubre a las 24 horas, en la página Web del Circuito <a href="https://www.gpfgranada.es" target="_blank" class="italic font-bold underline">www.gpfgranada.es</a> y asistir con su dorsal y chip asignados para todo el circuito. <br>
-                    - Todo aquel inscrito en el Circuito que no confirme la asistencia a la prueba, no puntuará en el mismo. <br>
-                    - En caso de incidencia contactar a través del correo electrónico: <a href="mailto:info@cruzandolameta.es" class="underline">info@cruzandolameta.es</a>
-                  </p>
-              </details>
-              <details>
-                <summary
-                  class="
-                  cursor-pointer
-                  pl-10 mb-2 pr-4
-                text-primarioMMM-500
-                  text-sm md:text-lg font-bold
-                  "
-                >
-                   1.3 PARTICIPACIÓN FUERA DE PLAZO: CAMPAÑA CORRO POR LA VIDA
-                </summary>
-                  <p class="pl-10 pr-4 pb-8 text-primarioMMM-500 text-md md:text-md">
-                    - Los/as atletas que no hayan formalizado su inscripción en los plazos establecidos
-                    podrán participar en la prueba, comunicándolo hasta media hora antes de la misma,
-                    adquiriendo el dorsal solidario, por el que deberán de abonar la cantidad de 10 € y en
-                    ningún caso se podrá inscribir como atleta local. <br>
-                    - El/la atleta inscrito/a en esta modalidad correrá con un dorsal de la Asociación contra
-                    el Cáncer, no llevará chip, y asumirá el hecho de no optar a ningún premio, ni trofeo,
-                    aunque sí tendrá derecho al resto de servicios. Al no ser cronometrado no aparecerá en
-                    las clasificaciones de las mismas. <br>
-                    - Este pago será íntegramente destinado a la Asociación Española contra el Cáncer. <br>
-                    - Asimismo se establece un dorsal cero en la prueba, para todas aquellas personas que
-                    sin participar, quieran colaborar con la asociación, con una aportación voluntaria,
-                    entregando dicha aportación a la organización local para su ingreso.
-                    <br>
-                    * Asociación española contra el Cáncer, Junta provincial de Granada: Información:
-                    <a href="tel:958293929" class="underline">958293929</a> <a href="mailto:granada@aecc.es" class="underline">granada@aecc.es</a> <a href="https://www.contraelcancer.es/es" class="italic font-bold underline"> www.contraelcancer.es</a>
-                  </p>
-              </details>
-            </div>
-        </details>
-        <details 
-          class="
-            mb-4
-            bg-white
-            rounded shadow
-            hover:scale-102 transition-transform duration-300 ease-in-out"
-        >
-          <summary
-            class="
-              cursor-pointer
-              px-8 py-4
-              text-primarioMMM-500
-              text-sm md:text-lg font-bold
-              "
-          >
-            2. CATEGORÍAS
-          </summary>
-          <div
-            class="
-              px-8
-              text-primarioMMM-500
-              text-md
-              "
-          >
-            <p class=" text-primarioMMM-500 text-md">
-              <strong class="italic font-black">ABSOLUTA:</strong> 18 años en adelante sin distinción de categorías. <br>
-              <strong class="italic font-black">Sub 20:</strong> 18 Y 19 años <br>
-              <strong class="italic font-black">Sub 23:</strong> 20, 21 y 22 años. <br>
-              <strong class="italic font-black">SENIOR:</strong> 23-34 años. <br>
-              <strong class="italic font-black">MASTER 35:</strong> de 35 a 39 años. <br>
-              <strong class="italic font-black">MASTER 40:</strong> de 40 a 44 años. <br>
-              <strong class="italic font-black">MASTER 45:</strong> de 45 a 49 años. <br>
-              <strong class="italic font-black">MASTER 50:</strong> de 50 a 54 años. <br>
-              <strong class="italic font-black">MASTER 55:</strong> de 55 a 59 años. <br>
-              <strong class="italic font-black">MASTER 60:</strong> de 60 a 64 años. <br>
-              <strong class="italic font-black">MASTER 65:</strong> de 65 A 69 años. <br>
-              <strong class="italic font-black">SUPERMASTER:</strong> de 70 años en adelante. <br>
-              <strong class="italic font-black">DICAPACITADOS/AS:</strong> de 18 años en adelante. <br>
-            </p>
-          </div>
-          <section
-            id="info-categorias"
-            class="
-              m-4 pb-4
-            "
-          >
-            <div
-              id="discapacidad"
+          1. INSCRIPCIONES
+        </summary>
+        <div class="space-y-2">
+          <details>
+            <summary
               class="
-              rounded-lg
-              border-2 border-primarioMMM-500/20
-              bg-primarioMMM-50/20
-              text-primarioMMM-500
-              text-md md:text-md
+                cursor-pointer
+                pl-10 mb-2 pr-4 pt-2
+                text-terciarioMMM-600
+                text-sm md:text-lg font-bold
               "
             >
-              <p class="m-4">*Los corredores Discapacitados/as podrán inscribirse acreditando su discapacidad (mínimo del
-              33% inclusive), para ello deberán remitir el certificado de discapacidad al correo electrónico
-              <a href="mailto:deportes@motril.es" class="underline">deportes@motril.es</a> y esperar a la resolución del comité de competición.</p>
+              1.1 NUEVAS INSCRIPCIONES
+            </summary>
+            <div class="pl-10 pr-4 pb-4 text-terciarioMMM-600 text-md space-y-1">
+              <p>- Las inscripciones se realizarán en la web <a href="https://www.mediamaraton.motril.es" target="_blank" rel="noopener noreferrer" class="italic font-bold underline">www.mediamaraton.motril.es</a> desde el 27 de julio al 13 de octubre de 2026 a las 13:00 h.</p>
+              <p>- Las cuotas de inscripción se establecen en 10 €, tanto para la prueba de 21k como para la de 10k.</p>
+              <p>- El importe de la inscripción no será retornable ni se podrá transferir el dorsal a otro corredor/a.</p>
             </div>
-            <p class="m-4 font-bold text-primarioMMM-500 text-md md:text-md">
-              *EDAD MÍNIMA DE LA PRUEBA: 18 AÑOS
-            </p>
-            <p class="m-4 font-bold text-primarioMMM-500 text-md md:text-md">
-              *TODAS LAS EDADES INDICADAS HAN DE ESTAR CUMPLIDAS EL DÍA DE LA PRUEBA.
-            </p>
-          </section>
-        </details>
-        <details 
-          class="
-            mb-4 
-            bg-white
-            rounded shadow
-            hover:scale-102 transition-transform duration-300 ease-in-out"
-        >
-          <summary
-            class="
-              cursor-pointer
-              px-8 py-4
-              text-primarioMMM-500
-              text-sm md:text-lg font-bold
+          </details>
+
+          <details>
+            <summary
+              class="
+                cursor-pointer
+                pl-10 mb-2 pr-4
+                text-terciarioMMM-600
+                text-sm md:text-lg font-bold
               "
-          >
-            3. RECOGIDA DE DORSAL
-          </summary>
-          <div class="px-8 pb-4 text-primarioMMM-500 text-md">
-            <p>
-              Todas las personas inscritas recibirán su Bolsa del Corredor con su dorsal/chip, y
-              documentación de la carrera. Podrán recogerlas en los siguientes puntos, días y
-              horarios: <br>
-              <ul class="list-disc pl-4 md:pl-8">
-                <li><strong> Pabellón Municipal de Deportes</strong> (C/Aguas del Hospital s/n): El sábado 18 de
-                octubre de 10:00 a 14:00 y de 17:00 a 21:00h.</li>
-                <li><strong>Salón Social del recinto portuario:</strong> El Domingo 19 de octubre de 8:00 a 9:30h.</li>
-              </ul>
-              Para la retirada de la bolsa del corredor es obligatoria la presentación del DNI, carné
-              de conducir o licencia federativa. <br>
-              Se podrá retirar el dorsal de otro atleta siempre presentando DNI, carné de conducir
-              o licencia federativa (o fotocopia compulsada) o justificante de la inscripción, sin
-              esto no se entregará ningún dorsal
+            >
+              1.2 INSCRIPCIONES ATLETAS DEL GRAN PREMIO DE FONDO DIPUTACIÓN
+            </summary>
+            <div class="pl-10 pr-4 pb-4 text-terciarioMMM-600 text-md space-y-2">
+              <p>- Los corredores/as inscritos/as en todo el circuito del Gran Premio de Fondo Diputación, solo tendrán que confirmar la asistencia a la prueba, hasta el 13 de octubre a las 13 horas, en la página Web del Circuito <a href="https://www.gpfgranada.es" target="_blank" rel="noopener noreferrer" class="italic font-bold underline">www.gpfgranada.es</a> y asistir con su dorsal y chip asignados para todo el circuito.</p>
+              <p>- Todo aquel inscrito en el Circuito que no confirme la asistencia a la prueba, no puntuará en el mismo.</p>
+              <p>- En caso de incidencia contactar a través del correo electrónico: <a href="mailto:info@cruzandolameta.es" class="underline font-bold">info@cruzandolameta.es</a> y al teléfono <a href="tel:671285439" class="underline font-bold">671285439</a> en horario de 10:00 a 14:00 horas y de 17:00 a 19:00 horas.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary
+              class="
+                cursor-pointer
+                pl-10 mb-2 pr-4
+                text-terciarioMMM-600
+                text-sm md:text-lg font-bold
+              "
+            >
+              1.3 PARTICIPACIÓN FUERA DE PLAZO: CAMPAÑA CORRO POR LA VIDA
+            </summary>
+            <div class="pl-10 pr-4 pb-8 text-terciarioMMM-600 text-md space-y-2">
+              <p>- Los/as atletas que no hayan formalizado su inscripción en los plazos establecidos podrán participar en la prueba, comunicándolo hasta media hora antes de la misma, adquiriendo el dorsal solidario, por el que deberán de abonar la cantidad de 10 €.</p>
+              <p>- El/la atleta inscrito/a en esta modalidad correrá con un dorsal de la Asociación contra el Cáncer, no llevará chip, y asumirá el hecho de no optar a ningún premio, ni trofeo, aunque sí tendrá derecho al resto de servicios. Al no ser cronometrado no aparecerá en las clasificaciones de las mismas.</p>
+              <p>- Este pago será íntegramente destinado a la Asociación Española contra el Cáncer.</p>
+              <p>- Asimismo se establece un dorsal cero en la prueba, para todas aquellas personas que sin participar, quieran colaborar con la asociación, con una aportación voluntaria, entregando dicha aportación a la organización local para su ingreso.</p>
+              <div class="pt-2 font-semibold">
+                <p>Asociación Española contra el Cáncer, Junta provincial de Granada:</p>
+                <p>Información: <a href="tel:958293929" class="underline">958 29 39 29</a> | <a href="mailto:granada@aecc.es" class="underline">granada@aecc.es</a> | <a href="https://www.todocancer.org" target="_blank" rel="noopener noreferrer" class="italic font-bold underline">www.todocancer.org</a></p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </details>
+
+      <!-- 2. CAMPEONATO DE ANDALUCÍA DE MEDIA MARATÓN -->
+      <details 
+        class="
+          mb-4 
+          bg-white
+          rounded shadow
+          hover:scale-102 transition-transform duration-300 ease-in-out"
+      >
+        <summary
+          class="
+            cursor-pointer
+            px-8 py-4
+            text-terciarioMMM-600
+            text-sm md:text-lg font-bold
+          "
+        >
+          2. CAMPEONATO DE ANDALUCÍA DE MEDIA MARATÓN
+        </summary>
+        <div class="px-8 pb-6 text-terciarioMMM-600 text-md space-y-4 pt-2">
+          <p>
+            La Federación Andaluza de Atletismo y el Ayuntamiento de Motril organizan el día <strong>18 de octubre de 2026</strong> el Campeonato de Andalucía de Media Maratón.
+          </p>
+
+          <div class="space-y-1">
+            <h4 class="font-bold text-md md:text-lg">2.1. Participación e inscripción</h4>
+            <p>Podrán participar todos los/las atletas con Licencia Federativa en vigor, según las categorías establecidas en esta normativa.</p>
+            <p>Las inscripciones se realizarán en la web <a href="https://www.mediamaraton.motril.es" target="_blank" rel="noopener noreferrer" class="italic font-bold underline">www.mediamaraton.motril.es</a> desde el 27 de julio al 13 de octubre de 2026 a las 13:00 h, debiendo marcar en el formulario su inscripción en el Campeonato de Andalucía de Media Maratón.</p>
+            <p>Los corredores/as inscritos/as en todo el circuito del Gran Premio de Fondo Diputación, con Licencia Federativa, en el momento de confirmar la asistencia a la prueba deberán marcar en el formulario su inscripción en el Campeonato de Andalucía de Media Maratón, teniendo de plazo hasta el 13 de octubre a las 13 horas en <a href="https://www.gpfgranada.es" target="_blank" rel="noopener noreferrer" class="italic font-bold underline">www.gpfgranada.es</a>.</p>
+            <p>Desde un mes antes de la celebración de la prueba, la FAA publicará listados de inscritos al campeonato, donde deberán revisar que están correctos sus datos y en caso contrario contactar con el organizador para corregirlos. No se admitirán reclamaciones el día de la prueba sobre errores de datos de inscripción.</p>
+          </div>
+
+          <div class="space-y-1">
+            <h4 class="font-bold text-md md:text-lg">2.2. Categorías</h4>
+            <p class="font-semibold">El campeonato individual se disputará en las siguientes categorías, tanto masculina como femenina:</p>
+            <ul class="list-disc pl-6">
+              <li>Sub 20</li>
+              <li>Sub 23</li>
+              <li>Senior</li>
+              <li>Master 35-40-45-50-55-60-65… etc.</li>
+            </ul>
+            <p class="font-semibold pt-2">El campeonato de clubes se disputará en las siguientes categorías:</p>
+            <ul class="list-disc pl-6">
+              <li>Absoluto (Sub 20-Sub 23-Senior-Master)</li>
+              <li>Master 35-44</li>
+              <li>Master 45-54</li>
+              <li>Master 55 y +</li>
+            </ul>
+            <p class="italic text-sm pt-1">*En la clasificación de clubes Master el atleta más joven marcará la categoría del equipo.</p>
+            <p class="pt-1">Todo lo no descrito en este apartado se regirá por las normas específicas de este campeonato publicadas en la normativa técnica de la FAA.</p>
+          </div>
+
+          <div class="space-y-1">
+            <h4 class="font-bold text-md md:text-lg">2.3. Clasificaciones</h4>
+            <p>Se efectuarán las siguientes clasificaciones:</p>
+            <ul class="list-disc pl-6">
+              <li>Clasificación general individual, donde aparecerán todos los/as atletas participantes.</li>
+              <li>Clasificación individual por categorías y sexo.</li>
+            </ul>
+            <p class="pt-1">
+              Se tendrán en cuenta las marcas de los 3 primeros atletas que entren en meta de cada categoría y sexo de la que se dispute el campeonato. Todos los/as atletas componentes de un equipo deberán pertenecer a la misma entidad a la que representan.
             </p>
           </div>
-        </details>
-        <details 
-          class="
-            mb-4 
-            bg-white
-            rounded shadow
-            hover:scale-102 transition-transform duration-300 ease-in-out"
-        >
-          <summary
-            class="
-              cursor-pointer
-              px-8 py-4
-              text-primarioMMM-500
-              text-sm md:text-lg font-bold
-              "
-          >
-            4. SALIDA Y CONTROL DE LOS TIEMPOS
-          </summary>
-          <div class="px-8 pb-4 text-primarioMMM-500 text-md">
+
+          <div class="space-y-1">
+            <h4 class="font-bold text-md md:text-lg">2.4. Premios</h4>
+            <p>La F.A.A. entregará medallas a los 3 primeros clasificados individuales de cada categoría, además de premiar a los 3 primeros atletas clasificados de la categoría Absoluta, tanto en categoría masculina como femenina.</p>
+            <p>Trofeos a los 3 primeros clubes clasificados por equipos.</p>
+          </div>
+
+          <div class="space-y-1">
+            <h4 class="font-bold text-md md:text-lg">2.5. Cámara de llamada</h4>
             <p>
-              Se realizará una salida única, a las 10:00h en la Avda. Dr. Norman Bethune. <br>
-              Se establecen los siguientes tiempos de corte para la prueba de 21K: <br>
-              <ol class=" pl-8 ">
-                <li >1. <span class="pl-2"></span> Km 8, tiempo de corte 57 minutos.</li>
-                <li >2. <span class="pl-2"></span> Km 16, tiempo de corte 1h y 54 minutos.</li>
-                <li >3. <span class="pl-2"></span> Cierre general de carrera 2h y 30 minutos.</li>
-              </ol>
-              Para la prueba de 10k se establece los siguientes tiempos de corte <br>
-              <ol class=" pl-8 ">
-                <li >1. <span class="pl-2"></span> Km 5, tiempo de corte 40 minutos.</li>
-                <li >2. <span class="pl-2"></span> Cierre general de la carrera 1h y 20 minutos.</li>
-              </ol>
-              <strong>*Todo atleta que sobrepase estos tiempos quedará fuera de carrera, debiendo retirarse el dorsal y
-              abandonar la calzada.</strong>
-              La organización contará con un sistema de control de tiempos por chip, que
-              garantiza su fiabilidad desde que cada corredor cruza la línea de salida hasta que
-              pisa la de meta. Habrá además puntos de cronometraje y control de paso
-              intermedios.
+              Los/as atletas se deberán acreditar en cámara de llamada con la Licencia federativa de la temporada actual o con cualquier otro documento oficial (NIF, NIE, Carnet de Conducir, Pasaporte) que permita su identificación.
             </p>
           </div>
-        </details>
-        <details 
+
+          <div class="space-y-1">
+            <h4 class="font-bold text-md md:text-lg">2.6. Normativa aplicable</h4>
+            <p>
+              Lo no previsto en esta normativa se regirá por las normas de WORLD ATHLETICS y RFEA.
+            </p>
+          </div>
+        </div>
+      </details>
+
+      <!-- 3. CATEGORÍAS -->
+      <details 
+        class="
+          mb-4
+          bg-white
+          rounded shadow
+          hover:scale-102 transition-transform duration-300 ease-in-out"
+      >
+        <summary
           class="
-            mb-4 
-            bg-white
-            rounded shadow
-            hover:scale-102 transition-transform duration-300 ease-in-out"
+            cursor-pointer
+            px-8 py-4
+            text-terciarioMMM-600
+            text-sm md:text-lg font-bold
+          "
         >
-          <summary
+          3. CATEGORÍAS
+        </summary>
+        <div class="px-8 text-terciarioMMM-600 text-md pt-2 space-y-1">
+          <p><strong class="italic font-black">ABSOLUTA:</strong> 18 años en adelante sin distinción de categorías.</p>
+          <p><strong class="italic font-black">Sub 20:</strong> 18 y 19 años.</p>
+          <p><strong class="italic font-black">Sub 23:</strong> 20, 21 y 22 años.</p>
+          <p><strong class="italic font-black">SENIOR:</strong> 23-34 años.</p>
+          <p><strong class="italic font-black">MASTER 35:</strong> de 35 a 39 años.</p>
+          <p><strong class="italic font-black">MASTER 40:</strong> de 40 a 44 años.</p>
+          <p><strong class="italic font-black">MASTER 45:</strong> de 45 a 49 años.</p>
+          <p><strong class="italic font-black">MASTER 50:</strong> de 50 a 54 años.</p>
+          <p><strong class="italic font-black">MASTER 55:</strong> de 55 a 59 años.</p>
+          <p><strong class="italic font-black">MASTER 60:</strong> de 60 a 64 años.</p>
+          <p><strong class="italic font-black">MASTER 65:</strong> de 65 a 69 años.</p>
+          <p><strong class="italic font-black">SUPERMASTER:</strong> de 70 años en adelante.</p>
+          <p><strong class="italic font-black">DISCAPACITADOS/AS:</strong> de 18 años en adelante.</p>
+        </div>
+        <section id="info-categorias" class="m-4 pb-4">
+          <div
+            id="discapacidad"
             class="
-              cursor-pointer
-              px-8 py-4
-              text-primarioMMM-500
-              text-sm md:text-lg font-bold
-              "
+              rounded-lg
+              border-2 border-terciarioMMM-600/20
+              bg-terciarioMMM-50/20
+              text-terciarioMMM-600
+              text-md md:text-md
+              p-4 mb-2
+            "
           >
-            5. PREMIOS
-          </summary>
-            <details>
-              <summary
-                class="
-                  cursor-pointer
-                  pl-10 mb-2 pr-4
-                  text-primarioMMM-500
-                  text-sm md:text-lg font-bold
-                  "
-              >
-                5.1 PREMIOS GENERALES
-              </summary>
-              <p class="pl-10 pr-4 pb-4 text-primarioMMM-500 text-md md:text-md">
-                Los premios económicos son únicos y exclusivos para los tres primeros en la clasificación absoluta tanto para hombres como para mujeres: <br>
-                1.- 500 € <br>
-                2.- 300 € <br>
-                3.- 200 € <br>
-                Los tres primeros clasificados por cada categoría obtendrán trofeo. <br>
-                *Para poder optar a estos premios los atletas deberán cumplir con las condiciones establecidas en las consideraciones generales de la normativa.
+            <p>
+              * Los corredores Discapacitados/as podrán inscribirse acreditando su discapacidad (mínimo del 33% inclusive), para ello deberán remitir el certificado de discapacidad al correo electrónico <a href="mailto:deportes@motril.es" class="underline font-bold">deportes@motril.es</a> y esperar a la resolución del comité de competición.
+            </p>
+          </div>
+          <p class="m-2 font-bold text-terciarioMMM-600 text-md">
+            * Edad mínima el día de la prueba: 18 años.
+          </p>
+          <p class="m-2 font-bold text-terciarioMMM-600 text-md">
+            * Todas las edades indicadas han de estar cumplidas el día de la prueba.
+          </p>
+        </section>
+      </details>
+
+      <!-- 4. RECOGIDA DE DORSALES -->
+      <details 
+        class="
+          mb-4 
+          bg-white
+          rounded shadow
+          hover:scale-102 transition-transform duration-300 ease-in-out"
+      >
+        <summary
+          class="
+            cursor-pointer
+            px-8 py-4
+            text-terciarioMMM-600
+            text-sm md:text-lg font-bold
+          "
+        >
+          4. RECOGIDA DE DORSALES
+        </summary>
+        <div class="px-8 pb-6 text-terciarioMMM-600 text-md space-y-3 pt-2">
+          <p>
+            Todas las personas inscritas recibirán su Bolsa del Corredor con su dorsal/chip, y documentación de la carrera. Podrán recogerlas en los siguientes puntos, días y horarios:
+          </p>
+          <div>
+            <p class="font-bold underline">
+              Pabellón Municipal de Deportes (C/Aguas del Hospital s/n):
+            </p>
+            <ul class="list-disc pl-6 space-y-1 mt-1">
+              <li><strong>Sábado 17 de octubre:</strong> de 10:00 a 14:00 y de 17:00 a 20:00 h.</li>
+              <li><strong>Domingo 18 de octubre:</strong> de 8:00 a 9:30 h.</li>
+            </ul>
+          </div>
+          <p>
+            Para la retirada de la bolsa del corredor es obligatoria la presentación del DNI, carné de conducir o licencia federativa.
+          </p>
+          <p>
+            Se podrá retirar el dorsal de otro atleta siempre presentando DNI, carné de conducir o licencia federativa (o fotocopia compulsada) o justificante de la inscripción, sin esto no se entregará ningún dorsal.
+          </p>
+        </div>
+      </details>
+
+      <!-- 5. SALIDA Y CONTROL DE TIEMPOS -->
+      <details 
+        class="
+          mb-4 
+          bg-white
+          rounded shadow
+          hover:scale-102 transition-transform duration-300 ease-in-out"
+      >
+        <summary
+          class="
+            cursor-pointer
+            px-8 py-4
+            text-terciarioMMM-600
+            text-sm md:text-lg font-bold
+          "
+        >
+          5. SALIDA Y CONTROL DE TIEMPOS
+        </summary>
+        <div class="px-8 pb-6 text-terciarioMMM-600 text-md space-y-3 pt-2">
+          <p>
+            Se realizará una salida única, a las <strong>10:00 h</strong> en el <strong>Paseo de las Explanadas (Avda. Ntra. Sra. de la Cabeza)</strong>.
+          </p>
+          
+          <div>
+            <p class="font-bold">Se establecen los siguientes tiempos de corte para la prueba de 21K:</p>
+            <ul class="list-disc pl-6 space-y-1 mt-1">
+              <li><strong>Km 8:</strong> tiempo de corte 57 minutos.</li>
+              <li><strong>Km 16:</strong> tiempo de corte 1 h y 54 minutos.</li>
+              <li><strong>Cierre general de carrera:</strong> 2 h y 30 minutos.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-bold">Para la prueba de 10K se establecen los siguientes tiempos de corte:</p>
+            <ul class="list-disc pl-6 space-y-1 mt-1">
+              <li><strong>Km 5:</strong> tiempo de corte 40 minutos.</li>
+              <li><strong>Cierre general de la carrera:</strong> 1 h y 30 minutos.</li>
+            </ul>
+          </div>
+
+          <p class="font-bold text-red-600">
+            * Todo atleta que sobrepase estos tiempos quedará fuera de carrera, debiendo retirarse el dorsal y abandonar la calzada.
+          </p>
+          <p>
+            La organización contará con un sistema de control de tiempos por chip, que garantiza su fiabilidad desde que cada corredor cruza la línea de salida hasta que pisa la de meta. Habrá además puntos de cronometraje y control de paso intermedios.
+          </p>
+        </div>
+      </details>
+
+      <!-- 6. PREMIOS -->
+      <details 
+        class="
+          mb-4 
+          bg-white
+          rounded shadow
+          hover:scale-102 transition-transform duration-300 ease-in-out"
+      >
+        <summary
+          class="
+            cursor-pointer
+            px-8 py-4
+            text-terciarioMMM-600
+            text-sm md:text-lg font-bold
+          "
+        >
+          6. PREMIOS
+        </summary>
+        <div class="space-y-2">
+          <details>
+            <summary
+              class="
+                cursor-pointer
+                pl-10 mb-2 pr-4 pt-2
+                text-terciarioMMM-600
+                text-sm md:text-lg font-bold
+              "
+            >
+              6.1 PREMIOS GENERALES
+            </summary>
+            <div class="pl-10 pr-4 pb-4 text-terciarioMMM-600 text-md space-y-2">
+              <p>
+                Los premios económicos son únicos y exclusivos para los tres primeros en la clasificación absoluta tanto para hombres como para mujeres:
               </p>
-            </details>
-            <details>
-              <summary
-                class="
-                  cursor-pointer
-                  pl-10 mb-2 pr-4
-                  text-primarioMMM-500
-                  text-sm md:text-lg font-bold
-                  "
-              >
-                5.2 PREMIOS ATLETAS DEL GRAN PREMIO DE FONDO DIPUTACIÓN UNIVERSO LORCA
-              </summary>
-              <p class="pl-10 pr-4 pb-8 text-primarioMMM-500 text-md md:text-md">
-                Todos los/las inscritos/as en el Circuito GPF 2025, que hayan confirmado su participación en la prueba a través de la
-                página <a href="https://www.gpfgranada.es" target="_blank" class="italic font-bold underline">www.gpfgranada.es</a> en
-                tiempo y plazo estipulados, optarán a alguno de estos sorteos. El resultado del sorteo podrá ser consultado el viernes
-                anterior a cada prueba en la página Web anteriormente citada y serán entregados al finalizar la carrera. Los vales son
-                por un importe aproximado de 50 € y las empresas colaboradoras son las siguientes: Intersport Moto Deporte, Aventura
-                entre pinos, Mercagranada, Deporte Base Liverpool, Sabor Granada y Gimnasio Open Fit. <br>
+              <ul class="list-disc pl-6 space-y-1 font-semibold">
+                <li>1º Posición: 500 €</li>
+                <li>2º Posición: 300 €</li>
+                <li>3º Posición: 200 €</li>
+              </ul>
+              <p>Los tres primeros clasificad@s por cada categoría obtendrán trofeo.</p>
+              <p class="text-sm italic">* Para poder optar a estos premios los atletas deberán cumplir con las condiciones establecidas en las consideraciones generales de la normativa.</p>
+              <p class="font-bold">Se hará entrega de una medalla conmemorativa de finisher a cada atleta que finalice la prueba.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary
+              class="
+                cursor-pointer
+                pl-10 mb-2 pr-4
+                text-terciarioMMM-600
+                text-sm md:text-lg font-bold
+              "
+            >
+              6.2 PREMIOS ATLETAS DEL GRAN PREMIO DE FONDO DIPUTACIÓN
+            </summary>
+            <div class="pl-10 pr-4 pb-8 text-terciarioMMM-600 text-md space-y-3">
+              <p>
+                Todos los/las inscritos/as en el Circuito GPF 2026, que hayan confirmed su participación en la prueba a través de la página <a href="https://www.gpfgranada.es" target="_blank" rel="noopener noreferrer" class="italic font-bold underline">www.gpfgranada.es</a> en tiempo y plazo estipulados, optarán a sorteos. El resultado del sorteo podrá ser consultado el viernes anterior a cada prueba en la página Web anteriormente citada y serán entregados al finalizar la carrera.
+              </p>
+              <p>
+                Los vales son por un importe aproximado de 50 € y las empresas colaboradoras son las siguientes:<br />
+                <em>Intersport Moto Deporte, Aventura entre pinos, Mercagranada, Deporte Base Liverpool, Sabor Granada, Deportes Bikila y Gimnasio Open Fit.</em>
+              </p>
+              <p class="text-sm font-semibold">
                 Nota: Para poder optar a dichos vales, es OBLIGATORIO que el/la Atleta premiado/a esté presente en el acto, en caso contrario no tendrá derecho al mismo, salvo causa de fuerza mayor, comunicada por antelación y por escrito.
               </p>
-            </details>
-        </details>
-        <details 
+              <p>
+                Al final de la prueba habrá diversas degustaciones de bebidas y productos a todos los participantes por gentileza de las firmas: <strong>Cruzcampo</strong>, <strong>Coca Cola</strong> y por parte del Ayuntamiento organizador.
+              </p>
+              <p>
+                <strong>Servicio de Ludoteca:</strong> Disponible para todos los inscritos al Circuito presentando el dorsal. El comienzo de este servicio se realizará media hora antes del inicio de la prueba.
+              </p>
+              <p class="font-bold">
+                Premios atletas del GPF: Trofeos a los 5 primeros de la categoría absoluto masculino y absoluto femenino.
+              </p>
+            </div>
+          </details>
+        </div>
+      </details>
+
+      <!-- 7. NORMATIVA TÉCNICA -->
+      <details 
+        class="
+          mb-4 
+          bg-white
+          rounded shadow
+          hover:scale-102 transition-transform duration-300 ease-in-out"
+      >
+        <summary
           class="
-            mb-4 
-            bg-white
-            rounded shadow
-            hover:scale-102 transition-transform duration-300 ease-in-out"
+            cursor-pointer
+            px-8 py-4
+            text-terciarioMMM-600
+            text-sm md:text-lg font-bold
+          "
         >
-          <summary
-            class="
-              cursor-pointer
-              px-8 py-4
-              text-primarioMMM-500
-              text-sm md:text-lg font-bold
-              "
-          >
-            6. NORMATIVA TÉCNICA
-          </summary>
-          <div class="px-8 pb-4 text-primarioMMM-500 text-md">
-            <p>
-              La organización no se hace responsable de los daños que pudieran causar o causarse los/as atletas participantes por imprudencias o negligencias de estos. Igualmente, el atleta declara estar en condiciones físicas óptimas para realizar esta prueba y lo hace bajo su entera responsabilidad, eximiendo de toda a la organización de la prueba. El inscribirse en esta prueba supone la aceptación plena de estas normas.
-            </p>
+          7. NORMATIVA TÉCNICA
+        </summary>
+        <div class="px-8 pb-6 text-terciarioMMM-600 text-md space-y-3 pt-2">
+          <p>
+            La organización no se hace responsable de los daños que pudieran causar o causarse los/as atletas participantes por imprudencias o negligencias de estos. Igualmente, el atleta declara estar en condiciones físicas óptimas para realizar esta prueba y lo hace bajo su entera responsabilidad, eximiendo de toda a la organización de la prueba. El inscribirse en esta prueba supone la aceptación plena de estas normas.
+          </p>
+
+          <div>
             <p class="font-bold">Será motivo de descalificación:</p>
-            <ul class="list-disc pl-8">
+            <ul class="list-disc pl-6 space-y-1 mt-1">
               <li>Llevar el dorsal no visible o colocado en la parte posterior del cuerpo.</li>
               <li>Conducta antideportiva.</li>
-              <li>No finalizar el recorrido, o no realizarlo por el circuito habilitado. Correr fuera del mismo (aceras…) es no completar el circuito homologado.</li>
+              <li>No finalizar el recorrido, o no realizarlo por el circuito habilitado.</li>
               <li>No atender al reglamento, ni las indicaciones de los organizadores, jueces o voluntarios.</li>
-              <li>Correr con el dorsal o chip de otro/a atleta, o duplicidad.</li>
+              <li>Correr con el dorsal o chip de otro/a atleta.</li>
               <li>Correr sin chip (con la excepción de los participantes no inscritos/as).</li>
+              <li>Correr o entrar en meta con sillas de niños, patines o similares, y/o correr o entrar a meta con animales, exceptuando en este caso lo establecido en la normativa vigente sobre perros guía.</li>
             </ul>
-            <p class="font-bold">Por motivos de seguridad en la carrera y para el buen desarrollo de la misma, así como debido a la legislación vigente sobre publicidad de bebidas alcohólicas y protección del menor, será también motivo de descalificación:</p>
-            <ul class="list-disc pl-8">
-              <li>Correr o entrar a meta con menores.</li>
-            </ul>
-            <p>
-              Cualquier reclamación en la prueba deberá formularse por escrito al Juez Árbitro de la carrera media hora después de haber
-              terminado la prueba, exponiendo de forma clara y concisa el motivo de la reclamación, con la oportuna identificación y la firma
-              del interesado. <br>
-              Los únicos vehículos que podrán seguir la prueba son los señalizados como oficiales por la organización. <br>
-              La organización dispone de un Plan de Autoprotección, Seguridad y Salud, que vela por la seguridad de atletas y público en general.
-            </p>
-            <p>
-              La prueba será controlada por el Colegio de Jueces de la Federación Andaluza de Atletismo (Delegación de Granada), transcurriendo en un circuito homologado de Media Maratón (21,097).
-            </p>
           </div>
-        </details>
-        <details 
+
+          <p class="font-bold">
+            Por motivos de seguridad en la carrera y para el buen desarrollo de la misma, así como debido a la legislación vigente sobre publicidad de bebidas alcohólicas y protección del menor, será también motivo de descalificación, correr o entrar a meta con menores.
+          </p>
+
+          <p>
+            Cualquier reclamación en la prueba deberá formularse por escrito al Juez Árbitro de la carrera media hora después de haber terminado la prueba, exponiendo de forma clara y concisa el motivo de la reclamación, con la oportuna identificación y la firma del interesado.
+          </p>
+          <p>
+            Los únicos vehículos que podrán seguir la prueba son los señalizados como oficiales por la organización.
+          </p>
+          <p>
+            La organización dispone de un Plan de Autoprotección, Seguridad y Salud, que vela por la seguridad de atletas y público en general.
+          </p>
+          <p>
+            La prueba será controlada por el Colegio de Jueces de la Federación Andaluza de Atletismo (Delegación de Granada), transcurriendo en un circuito homologado de Media Maratón (21,097 km).
+          </p>
+        </div>
+      </details>
+
+      <!-- 8. INFORMACIÓN Y CONTACTO -->
+      <details 
+        class="
+          mb-4 
+          bg-white
+          rounded shadow
+          hover:scale-102 transition-transform duration-300 ease-in-out"
+      >
+        <summary
           class="
-            mb-4 
-            bg-white
-            rounded shadow
-            hover:scale-102 transition-transform duration-300 ease-in-out"
+            cursor-pointer
+            px-8 py-4
+            text-terciarioMMM-600
+            text-sm md:text-lg font-bold
+          "
         >
-          <summary
-            class="
-              cursor-pointer
-              px-8 py-4
-              text-primarioMMM-500
-              text-sm md:text-lg font-bold
-              "
+          8. INFORMACIÓN Y CONTACTO
+        </summary>
+        <div class="px-8 pb-6 text-terciarioMMM-600 text-md space-y-2 pt-2">
+          <p><strong>Teléfono:</strong> <a href="tel:958824530" class="underline">958 82 45 30</a></p>
+          <p><strong>Oficina de información:</strong> Pabellón Municipal de Deportes, Calle Aguas del Hospital s/n, 18600 Motril, Granada</p>
+          <p><strong>Email:</strong> <a href="mailto:deportes@motril.es" class="underline font-bold">deportes@motril.es</a></p>
+          <p><strong>Web oficial:</strong> <a href="https://www.mediamaraton.motril.es" target="_blank" rel="noopener noreferrer" class="italic font-bold underline">www.mediamaraton.motril.es</a></p>
+        </div>
+      </details>
+
+      <!-- BOTÓN DE DESCARGA PDF -->
+      <div class="mt-8 mb-4 flex justify-center">
+        <a
+          href="/docs/normativa.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="
+            inline-flex items-center gap-3
+            px-8 py-4
+            bg-blancoMMM hover:bg-secundarioMMM-600
+            text-terciarioMMM-600 hover:text-terciarioMMM-800 font-bold text-lg
+            rounded-xl shadow-xl
+            transition-all duration-300 ease-in-out
+            hover:scale-105
+          "
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            class="w-6 h-6 fill-current" 
+            viewBox="0 0 24 24"
           >
-            7. LEY DE PROTECCIÓN DE DATOS
-          </summary>
-          <div class="px-8 pb-4 text-primarioMMM-500 text-md">
-            <p>
-              En cumplimiento del Reglamento General de Protección de Datos de Carácter Personal (UE 2016/679), le informo que los datos facilitados por usted en su solicitud serán tratados por el Ayuntamiento con la finalidad de gestionar su inscripción en la Media Maratón Ciudad de Motril. Podrá ejercer sus derechos en el Ayuntamiento de Motril.  
-            </p>
-          </div>
-        </details>
-        <p class="text-primarioMMM-500 text-md md:text-md pb-8">
-          Puedes descargar la normativa completa en formato PDF haciendo clic
-          <a href="/files/Normativa 41 Edicion Media Maratón ciudad de Motril (2025).pdf" download="Normativa 41 Edicion Media Maratón ciudad de Motril (2025).pdf" class="font-bold underline italic">aquí</a>
-        </p> 
-      </section>
-      <LogoSlider />
+            <path d="M12 16l4-5h-3V4h-2v7H8l4 5zm9-13v18H3V3h18zm2-2H1v22h22V1z"/>
+          </svg>
+          DESCARGAR NORMATIVA EN PDF
+        </a>
+      </div>
+
+    </section>
+    <LogoSlider />
   </main>
 </Layout>
