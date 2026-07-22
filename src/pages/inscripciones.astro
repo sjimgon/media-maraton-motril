@@ -6,15 +6,35 @@ import Boton from "../components/Botones.astro";
 ---
 
 <Layout title="Inscripciones | Media Maratón Ciudad de Motril">
-  <main class="bg-primarioMMM-500">
-    <h1
-      class="text-blancoMMM
-        font-heading text-4xl md:text-6xl font-extrabold
-        text-center
-        pt-26 md:pt-32 "
+   <main class="bg-[url('/images/index/hero/hero10-bg-web.webp')] bg-cover bg-center bg-no-repeat ">
+    <div
+  class="
+    w-full
+    flex flex-col items-center justify-center
+    pt-20 pb-6 md:pt-40 md:pb-2
+    px-4
+  "
+>
+  <div
+    class="
+      px-8 py-3 md:px-14 md:py-5
+      bg-secundarioMMM-500
+      rounded-2xl
+      shadow-2xl
+      flex items-center justify-center
+    "
+  >
+    <h1 
+      class="
+        text-terciarioMMM-700 
+        font-morganite text-9xl md:leading-none font-extrabold
+        text-center 
+      "
     >
       INSCRIPCIONES
     </h1>
+  </div>
+</div>
 
     <section
       id="inscripciones-content"
@@ -26,26 +46,27 @@ import Boton from "../components/Botones.astro";
     >
       <section
         id="informacion-general-content"
-        class="bg-terciarioMMM-50 rounded-lg shadow-terciarioMMM-200 p-5 hover:scale-105 transition-transform duration-300"
+        class="bg-terciarioMMM-50 rounded-lg shadow-terciarioMMM-200 p-5 transition-transform duration-300"
       >
         <h2
-          class="text-primarioMMM-500
+          class="text-terciarioMMM-500
             text-2xl md:text-4xl font-black
             mb-2
-            text-center md:text-left"
+            text-center md:text-left
+            text-helvetica italic"
         >
           INFORMACIÓN GENERAL
         </h2>
-          <ul class="list-disc pl-6 space-y-2 mb-6 text-primarioMMM-500">
+          <ul class="list-disc pl-6 space-y-2 mb-6 text-terciarioMMM-500 text-helvetica">
             <li>
               <p>
                 Las inscripciones se realizarán en la web de <a
-                  href="https://www.cruzandolameta.es/ver/xli-media-maraton-ciudad-de-motril---2259/"
+                  href="https://www.cruzandolameta.es/ver/xlii-media-maraton-ciudad-de-motril---2487/"
                   target="_blank"
                   class="underline font-bold italic"
                   >CruzandoLaMeta</a
                 >
-                desde el <strong>21 de julio al 12 de octubre de 2025</strong>.
+                desde el <strong>27 de julio al 13 de octubre de 2026 a las 13:00 horas</strong>.
                 Las cuotas de inscripción son de <strong>10 €</strong>, tanto
                 para la prueba de 21k como para la de 10k.
               </p>
@@ -60,10 +81,10 @@ import Boton from "../components/Botones.astro";
             </li>
           </ul>
         <Boton
-          color="primary"
-          version="positivo"
+          color="tertiary"
+          version="negativo"
           target="_blank"
-          href="https://www.cruzandolameta.es/ver/xli-media-maraton-ciudad-de-motril---2259/"
+          href="https://www.cruzandolameta.es/ver/xlii-media-maraton-ciudad-de-motril---2487/"
           class="text-xl md:text-2xl font-bold mx-auto block text-center"
         >
           INSCRÍBETE AQUÍ
@@ -72,21 +93,23 @@ import Boton from "../components/Botones.astro";
 
       <section
         id="inscripciones-fondo-content"
-        class="bg-secundarioMMM-400 rounded-lg shadow p-5 hover:scale-105 transition-transform duration-300"
+        class="bg-secundarioMMM-400 rounded-lg shadow p-5  transition-transform duration-300"
       >
         <h2
           class="
-            text-blancoMMM
+            text-terciarioMMM-700
             text-2xl md:text-4xl font-black
-            text-center md:text-left"
+            text-center md:text-left
+            text-helvetica italic
+            mb-2"
         >
           GRAN PREMIO DE FONDO DIPUTACIÓN UNIVERSO LORCA
         </h2>
-        <ul class="list-disc pl-6 space-y-2 mb-6 text-blancoMMM">
+        <ul class="list-disc pl-6 space-y-2 mb-6 text-terciarioMMM-500 text-helvetica">
           <li>
             Los corredores/as inscritos/as en todo el circuito solo tendrán que
             confirmar la asistencia a la prueba, hasta el <strong
-              >12 de octubre a las 24 horas</strong
+              >13 de octubre a las 13:00 horas</strong
             >, en la página Web del Circuito
             <a
               href="https://www.gpfgranada.es"
@@ -104,7 +127,7 @@ import Boton from "../components/Botones.astro";
               >info@cruzandolameta.es</a
             >
             y al teléfono
-            <a href="tel:662154453" class="underline">662154453</a>
+            <a href="tel:671285439" class="underline">671285439</a>
             en horario de 10:00 a 14:00 horas y de 17:00 a 19:00 horas.
           </li>
         </ul>
@@ -112,17 +135,18 @@ import Boton from "../components/Botones.astro";
 
       <section
         id="inscripciones-solidarias-content"
-        class="bg-blancoMMM rounded-lg shadow p-5 mb-6 text-primarioMMM-500 hover:scale-105 transition-transform duration-300"
+        class="bg-blancoMMM rounded-lg shadow p-5 mb-6 text-terciarioMMM-500 transition-transform duration-300
+        "
       >
         <h2
            class="
             text-2xl md:text-4xl font-black
             mb-2
-            text-center md:text-left"
+            text-center md:text-left text-helvetica italic"
         >
           PARTICIPACIÓN FUERA DE PLAZO / CAMPAÑA CORRO POR LA VIDA
         </h2>
-        <ul class="list-disc pl-6 space-y-2 mb-6 text-primarioMMM-500">
+        <ul class="list-disc pl-6 space-y-2 mb-6 text-terciarioMMM-500 text-helvetica">
           <li>
             Los/as atletas que no hayan formalizado su inscripción en los plazos
             establecidos podrán participar en la prueba, comunicándolo hasta
@@ -160,9 +184,9 @@ import Boton from "../components/Botones.astro";
             >granada@aecc.es</a
           ><br />
           Web: <a
-            href="https://www.contraelcancer.es"
+            href="https://todocancer.org/"
             target="_blank"
-            class="underline">www.contraelcancer.es</a
+            class="underline">www.todocancer.org</a
           >
         </div>
       </section>
