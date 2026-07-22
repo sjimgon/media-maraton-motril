@@ -4,97 +4,129 @@ import Layout from '../layouts/LayoutMaster.astro';
 import Card from '../components/Card.astro';
 import Icon from '../components/Iconos.astro';
 import LogoSlider from '../components/LogoSlider.astro';
+
+const servicios = [
+  {
+    title: "Guardarropa",
+    desc: "Ubicado en el salón social del recinto portuario. Abierto de 8:00 a 14:00 h.",
+    icon: "guardarropa",
+  },
+  {
+    title: "Zona de Calentamiento",
+    desc: "Tráfico cerrado 2h antes en Avda. Norman Betune. Avituallamiento disponible.",
+    icon: "calentamiento",
+  },
+  {
+    title: "Puntos de Control",
+    desc: "Pasos obligatorios durante el recorrido para garantizar la seguridad de la prueba.",
+    icon: "checkpoint",
+  },
+  {
+    title: "Duchas",
+    desc: "Disponibles en las instalaciones del Real Club Náutico (Recinto Portuario).",
+    icon: "ducha",
+  },
+  {
+    title: "Avituallamientos",
+    desc: "Cada 2,5 km en carrera y avituallamiento final completo en meta con sólido y líquido.",
+    icon: "agua",
+  },
+  {
+    title: "Medalla Finisher",
+    desc: "Medalla exclusiva para cada atleta que cruce la línea de meta.",
+    icon: "medalla",
+  },
+  {
+    title: "Masajes",
+    desc: "Servicio de fisioterapia y masajes gratuito en la zona de recuperación.",
+    icon: "masaje",
+  },
+  {
+    title: "Retransmisión en streaming",
+    desc: "Sigue la prueba en directo a través de la emisión de Onda Sur Motril.",
+    icon: "radio",
+  },
+];
 ---
 
 <Layout title="Servicios al corredor | Media Maratón Ciudad de Motril">
-  <main>
+   <main class="bg-[url('/images/index/hero/hero10-bg-web.webp')] bg-cover bg-center bg-no-repeat ">
+    <div
+  class="
+    w-full
+    flex flex-col items-center justify-center
+    pt-20 pb-6 md:pt-40 md:pb-2
+    px-4
+  "
+>
+  <div
+    class="
+      px-8 py-3 md:px-14 md:py-5
+      bg-secundarioMMM-500
+      rounded-2xl
+      shadow-2xl
+      flex items-center justify-center
+    "
+  >
     <h1 
       class="
-        text-primarioMMM-500 
-        font-heading text-4xl md:text-6xl font-extrabold
-        text-center
-        pt-20 md:pt-25
+        text-terciarioMMM-700 
+        font-morganite text-9xl md:leading-none font-extrabold
+        text-center 
       "
     >
       SERVICIOS AL CORREDOR
     </h1>
-    <section 
-      id="servicios_cards"
-      class="p-8 grid grid-cols-1 md:grid-cols-3 gap-8 w-auto"
-    >
-      <Card
-        color="primary"
-        title="Guardarropa"
-        description="Ubicado en el salón social del recinto portuario. Abierto de 8:00 a 14:00 h."
-        class="order-1 md:order-1"
+  </div>
+</div>
+    <section id="servicios" class="w-full max-w-7xl mx-auto px-6 py-12 md:py-20">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {servicios.map((servicio) => (
+      <div 
+        class="
+          group relative flex flex-col justify-between p-6
+          items-center md:items-start
+          text-center md:text-left
+          bg-secundarioMMM-100/20 backdrop-blur-md
+          border border-secundarioMMM-500/30 rounded-2xl
+          hover:border-terciarioMMM-800/80 hover:bg-secundarioMMM-600
+          transition-all duration-300 ease-out
+          hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-terciarioMMM-800/10
+        "
       >
-        <Icon slot="image" name="guardarropa" class="w-30 md:w-23 mb-4" />
-      </Card>
-      <Card
-        color="secondary"
-        title="Zona de Calentamiento"
-        description="Tráfico cerrado 2h antes en Avda. Norman Betune para calentamiento seguro. Avituallamiento disponible."
-        class:list={"order-2 md:order-2"}
-        >
-        <Icon slot="image" name="calentamiento" class="w-14 md:w-12 mb-4" />
-      </Card>
-      <Card
-        color="tertiary"
-        title="Puntos de Control"
-        description="Varios pasos obligatorios de control durante el recorrido para garantizar la seguridad."
-        class:list={"order-3 md:order-3"}
-      >
-        <Icon slot="image" name="checkpoint" class="w-18 md:w-16 mb-4" />
-      </Card>
-      <Card
-        color="tertiary"
-        title="Duchas"
-        description="Disponibles en las instalaciones del Real Club Náutico (Recinto Portuario)."
-        class="order-6 md:order-4"
-      >
-        <Icon slot="image" name="ducha" class="w-16 md:w-12 mb-4" />
-      </Card>
-      <Card
-        color="primary"
-        title="Avituallamientos"
-        description="En carrera cada 2,5 km y avituallamiento final con fruta, agua, isotónico, barritas y geles."
-        class:list={"order-4 md:order-5"}
-      >
-        <Icon slot="image" name="agua" class="w-10 md:w-10 mb-4" />
-      </Card>
-      <Card
-        color="secondary"
-        title="Medalla Finisher"
-        description="Medalla para cada atleta que finalice la prueba."
-        class:list={"order-5 md:order-6"}
-      >
-        <Icon slot="image" name="medalla" class="w-16 md:w-18 mb-4" />
-      </Card>
-      <Card
-        color="secondary"
-        title="Feria de la Pasta"
-        description="Bol de pasta gratuito para cada atleta inscrito."
-        class:list={"order-9 md:order-7"}
-      >
-        <Icon slot="image" name="pasta" class="w-22 md:w-22 mb-4" />
-      </Card>
-      <Card
-        color="tertiary"
-        title="Masajes"
-        description="Servicio de masajes gratuito en la zona de recuperación."
-        class:list={"order-8 md:order-8"}
-      >
-        <Icon slot="image" name="masaje" class="w-22 md:w-24 mb-4" />
-      </Card>
-      <Card
-        color="primary"
-        title="Retransmisión y Resultados"
-        description="Sigue la prueba en Onda Sur Motril (107.7 FM), YouTube (Cruzando la Meta) y consulta resultados en la App de Cruzando la Meta."
-        class:list={"order-7 md:order-9"}
-      >
-        <Icon slot="image" name="radio" class="w-20 md:w-22 mb-4" />
-      </Card>
-    </section>
+        <!-- Icono (Centrado en < md, alineado a la izquierda en >= md) -->
+        <div class="flex items-center justify-center md:justify-start w-full mb-6">
+          <div 
+            class="
+              w-18 h-18 rounded-xl 
+              bg-terciarioMMM-800 group-hover:bg-terciarioMMM-800
+              flex items-center justify-center 
+              transition-colors duration-300
+            "
+          >
+            <Icon name={servicio.icon} class="w-10 h-10 text-blancoMMM group-hover:text-secundarioMMM-500 transition-colors duration-300" />
+          </div>
+        </div>
+
+        <!-- Texto (Centrado en < md, alineado a la izquierda en >= md) -->
+        <div class="flex flex-col flex-grow justify-start items-center md:items-start w-full">
+          <h3 
+            class="
+              font-helvetica font-bold text-2xl 
+              text-blancoMMM group-hover:text-terciarioMMM-800 
+              tracking-wide mb-2 transition-colors duration-300
+            "
+          >
+            {servicio.title}
+          </h3>
+          <p class="text-base text-blancoMMM leading-relaxed font-light group-hover:text-terciarioMMM-800 transition-colors duration-300">
+            {servicio.desc}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
     <LogoSlider />
   </main>
 </Layout>
