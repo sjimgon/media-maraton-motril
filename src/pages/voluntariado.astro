@@ -3,22 +3,46 @@ import Layout from "../layouts/LayoutMaster.astro";
 ---
 
 <Layout title="Voluntariado | Media Maratón Ciudad de Motril">
-  <main class="">
-     <h1
-      class="text-primarioMMM-500
-        font-heading text-4xl md:text-6xl font-extrabold
-        text-center
-        pt-20 md:pt-25"
+  <main class="min-h-screen flex flex-col bg-[url('/images/index/hero/hero10-bg-web.webp')] bg-cover bg-center bg-no-repeat">
+    <div
+      class="
+        w-full
+        flex flex-col items-center justify-center
+        pt-20 pb-6 md:pt-40 md:pb-2
+        px-4
+      "
     >
-      VOLUNTARIOS
-    </h1>
-    <section class="h-100 flex flex-col justify-center items-center my-20">
-        <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScu2Gh8zqdU0u5o6f50jwTEffkfDq8lq2dpy9Ylnvg5o5BAGQ/viewform?embedded=true" width="100%" height="1900" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe> -->
-          <div class="w-1/2 flex flex-col gap-8">
-            <p class="text-primarioMMM-500 font-medium  text-xl sm:text-4xl text-center">Hemos completado del cupo de voluntarios para la 41 Media Maratón Ciudad de Motril</p>
-            <p class="text-primarioMMM-500 font-black text-4xl sm:text-6xl text-center">!GRACIAS A TODOS!</p>
-          </div>
-        
-      </section>
+      <div
+        class="
+          px-8 py-3 md:px-14 md:py-5
+          bg-secundarioMMM-500
+          rounded-2xl
+          shadow-2xl
+          flex items-center justify-center
+        "
+      >
+        <h1 
+          class="
+            text-terciarioMMM-700 
+            font-morganite text-9xl md:leading-none font-extrabold
+            text-center 
+          "
+        >
+          VOLUNTARIOS
+        </h1>
+      </div>
+    </div>
+
+    <section class="flex-1 flex flex-col justify-center items-center px-4 py-12">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeCqqVIyTFfSh7XDFp6O2wxEcAXdYuYxSTjenTdxEleh6U3xQ/viewform" width="100%" height="1900" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+      <!-- <div class="w-full max-w-3xl flex flex-col gap-6">
+        <p class="text-terciarioMMM-600 font-medium text-xl sm:text-4xl text-center">
+          Hemos completado el cupo de voluntarios para la 41 Media Maratón Ciudad de Motril
+        </p>
+        <p class="text-terciarioMMM-700 font-black text-4xl sm:text-6xl text-center">
+          ¡GRACIAS A TODOS!
+        </p>
+      </div> -->
+    </section>
   </main>
 </Layout>
