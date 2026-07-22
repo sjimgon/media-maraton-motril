@@ -19,7 +19,8 @@ import Icono from '../components/Iconos.astro';
         flex flex-col
         gap-y-4 md:gap-y-2
         items-start justify-center
-        bg-[url('/images/index/hero/hero7-bg-web.webp')] bg-cover bg-center bg-no-repeat
+        bg-[url('/images/index/hero/hero9-bg-web.webp')] bg-center bg-cover bg-no-repeat
+        md:bg-[url('/images/index/hero/hero7-bg-web.webp')] md:bg-cover md:bg-center md:bg-no-repeat
       "
     >
 
@@ -461,9 +462,7 @@ import Icono from '../components/Iconos.astro';
   </div>
 </section>
 
-    <!-- SECCION DE PATROCINADORES -->
-
-    <section
+<section
   id="patros-index"
   class="
     w-full
@@ -490,6 +489,7 @@ import Icono from '../components/Iconos.astro';
       class="
         w-full
         grid grid-cols-2 place-items-center gap-6
+        [&>:nth-child(odd):last-child]:col-span-2
         md:flex md:flex-wrap md:gap-16
         justify-center items-center
       "
@@ -531,6 +531,7 @@ import Icono from '../components/Iconos.astro';
       class="
         w-full
         grid grid-cols-2 place-items-center gap-6
+        [&>:nth-child(odd):last-child]:col-span-2
         md:flex md:flex-wrap md:gap-12
         justify-center items-center
       "

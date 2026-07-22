@@ -17,24 +17,33 @@ import Boton from '../components/Botones.astro';
       FALTAN:
   </p>
   
-  <div class="w-4/5 flex gap-4 bg-terciarioMMM-900/70 rounded-lg p-4 justify-around items-center border-2 border-secundarioMMM-500">
-    <div class="flex flex-col items-center text-secundarioMMM-500 font-helvetica ">
-      <span id="dias" class="text-5xl mb-1">00</span>
-      <span class="text-2xl font-helvetica-cn">DÍAS</span>
-    </div>
-    <div class="flex flex-col items-center text-secundarioMMM-500 font-helvetica">
-      <span id="horas" class="text-5xl mb-1">00</span>
-      <span class="text-2xl font-helvetica-cn">HORAS </span>
-    </div>
-    <div class="flex flex-col items-center text-secundarioMMM-500 font-helvetica">
-      <span id="minutos" class="text-5xl mb-1">00</span>
-      <span class="text-2xl font-helvetica-cn">MINUTOS</span>
-    </div>
-    <div class="flex flex-col items-center text-secundarioMMM-500 font-helvetica">
-      <span id="segundos" class="text-5xl mb-1">00</span>
-      <span class="text-2xl font-helvetica-cn">SEGUNDOS</span>
-    </div>
+  <div class="w-full max-w-3xl grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 bg-terciarioMMM-900/70 rounded-lg p-4 md:p-6 border-2 border-secundarioMMM-500 place-items-center">
+  
+  <!-- DÍAS -->
+  <div class="flex flex-col items-center text-secundarioMMM-500 font-helvetica">
+    <span id="dias" class="text-5xl md:text-5xl font-bold mb-1 tabular-nums">00</span>
+    <span class="text-lg md:text-xl font-helvetica-cn tracking-wider uppercase">Días</span>
   </div>
+
+  <!-- HORAS -->
+  <div class="flex flex-col items-center text-secundarioMMM-500 font-helvetica">
+    <span id="horas" class="text-5xl md:text-5xl font-bold mb-1 tabular-nums">00</span>
+    <span class="text-lg md:text-xl font-helvetica-cn tracking-wider uppercase">Horas</span>
+  </div>
+
+  <!-- MINUTOS -->
+  <div class="flex flex-col items-center text-secundarioMMM-500 font-helvetica">
+    <span id="minutos" class="text-5xl md:text-5xl font-bold mb-1 tabular-nums">00</span>
+    <span class="text-lg md:text-xl font-helvetica-cn tracking-wider uppercase">Minutos</span>
+  </div>
+
+  <!-- SEGUNDOS -->
+  <div class="flex flex-col items-center text-secundarioMMM-500 font-helvetica">
+    <span id="segundos" class="text-5xl md:text-5xl font-bold mb-1 tabular-nums">00</span>
+    <span class="text-lg md:text-xl font-helvetica-cn tracking-wider uppercase">Segundos</span>
+  </div>
+
+</div>
 </div>
 
 <script>
