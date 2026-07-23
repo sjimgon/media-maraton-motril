@@ -7,165 +7,193 @@ import LogoSlider from '../components/LogoSlider.astro';
 
 <Layout title="Recorrido | Media Maratón Ciudad de Motril">
 
-  <main class="bg-[url('/images/index/hero/hero10-bg-web.webp')] bg-cover bg-center bg-no-repeat ">
+  <main class="min-h-screen flex flex-col justify-between bg-[url('/images/index/hero/hero10-bg-web.webp')] bg-cover bg-center bg-no-repeat ">
     <div
-  class="
-    w-full
-    flex flex-col items-center justify-center
-    pt-20 pb-6 md:pt-40 md:pb-2
-    px-4
-  "
->
-  <div
-    class="
-      px-8 py-3 md:px-14 md:py-5
-      bg-secundarioMMM-500
-      rounded-2xl
-      shadow-2xl
-      flex items-center justify-center
-    "
-  >
-    <h1 
       class="
-        text-terciarioMMM-700 
-        font-morganite text-9xl md:leading-none font-extrabold
-        text-center 
+        w-full
+        flex flex-col items-center justify-center
+        pt-20 pb-6 md:pt-40 md:pb-2
+        px-4
       "
     >
-      RECORRIDOS
-    </h1>
-  </div>
-</div>
-
-      <!-- SECCIÓN CIRCUITO 21K -->
-<section
-  id="circuito-21k"
-  class="px-8 pb-8 md:px-12 md:pb-8 flex flex-col items-center justify-center"
->
-  <div
-    id="bloque-circuito-21k"
-    class="w-full flex flex-col justify-center items-center mt-6 md:mt-8"
-  >
-    <!-- CONTENEDOR ENVOLVENTE -->
-    <div class="w-full md:w-3/4 lg:w-1/2 flex flex-col items-center">
-      <h2
+      <div
         class="
-          font-helvetica font-bold
-          tracking-widest
-          text-secundarioMMM-400
-          drop-shadow-[0_1px_14px_rgba(0,0,0,0.2)]
-          text-4xl
+          px-8 py-3 md:px-14 md:py-5
+          bg-secundarioMMM-500
+          rounded-2xl
+          shadow-2xl
+          flex items-center justify-center
         "
       >
-        CIRCUITO 21K
-      </h2>
-
-      <img
-        src="images/pages/recorrido/recorrido-21k.webp"
-        alt="Recorrido 21K"
-        class="
-          mt-4 mb-8
-          w-full
-          shadow-lg
-          transition-transform duration-800 transform hover:scale-105
-        "
-      />
+        <h1 
+          class="
+            text-terciarioMMM-700 
+            font-morganite text-9xl md:leading-none font-extrabold
+            text-center 
+          "
+        >
+          RECORRIDOS
+        </h1>
+      </div>
     </div>
 
-    <!-- Botones centrados -->
-    <div
-      id="botones-recorrido-21k"
-      class="flex flex-row gap-4 justify-center items-center"
+    <!-- SECCIÓN CIRCUITO 21K -->
+    <section
+      id="circuito-21k"
+      class="px-8 pb-8 md:px-12 md:pb-8 flex flex-col items-center justify-center"
     >
-      <Boton 
-        color="primary" 
-        version="negativo"
-        href="/images/pages/recorrido/descargable-21k.jpg"
-        download="Recorrido 21K - 42 Media Maratón Ciudad de Motril.jpg"
-        class="flex items-center gap-2 font-helvetica font-medium text-lg md:text-base"
+      <div
+        id="bloque-circuito-21k"
+        class="w-full flex flex-col justify-center items-center mt-6 md:mt-8"
       >
-        DESCARGAR IMAGEN
-        <Icon name="arrow-down" class="inline-block w-4 md:w-3 h-5" />
-      </Boton>
-      <Boton 
-        color="" 
-        version=""
-        target="_blank"
-        href="https://www.wikiloc.com/running-trails/mmm26-275090229?wa=sc"
-        class="bg-blancoMMM text-green-600 hover:bg-green-600 hover:text-blancoMMM font-helvetica font-medium text-lg md:text-base"
-      >
-        VER EN WIKILOC
-        <Icon name="wikiloc" class="inline-block w-4 md:w-4 h-5 ml-1 pb-1" />
-      </Boton>
-    </div>
+        <!-- CONTENEDOR ENVOLVENTE -->
+        <div class="w-full md:w-3/4 lg:w-1/2 flex flex-col items-center">
+          
+          <!-- CONTENEDOR TÍTULO + TOOLTIP EN MOUSEOVER -->
+          <div class="relative group flex items-center justify-center gap-2 cursor-pointer">
+            <h2
+              class="
+                font-helvetica font-bold
+                tracking-widest
+                text-secundarioMMM-400
+                drop-shadow-[0_1px_14px_rgba(0,0,0,0.2)]
+                text-4xl
+              "
+            >
+              CIRCUITO 21K
+            </h2>
 
-  </div>
-</section>
+            <!-- Ícono indicador (i) -->
+            <div class="text-secundarioMMM-400 hover:text-blancoMMM transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+              </svg>
+            </div>
 
-<!-- SECCIÓN CIRCUITO 10K (HOMOLOGADA) -->
-<section
-  id="circuito-10k"
-  class="px-8 pb-8 md:px-12 md:pb-8 flex flex-col items-center justify-center"
->
-  <div
-    id="bloque-circuito-10k"
-    class="w-full flex flex-col justify-center items-center mt-6 md:mt-8"
-  >
-    <!-- CONTENEDOR ENVOLVENTE -->
-    <div class="w-full md:w-3/4 lg:w-1/2 flex flex-col items-center">
-      <h2
-        class="
-          font-helvetica font-bold
-          tracking-widest
-          text-secundarioMMM-500
-          drop-shadow-[0_1px_14px_rgba(0,0,0,0.2)]
-          text-4xl
-        "
-      >
-        CIRCUITO 10K
-      </h2>
+            <!-- Popup / Tooltip -->
+            <div 
+              class="
+                absolute bottom-full left-1/2 -translate-x-1/2 mb-3
+                hidden group-hover:flex flex-col items-center
+                pointer-events-none z-30 w-max max-w-xs md:max-w-sm
+                transition-all duration-200
+              "
+            >
+              <div class="bg-gray-950/90 text-blancoMMM text-xs md:text-sm font-helvetica font-medium px-3 py-2 rounded-xl shadow-2xl border border-white/10 text-center backdrop-blur-md">
+                Circuito pendiente de homologación por la RFAA
+              </div>
+              <!-- Flechita decorativa inferior del tooltip -->
+              <div class="w-2.5 h-2.5 -mt-1 bg-gray-950/90 rotate-45 border-r border-b border-white/10"></div>
+            </div>
+          </div>
 
-      <img
-        src="images/pages/recorrido/recorrido-10k.webp"
-        alt="Recorrido 10K"
-        class="
-          mt-4 mb-8
-          w-full
-          shadow-lg
-          transition-transform duration-800 transform hover:scale-105
-        "
-      />
-    </div>
+          <img
+            src="images/pages/recorrido/recorrido-21k.webp"
+            alt="Recorrido 21K"
+            class="
+              mt-4 mb-8
+              w-full
+              shadow-lg
+              transition-transform duration-800 transform hover:scale-105
+            "
+          />
+        </div>
 
-    <!-- Botones centrados -->
-    <div
-      id="botones-recorrido-10k"
-      class="flex flex-row gap-4 justify-center items-center"
+        <!-- Botones centrados -->
+        <div
+          id="botones-recorrido-21k"
+          class="flex flex-row gap-4 justify-center items-center"
+        >
+          <Boton 
+            color="primary" 
+            version="negativo"
+            href="/images/pages/recorrido/descargable-21k.jpg"
+            download="Recorrido 21K - 42 Media Maratón Ciudad de Motril.jpg"
+            class="flex items-center gap-2 font-helvetica font-medium text-lg md:text-base"
+          >
+            DESCARGAR IMAGEN
+            <Icon name="arrow-down" class="inline-block w-4 md:w-3 h-5" />
+          </Boton>
+          <Boton 
+            color="" 
+            version=""
+            target="_blank"
+            href="https://www.wikiloc.com/running-trails/mmm26-275090229?wa=sc"
+            class="bg-blancoMMM text-green-600 hover:bg-green-600 hover:text-blancoMMM font-helvetica font-medium text-lg md:text-base"
+          >
+            VER EN WIKILOC
+            <Icon name="wikiloc" class="inline-block w-4 md:w-4 h-5 ml-1 pb-1" />
+          </Boton>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN CIRCUITO 10K (HOMOLOGADA) -->
+    <section
+      id="circuito-10k"
+      class="px-8 pb-8 md:px-12 md:pb-8 flex flex-col items-center justify-center"
     >
-      <Boton 
-        color="primary" 
-        version="negativo"
-        href="/images/pages/recorrido/descargable-10k.jpg"
-        download="Recorrido 10K - 42 Media Maratón Ciudad de Motril.jpg"
-        class="flex items-center gap-2 font-helvetica font-medium text-lg md:text-base"
+      <div
+        id="bloque-circuito-10k"
+        class="w-full flex flex-col justify-center items-center mt-6 md:mt-8"
       >
-        DESCARGAR IMAGEN
-        <Icon name="arrow-down" class="inline-block w-4 md:w-3 h-5" />
-      </Boton>
-      <Boton 
-        color="" 
-        version=""
-        target="_blank"
-        href="https://www.wikiloc.com/running-trails/mmm26-10k-275236005?wa=sc"
-        class="bg-blancoMMM text-green-600 hover:bg-green-600 hover:text-blancoMMM font-helvetica font-medium text-lg md:text-base"
-      >
-        VER EN WIKILOC
-        <Icon name="wikiloc" class="inline-block w-4 md:w-4 h-5 ml-1 pb-1" />
-      </Boton>
-    </div>
+        <!-- CONTENEDOR ENVOLVENTE -->
+        <div class="w-full md:w-3/4 lg:w-1/2 flex flex-col items-center">
+          <h2
+            class="
+              font-helvetica font-bold
+              tracking-widest
+              text-secundarioMMM-500
+              drop-shadow-[0_1px_14px_rgba(0,0,0,0.2)]
+              text-4xl
+            "
+          >
+            CIRCUITO 10K
+          </h2>
 
-  </div>
-</section>
+          <img
+            src="images/pages/recorrido/recorrido-10k.webp"
+            alt="Recorrido 10K"
+            class="
+              mt-4 mb-8
+              w-full
+              shadow-lg
+              transition-transform duration-800 transform hover:scale-105
+            "
+          />
+        </div>
+
+        <!-- Botones centrados -->
+        <div
+          id="botones-recorrido-10k"
+          class="flex flex-row gap-4 justify-center items-center"
+        >
+          <Boton 
+            color="primary" 
+            version="negativo"
+            href="/images/pages/recorrido/descargable-10k.jpg"
+            download="Recorrido 10K - 42 Media Maratón Ciudad de Motril.jpg"
+            class="flex items-center gap-2 font-helvetica font-medium text-lg md:text-base"
+          >
+            DESCARGAR IMAGEN
+            <Icon name="arrow-down" class="inline-block w-4 md:w-3 h-5" />
+          </Boton>
+          <Boton 
+            color="" 
+            version=""
+            target="_blank"
+            href="https://www.wikiloc.com/running-trails/mmm26-10k-275236005?wa=sc"
+            class="bg-blancoMMM text-green-600 hover:bg-green-600 hover:text-blancoMMM font-helvetica font-medium text-lg md:text-base"
+          >
+            VER EN WIKILOC
+            <Icon name="wikiloc" class="inline-block w-4 md:w-4 h-5 ml-1 pb-1" />
+          </Boton>
+        </div>
+
+      </div>
+    </section>
+    
     <LogoSlider />
   </main>
 </Layout>
