@@ -63,28 +63,50 @@ import LogoSlider from '../components/LogoSlider.astro';
               CIRCUITO 21K
             </h2>
 
-            <!-- Ícono indicador (i) -->
-            <div class="text-secundarioMMM-400 hover:text-blancoMMM transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
-              </svg>
-            </div>
+            <!-- CONTENEDOR TÍTULO + TOOLTIP -->
+<div class="relative flex items-center justify-center gap-2">
+  <h2
+    class="
+      font-helvetica font-bold
+      tracking-widest
+      text-secundarioMMM-400
+      drop-shadow-[0_1px_14px_rgba(0,0,0,0.2)]
+      text-4xl
+    "
+  >
+    CIRCUITO 21K
+  </h2>
 
-            <!-- Popup / Tooltip -->
-            <div 
-              class="
-                absolute bottom-full left-1/2 -translate-x-1/2 mb-3
-                hidden group-hover:flex flex-col items-center
-                pointer-events-none z-30 w-max max-w-xs md:max-w-sm
-                transition-all duration-200
-              "
-            >
-              <div class="bg-gray-950/90 text-blancoMMM text-xs md:text-sm font-helvetica font-medium px-3 py-2 rounded-xl shadow-2xl border border-white/10 text-center backdrop-blur-md">
-                Circuito pendiente de homologación por la RFAA
-              </div>
-              <!-- Flechita decorativa inferior del tooltip -->
-              <div class="w-2.5 h-2.5 -mt-1 bg-gray-950/90 rotate-45 border-r border-b border-white/10"></div>
-            </div>
+  <!-- Botón disparador (funciona con hover en PC y con tap/click en móvil) -->
+  <button
+    type="button"
+    class="group relative flex items-center justify-center focus:outline-none cursor-pointer"
+    aria-label="Más información sobre la homologación"
+  >
+    <!-- Ícono indicador (i) -->
+    <div class="text-secundarioMMM-400 group-hover:text-blancoMMM group-focus:text-blancoMMM transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+      </svg>
+    </div>
+
+    <!-- Popup / Tooltip -->
+    <div 
+      class="
+        absolute bottom-full left-1/2 -translate-x-1/2 mb-3
+        hidden group-hover:flex group-focus:flex flex-col items-center
+        pointer-events-none z-30 w-max max-w-xs md:max-w-sm
+        transition-all duration-200
+      "
+    >
+      <div class="bg-gray-950/90 text-blancoMMM text-xs md:text-sm font-helvetica font-medium px-3 py-2 rounded-xl shadow-2xl border border-white/10 text-center backdrop-blur-md">
+        Circuito pendiente de homologación por la RFAA
+      </div>
+      <!-- Flechita decorativa inferior del tooltip -->
+      <div class="w-2.5 h-2.5 -mt-1 bg-gray-950/90 rotate-45 border-r border-b border-white/10"></div>
+    </div>
+  </button>
+</div>
           </div>
 
           <img
