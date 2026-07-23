@@ -5,35 +5,36 @@ import Boton from "../components/Botones.astro";
 ---
 
 <Layout title="Multimedia | Media Maratón Ciudad de Motril">
-   <main class="bg-[url('/images/index/hero/hero10-bg-web.webp')] bg-cover bg-center bg-no-repeat ">
+  <main class="min-h-screen flex flex-col justify-between bg-[url('/images/index/hero/hero10-bg-web.webp')] bg-cover bg-center bg-no-repeat">
     <div
-  class="
-    w-full
-    flex flex-col items-center justify-center
-    pt-20 pb-6 md:pt-40 md:pb-2
-    px-4
-  "
->
-  <div
-    class="
-      px-8 py-3 md:px-14 md:py-5
-      bg-secundarioMMM-500
-      rounded-2xl
-      shadow-2xl
-      flex items-center justify-center
-    "
-  >
-    <h1 
       class="
-        text-terciarioMMM-700 
-        font-morganite text-9xl md:leading-none font-extrabold
-        text-center 
+        w-full
+        flex flex-col items-center justify-center
+        pt-20 pb-6 md:pt-40 md:pb-2
+        px-4
       "
     >
-      MULTIMEDIA
-    </h1>
-  </div>
-</div>
+      <div
+        class="
+          px-8 py-3 md:px-14 md:py-5
+          bg-secundarioMMM-500
+          rounded-2xl
+          shadow-2xl
+          flex items-center justify-center
+        "
+      >
+        <h1 
+          class="
+            text-terciarioMMM-700 
+            font-morganite text-9xl md:leading-none font-extrabold
+            text-center 
+          "
+        >
+          MULTIMEDIA
+        </h1>
+      </div>
+    </div>
+
     <section
       id="multimedia"
       class="
@@ -44,64 +45,63 @@ import Boton from "../components/Botones.astro";
       <div
         id="content-multimedia"
         class="
-        wfull md:w-4/5
-        flex flex-col md:flex-row
-        items-center md:items-start
-        gap-y-4 md:gap-x-8
+          w-full md:w-4/5
+          flex flex-col md:flex-row
+          items-center md:items-start
+          gap-y-4 md:gap-x-8
         "
       >
-      <div id="carteleria" class="md:w-3/5">
-        <figure>
-          <img
-            src="images/pages/multimedia/MMM26'.webp"
-            alt="Cartel Media Maratón Motril 2026"
-            class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-          />
-        </figure>
-      </div>
-      <div
-        id="descargables"
-        class="w-full md:w-2/5
+        <div id="carteleria" class="md:w-3/5">
+          <figure>
+            <img
+              src="images/pages/multimedia/MMM26'.webp"
+              alt="Cartel Media Maratón Motril 2026"
+              class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+          </figure>
+        </div>
+        <div
+          id="descargables"
+          class="w-full md:w-2/5
             mx-auto
             flex flex-col justify-center items-center md:items-start
             gap-2"
-      >
-        <h3 class="text-2xl md:text-5xl font-bold text-blancoMMM ">
-          ENLACES DE DESCARGA
-        </h3>
-        <div
-          id="botones-descargables"
-          class="
-          w-2/3
-          text-center md:text-left
-          flex flex-col
-          gap-3
-
-          "
         >
-          <Boton
-            color="primary"
-            version="negativo"
-            href="/files/MMM26'-Carteleria.zip"
-            download="Cartelería MMM26'.zip"
-            class="font-bold"
+          <h3 class="text-2xl md:text-5xl font-bold text-blancoMMM ">
+            ENLACES DE DESCARGA
+          </h3>
+          <div
+            id="botones-descargables"
+            class="
+              w-2/3
+              text-center md:text-left
+              flex flex-col
+              gap-3
+            "
           >
-            CARTELERÍA MMM26'
-          </Boton>
-          <Boton
-            color="secondary"
-            version="positivo"
-            href="/files/LogoMMM.zip"
-            download="LogoMMM.zip"
-            class=" font-bold"
-          >
-            LOGOTIPO MMM
-          </Boton>
+            <Boton
+              color="primary"
+              version="negativo"
+              href="/files/MMM26'-Carteleria.zip"
+              download="Cartelería MMM26'.zip"
+              class="font-bold"
+            >
+              CARTELERÍA MMM26'
+            </Boton>
+            <Boton
+              color="secondary"
+              version="positivo"
+              href="/files/LogoMMM.zip"
+              download="LogoMMM.zip"
+              class="font-bold"
+            >
+              LOGOTIPO MMM
+            </Boton>
+          </div>
         </div>
-        
-      </div>
       </div>
     </section>
+
     <LogoSlider />
   </main>
 </Layout>
