@@ -1,37 +1,88 @@
 ---
-const { title = "42 Media Maratón Ciudad de Motril" } = Astro.props;
-import "../styles/global.css";
+// Importación de componentes desde src/components/
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
----
 
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = "Inicio | Media Maratón Ciudad de Motril",
+  description = "Competición deportiva celebrada en la ciudad de Motril con dos pruebas principales, 10 kilómetros y 21 kilómetros.",
+  image = "/images/otros/opengraph-mmm26.jpg",
+} = Astro.props;
+
+const siteUrl = Astro.site ? Astro.site.origin : "https://mediamaraton.motril.es";
+const canonicalURL = new URL(Astro.url.pathname, siteUrl).href;
+const absoluteImageUrl = new URL(image, siteUrl).href;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SportsEvent",
+  "name": "Media Maratón Ciudad de Motril",
+  "description": description,
+  "url": canonicalURL,
+  "sport": "Running",
+  "location": {
+    "@type": "Place",
+    "name": "Motril",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Motril",
+      "addressRegion": "Granada",
+      "addressCountry": "ES"
+    }
+  }
+};
+---
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<title>{title}</title>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="description" content="Competición deportiva celebrada en la ciudad de Motril con dos pruebas principales, 10 kilómetros y 21 kilómetros" />
-		<meta name="keywords" content="Maratón, Motril, Media Maratón, 10K, 21K, Carrera, Deporte" />
-		<meta name="author" content="41 Media Maratón Ciudad de Motril" />
-		
-		<meta property="og:url" content="https://mediamaraton.motril.es/" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content="Competición deportiva celebrada en la ciudad de Motril con dos pruebas principales, 10 kilómetros y 21 kilómetros" />
-		<meta property="og:image" content="/images/otros/OpenGraph - MMM25'.jpg" />
-		<meta property="og:logo" content="/svg/marca/MMM - White.svg" />
-		<meta property="og:locale" content="es_ES" />
-	</head>
-	<body >
-		<Header />
-			<slot />
-		<Footer />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+
+    <!-- Meta SEO -->
+    <meta name="description" content={description} />
+    <meta name="keywords" content="Maratón, Motril, Media Maratón, 10K, 21K, Carrera, Deporte" />
+    <meta name="author" content="Media Maratón Ciudad de Motril" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="theme-color" content="#1e40af" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={absoluteImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Media Maratón Ciudad de Motril" />
+    <meta property="og:site_name" content="Media Maratón Ciudad de Motril" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteImageUrl} />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 </html>
-
-<style>
-
-</style>
