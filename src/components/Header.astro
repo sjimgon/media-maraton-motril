@@ -1,6 +1,14 @@
 ---
-// filepath: /home/ser/media-maraton-motril/src/components/Header.astro
 import Icon from '../components/Iconos.astro';
+
+// ÚNICA FUENTE DE VERDAD: Si necesitas cambiar un enlace, lo haces aquí, no buceando en el HTML.
+const enlacesPrueba = [
+  { nombre: "RECORRIDO", url: "/recorrido" },
+  { nombre: "SERVICIOS AL CORREDOR", url: "/servicios" },
+  { nombre: "ALOJAMIENTOS", url: "/alojamientos" },
+  { nombre: "NORMATIVA", url: "/normativa" },
+  { nombre: "VOLUNTARIOS", url: "/voluntariado" }
+];
 ---
 
 <header
@@ -87,58 +95,21 @@ import Icon from '../components/Iconos.astro';
             text-center
           "
         >
-          <li>
-            <a
-              href="/recorrido"
-              class="
-                block
-                px-4 py-2
-                font-bold text-terciarioMMM-600 text-sm
-                hover:text-terciarioMMM-800 hover:bg-terciarioMMM-50/30 transition-all duration-300
-              "
-            >
-              RECORRIDO
-            </a>
-          </li>
-          <li>
-            <a
-              href="/servicios"
-              class="
-                block
-                px-4 py-2
-                font-bold text-terciarioMMM-600 text-sm
-                hover:text-terciarioMMM-800 hover:bg-terciarioMMM-50/30 transition-all duration-300
-              "
-            >
-              SERVICIOS AL CORREDOR
-            </a>
-          </li>
-          <li>
-            <a
-              href="/normativa"
-              class="
-                block
-                px-4 py-2
-                font-bold text-terciarioMMM-600 text-sm
-                hover:text-terciarioMMM-800 hover:bg-terciarioMMM-50/30 transition-all duration-300
-              "
-            >
-              NORMATIVA
-            </a>
-          </li>
-          <li>
-            <a
-              href="/voluntariado"
-              class="
-                block
-                px-4 py-2
-                font-bold text-terciarioMMM-600 text-sm
-                hover:text-terciarioMMM-800 hover:bg-terciarioMMM-50/30 transition-all duration-300
-              "
-            >
-              VOLUNTARIOS
-            </a>
-          </li>
+          {enlacesPrueba.map((enlace) => (
+            <li>
+              <a
+                href={enlace.url}
+                class="
+                  block
+                  px-4 py-2
+                  font-bold text-terciarioMMM-600 text-sm
+                  hover:text-terciarioMMM-800 hover:bg-terciarioMMM-50/30 transition-all duration-300 uppercase
+                "
+              >
+                {enlace.nombre}
+              </a>
+            </li>
+          ))}
         </ul>
       </li>
       <li>
@@ -213,62 +184,22 @@ import Icon from '../components/Iconos.astro';
             transition-opacity z-10
           "
         >
-          <li>
-            <a
-              href="/recorrido"
-              class="
-                block
-                px-4 py-2
-                font-black text-terciarioMMM-600
-                hover:text-terciarioMMM-800 hover:bg-terciarioMMM-50/30 hover:scale-105
-                transition-all duration-300
-              "
-            >
-              Recorrido
-            </a>
-          </li>
-          <li>
-            <a
-              href="/servicios"
-              class="
-                block
-                px-4 py-2
-                font-black text-terciarioMMM-600
-                hover:text-terciarioMMM-800 hover:bg-terciarioMMM-50/30 hover:scale-105
-                transition-all duration-300
-              "
-            >
-              Servicios al corredor
-            </a>
-          </li>
-          <li>
-            <a
-              href="/normativa"
-              class="
-                block
-                px-4 py-2
-                font-black text-terciarioMMM-600
-                hover:text-terciarioMMM-800 hover:bg-terciarioMMM-50/30 hover:scale-105
-                transition-all duration-300
-              "
-            >
-              Normativa
-            </a>
-          </li>
-          <li>
-            <a
-              href="/voluntariado"
-              class="
-                block
-                px-4 py-2
-                font-black text-terciarioMMM-600
-                hover:text-terciarioMMM-800 hover:bg-terciarioMMM-50/30 hover:scale-105
-                transition-all duration-300
-              "
-            >
-              Voluntarios
-            </a>
-          </li>
+          {enlacesPrueba.map((enlace) => (
+            <li>
+              <a
+                href={enlace.url}
+                class="
+                  block
+                  px-4 py-2
+                  font-black text-terciarioMMM-600
+                  hover:text-terciarioMMM-800 hover:bg-terciarioMMM-50/30 hover:scale-105
+                  transition-all duration-300 uppercase
+                "
+              >
+                {enlace.nombre}
+              </a>
+            </li>
+          ))}
         </ul>
       </li>
 
@@ -344,38 +275,14 @@ import Icon from '../components/Iconos.astro';
 
       <!-- RRSS Escritorio -->
       <li class="flex items-center gap-3 pl-2">
-        <a
-          href="https://www.facebook.com/MediaMaratonMotril"
-          target="_blank"
-          class="inline-block"
-        >
-          <img
-            src="/svg/rrss/fb-square.svg"
-            alt="Facebook"
-            class="h-5 hover:scale-115 transition-transform"
-          />
+        <a href="https://www.facebook.com/MediaMaratonMotril" target="_blank" class="inline-block">
+          <img src="/svg/rrss/fb-square.svg" alt="Facebook" class="h-5 hover:scale-115 transition-transform" />
         </a>
-        <a
-          href="https://www.instagram.com/motrilmedia/"
-          target="_blank"
-          class="inline-block"
-        >
-          <img
-            src="/svg/rrss/ig-square.svg"
-            alt="Instagram"
-            class="h-5 hover:scale-115 transition-transform"
-          />
+        <a href="https://www.instagram.com/motrilmedia/" target="_blank" class="inline-block">
+          <img src="/svg/rrss/ig-square.svg" alt="Instagram" class="h-5 hover:scale-115 transition-transform" />
         </a>
-        <a
-          href="https://www.tiktok.com/@mediamaratonmotril?_r=1&_t=ZN-98F83QVivT8"
-          target="_blank"
-          class="inline-block"
-        >
-          <img
-            src="/svg/rrss/tk-square.svg"
-            alt="Tiktok"
-            class="h-5 hover:scale-115 transition-transform"
-          />
+        <a href="https://www.tiktok.com/@mediamaratonmotril?_r=1&_t=ZN-98F83QVivT8" target="_blank" class="inline-block">
+          <img src="/svg/rrss/tk-square.svg" alt="Tiktok" class="h-5 hover:scale-115 transition-transform" />
         </a>
       </li>
     </ul>
@@ -388,13 +295,8 @@ import Icon from '../components/Iconos.astro';
   const menu = document.getElementById('main-menu-mobile');
   if (toggle && menu) {
     toggle.addEventListener('click', () => {
-      if (menu.classList.contains('translate-x-full')) {
-        menu.classList.remove('translate-x-full');
-        menu.classList.add('translate-x-0');
-      } else {
-        menu.classList.add('translate-x-full');
-        menu.classList.remove('translate-x-0');
-      }
+      menu.classList.toggle('translate-x-full');
+      menu.classList.toggle('translate-x-0');
     });
   }
 
@@ -419,7 +321,7 @@ import Icon from '../components/Iconos.astro';
     });
   }
 
-  // Efecto scroll/reducción solo en escritorio + hover para restaurar tamaño
+  // Efecto scroll
   const header = document.getElementById('main-header');
   const nav = document.getElementById('main-nav');
   const desktopMenu = nav ? nav.querySelector('.md\\:flex') : null;
@@ -427,9 +329,7 @@ import Icon from '../components/Iconos.astro';
   const desktopLogo = desktopMenu ? desktopMenu.querySelector('img') : null;
 
   function setOriginalSize() {
-    if (header) {
-      header.classList.remove('bg-blancoMMM/60', 'backdrop-blur-md');
-    }
+    if (header) header.classList.remove('bg-blancoMMM/60', 'backdrop-blur-md');
     if (nav) {
       nav.classList.remove('py-1', 'py-2', 'py-3', 'p-5');
       nav.classList.add('py-0');
@@ -439,16 +339,13 @@ import Icon from '../components/Iconos.astro';
       link.classList.add('text-sm', 'm-1');
     });
     if (desktopLogo) {
-      desktopLogo.classList.remove('h-12');
+      desktopLogo.classList.remove('h-10', 'h-12', 'h-18');
       desktopLogo.classList.add('h-14');
-      desktopLogo.classList.remove('h-18');
     }
   }
 
   function setReducedSize() {
-    if (header) {
-      header.classList.add('bg-blancoMMM/60', 'backdrop-blur-md');
-    }
+    if (header) header.classList.add('bg-blancoMMM/60', 'backdrop-blur-md');
     if (nav) {
       nav.classList.remove('py-3', 'p-5', 'py-1', 'py-2');
       nav.classList.add('py-0');

@@ -1,0 +1,154 @@
+---
+import Layout from '../layouts/LayoutMaster.astro';
+import Boton from '../components/Botones.astro';
+import Icon from '../components/Iconos.astro';
+import LogoSlider from '../components/LogoSlider.astro';
+
+const hoteles = [
+  {
+    nombre: "Hotel Elba Motril",
+    estancia: "Del 16 al 18 de octubre de 2026",
+    descuento: "12%",
+    codigo: "42mediamaraton",
+    imagen: "/images/pages/alojamientos/hotel-elba.webp",
+    reservaUrl: "https://www.hoteleselba.com/es/hotel/elba-motril-beach-business-hotel" 
+  },
+  {
+    nombre: "Impressive Playa Granada ****",
+    estancia: "17 y 18 de octubre de 2026",
+    descuento: "12%",
+    codigo: "HMMOTRIL",
+    imagen: "/images/pages/alojamientos/hotel-impressive-granada.webp",
+    reservaUrl: "https://www.impressiveresortsplayagranada.com/" 
+  }
+];
+---
+
+<Layout title="Alojamientos Oficiales | Media Maratón Ciudad de Motril">
+  <main class="min-h-screen flex flex-col justify-between bg-[url('/images/index/hero/hero10-bg-web.webp')] bg-cover bg-center bg-no-repeat bg-fixed">
+    
+    <!-- HERO HEADER -->
+    <div class="w-full flex flex-col items-center justify-center pt-20 pb-6 md:pt-40 md:pb-12 px-4">
+      <div class="px-8 py-3 md:px-14 md:py-5 bg-secundarioMMM-500 rounded-2xl shadow-2xl flex items-center justify-center">
+        <h1 class="text-terciarioMMM-700 font-morganite text-9xl md:leading-none font-extrabold text-center uppercase">
+          Alojamientos
+        </h1>
+      </div>
+    </div>
+
+    <!-- GRID DE HOTELES -->
+    <section id="hoteles" class="w-full max-w-5xl mx-auto px-6 pb-16 md:pb-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {hoteles.map((hotel) => (
+          <article 
+            class="
+              flex flex-col bg-blancoMMM rounded-2xl overflow-hidden shadow-xl 
+              transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl
+              border-2 border-transparent hover:border-secundarioMMM-500
+            "
+          >
+            <!-- CONTENEDOR DE IMAGEN -->
+            <div class="relative w-full h-64 overflow-hidden bg-gray-200">
+              <img 
+                src={hotel.imagen} 
+                alt={`Imagen del ${hotel.nombre}`} 
+                class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+              />
+              <div class="absolute top-4 right-4 bg-terciarioMMM-800 text-blancoMMM font-helvetica font-bold px-4 py-1 rounded-full shadow-md">
+                - {hotel.descuento}
+              </div>
+            </div>
+
+            <!-- CONTENIDO DE LA TARJETA -->
+            <div class="p-8 flex flex-col flex-grow">
+              <h2 class="font-helvetica font-bold text-3xl text-terciarioMMM-800 mb-4 tracking-wide">
+                {hotel.nombre}
+              </h2>
+              
+              <div class="flex flex-col gap-4 mb-8">
+                <!-- Estancia -->
+                <div class="flex items-center gap-3">
+                  <Icon name="calendar" class="w-6 h-6 text-terciarioMMM-800 shrink-0" />
+                  <span class="font-helvetica text-negroMMM text-lg leading-tight">{hotel.estancia}</span>
+                </div>
+                
+                <!-- Código y Copiar -->
+                <div class="flex items-start gap-3">
+                  <Icon name="ticket" class="w-6 h-6 text-terciarioMMM-800 shrink-0 mt-1" />
+                  <div class="flex flex-col gap-2 w-full">
+                    <span class="font-helvetica text-negroMMM text-lg leading-tight">Código promocional:</span>
+                    <div class="flex items-center gap-2 w-full">
+                      <code class="font-mono font-bold text-lg bg-gray-100 px-3 py-2 rounded border border-gray-300 text-terciarioMMM-800 flex-grow text-center tracking-wider">
+                        {hotel.codigo}
+                      </code>
+                      <button 
+                        class="btn-copiar bg-terciarioMMM-800 hover:bg-terciarioMMM-900 text-blancoMMM px-4 py-2 rounded font-helvetica font-bold text-sm transition-colors duration-200 shadow-sm shrink-0 flex items-center justify-center min-w-[90px]"
+                        data-codigo={hotel.codigo}
+                        aria-label="Copiar código promocional"
+                      >
+                        COPIAR
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BOTÓN CTA PRINCIPAL -->
+              <div class="mt-auto flex justify-center">
+                <!-- Nota: Si tu componente <Boton> bloquea estas clases, bórralo temporalmente y usa un <a> nativo con estas clases exactas para asegurar el resultado visual -->
+                <Boton 
+                  color="secundario" 
+                  version="solido" 
+                  target="_blank"
+                  href={hotel.reservaUrl}
+                  class="w-full text-center text-lg py-3 font-helvetica font-extrabold tracking-wider bg-secundarioMMM-500 text-terciarioMMM-900 hover:bg-secundarioMMM-400 transition-colors shadow-md hover:shadow-lg"
+                >
+                  IR A RESERVAS
+                </Boton>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <LogoSlider />
+  </main>
+</Layout>
+
+<script>
+  // Lógica de portapapeles ejecutada en el cliente
+  document.addEventListener('DOMContentLoaded', () => {
+    const botonesCopiar = document.querySelectorAll('.btn-copiar');
+
+    botonesCopiar.forEach(boton => {
+      boton.addEventListener('click', async () => {
+        const codigo = boton.getAttribute('data-codigo');
+        const textoOriginal = boton.innerText;
+
+        if (!codigo) return;
+
+        try {
+          await navigator.clipboard.writeText(codigo);
+          
+          // Feedback visual de éxito
+          boton.innerText = '¡COPIADO!';
+          boton.classList.remove('bg-terciarioMMM-800', 'hover:bg-terciarioMMM-900');
+          boton.classList.add('bg-green-600', 'hover:bg-green-700');
+
+          // Restaurar el botón después de 2.5 segundos
+          setTimeout(() => {
+            boton.innerText = textoOriginal;
+            boton.classList.remove('bg-green-600', 'hover:bg-green-700');
+            boton.classList.add('bg-terciarioMMM-800', 'hover:bg-terciarioMMM-900');
+          }, 2500);
+          
+        } catch (err) {
+          console.error('Error al copiar al portapapeles: ', err);
+          boton.innerText = 'ERROR';
+          boton.classList.add('bg-red-600');
+        }
+      });
+    });
+  });
+</script>
